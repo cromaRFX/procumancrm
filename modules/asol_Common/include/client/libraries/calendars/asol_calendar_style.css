@@ -1,0 +1,31 @@
+#gregorianMonthIdentificator{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	text-align: center;
+}
+.gregorianDate_day{
+	color:red!important;
+	font-size: 6pt;
+}
+.calendars-popup{
+	z-index:1050;
+}
+.calendars-ctrl{
+	font-size:9pt;
+}
+.calendars-month{
+	width:250px;
+}
+.calendars-month-header,.calendars-nav,#gregorianMonthIdentificator{
+	font-size:10pt;
+}
+.calendars-month-header select{
+        padding: 0px !important;
+}
+.calendars-month table tbody{
+	font-size:9pt;
+}
+.calendars-month td .calendars-today {
+    background-color: #fad42e !important;
+}

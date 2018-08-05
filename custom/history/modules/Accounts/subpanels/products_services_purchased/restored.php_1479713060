@@ -1,0 +1,59 @@
+<?php
+// created: 2016-11-21 07:24:15
+$layout_defs = array (
+  'po_number_c' => 
+  array (
+    'type' => 'int',
+    'default' => true,
+    'vname' => 'LBL_PO_NUMBER',
+    'width' => '10%',
+  ),
+  'name' => 
+  array (
+    'vname' => 'LBL_PRODUCTS_SERVICES',
+    'widget_class' => 'SubPanelDetailViewLink',
+    'target_record_key' => 'product_id',
+    'target_module' => 'AOS_Products',
+    'width' => '25%',
+    'default' => true,
+  ),
+  'parent_name' => 
+  array (
+    'vname' => 'LBL_ACCOUNT_PRODUCT_QUOTE_LINK',
+    'widget_class' => 'SubPanelDetailViewLink',
+    'target_record_key' => 'parent_id',
+    'target_module_key' => 'parent_type',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'product_qty' => 
+  array (
+    'vname' => 'LBL_PRODUCT_QTY',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'product_list_price' => 
+  array (
+    'vname' => 'LBL_PRODUCT_LIST_PRICE',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'product_discount' => 
+  array (
+    'vname' => 'LBL_PRODUCT_DISCOUNT',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'product_unit_price' => 
+  array (
+    'vname' => 'LBL_ACCOUNT_PRODUCT_SALE_PRICE',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'product_total_price' => 
+  array (
+    'vname' => 'LBL_PRODUCT_TOTAL_PRICE',
+    'width' => '10%',
+    'default' => true,
+  ),
+);

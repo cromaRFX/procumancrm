@@ -1,0 +1,143 @@
+GL Account,Account Description
+1000,Petty Cash
+1010,Cash on Hand (e.g. in cash registers)
+1020,Regular Checking Account
+1030,Payroll Checking Account
+1040,Savings Account
+1050,Special Account
+1060,Investments - Money Market
+1070,Investments - Certificates of Deposit
+1100,Accounts Receivable
+1140,Other Receivables
+1150,Allowance for Doubtful Accounts
+1200,Raw Materials Inventory
+1205,Supplies Inventory
+1210,Work in Progress Inventory
+1215,Finished Goods Inventory - Product #1
+1220,Finished Goods Inventory - Product #2
+1230,Finished Goods Inventory - Product #3
+1400,Prepaid Expenses
+1410,Employee Advances
+1420,Notes Receivable - Current
+1430,Prepaid Interest
+1470,Other Current Assets
+1500,Furniture and Fixtures
+1510,Equipment
+1520,Vehicles
+1530,Other Depreciable Property
+1540,Leasehold Improvements
+1550,Buildings
+1560,Building Improvements
+1690,Land
+1700,"Accumulated Depreciation, Furniture and Fixtures"
+1710,"Accumulated Depreciation, Equipment"
+1720,"Accumulated Depreciation, Vehicles"
+1730,"Accumulated Depreciation, Other"
+1740,"Accumulated Depreciation, Leasehold"
+1750,"Accumulated Depreciation, Buildings"
+1760,"Accumulated Depreciation, Building Improvements"
+1900,Deposits
+1910,Organization Costs
+1915,"Accumulated Amortization, Organization Costs"
+1920,"Notes Receivable, Non-current"
+1990,Other Non-current Assets
+2000,Accounts Payable
+2300,Accrued Expenses
+2310,Sales Tax Payable
+2320,Wages Payable
+2330,401-K Deductions Payable
+2335,Health Insurance Payable
+2340,Federal Payroll Taxes Payable
+2350,FUTA Tax Payable
+2360,State Payroll Taxes Payable
+2370,SUTA Payable
+2380,Local Payroll Taxes Payable
+2390,Income Taxes Payable
+2400,Other Taxes Payable
+2410,Employee Benefits Payable
+2420,Current Portion of Long-term Debt
+2440,Deposits from Customers
+2480,Other Current Liabilities
+2700,Notes Payable
+2702,Land Payable
+2704,Equipment Payable
+2706,Vehicles Payable
+2708,Bank Loans Payable
+2710,Deferred Revenue
+2740,Other Long-term Liabilities
+3010,Stated Capital
+3020,Capital Surplus
+3030,Retained Earnings
+4000,Product #1 Sales
+4020,Product #2 Sales
+4040,Product #3 Sales
+4060,Interest Income
+4080,Other Income
+4540,Finance Charge Income
+4550,Shipping Charges Reimbursed
+4800,Sales Returns and Allowances
+4900,Sales Discounts
+5000,Product #1 Cost
+5010,Product #2 Cost
+5020,Product #3 Cost
+5050,Raw Material Purchases
+5100,Direct Labor Costs
+5150,Indirect Labor Costs
+5200,Heat and Power
+5250,Commissions
+5300,Miscellaneous Factory Costs
+5700,"Cost of Goods Sold, Salaries and Wages"
+5730,"Cost of Goods Sold, Contract Labor"
+5750,"Cost of Goods Sold, Freight"
+5800,"Cost of Goods Sold, Other"
+5850,Inventory Adjustments
+5900,Purchase Returns and Allowances
+5950,Purchase Discounts
+6000,Default Purchase Expense
+6010,Advertising Expense
+6050,Amortization Expense
+6100,Auto Expenses
+6150,Bad Debt Expense
+6200,Bank Fees
+6250,Cash Over and Short
+6300,Charitable Contributions Expense
+6350,Commissions and Fees Expense
+6400,Depreciation Expense
+6450,Dues and Subscriptions Expense
+6500,"Employee Benefit Expense, Health Insurance"
+6510,"Employee Benefit Expense, Pension Plans"
+6520,"Employee Benefit Expense, Profit Sharing Plan"
+6530,"Employee Benefit Expense, Other"
+6550,Freight Expense
+6600,Gifts Expense
+6650,"Income Tax Expense, Federal"
+6660,"Income Tax Expense, State"
+6670,"Income Tax Expense, Local"
+6700,"Insurance Expense, Product Liability"
+6710,"Insurance Expense, Vehicle"
+6750,Interest Expense
+6800,Laundry and Dry Cleaning Expense
+6850,Legal and Professional Expense
+6900,Licenses Expense
+6950,Loss on NSF Checks
+7000,Maintenance Expense
+7050,Meals and Entertainment Expense
+7100,Office Expense
+7200,Payroll Tax Expense
+7250,Penalties and Fines Expense
+7300,Other Taxes
+7350,Postage Expense
+7400,Rent or Lease Expense
+7450,"Repair and Maintenance Expense, Office"
+7460,"Repair and Maintenance Expense, Vehicle"
+7550,"Supplies Expense, Office"
+7600,Telephone Expense
+7620,Training Expense
+7650,Travel Expense
+7700,"Salaries Expense, Officers"
+7750,Wages Expense
+7800,Utilities Expense
+8900,Other Expense
+9000,Gain/Loss on Sale of Assets
+,
+,

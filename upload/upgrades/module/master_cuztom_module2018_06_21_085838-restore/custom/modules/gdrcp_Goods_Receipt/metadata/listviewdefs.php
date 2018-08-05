@@ -1,0 +1,126 @@
+<?php
+$module_name = 'gdrcp_Goods_Receipt';
+$listViewDefs [$module_name] = 
+array (
+  'PO_NUMBER_C' => 
+  array (
+    'type' => 'int',
+    'default' => true,
+    'label' => 'LBL_PO_NUMBER',
+    'width' => '10%',
+  ),
+  'PO_LINE_C' => 
+  array (
+    'type' => 'int',
+    'default' => true,
+    'label' => 'LBL_PO_LINE',
+    'width' => '5%',
+  ),
+  'NAME' => 
+  array (
+    'width' => '5%',
+    'label' => 'LBL_NAME',
+    'default' => true,
+    'link' => true,
+  ),
+  'RECEIVED_DATE' => 
+  array (
+    'type' => 'date',
+    'label' => 'LBL_RECEIVED_DATE',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'AOS_PRODUCTS_QUOTES_GDRCP_GOODS_RECEIPT_1_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_AOS_PRODUCTS_QUOTES_GDRCP_GOODS_RECEIPT_1_FROM_AOS_PRODUCTS_QUOTES_TITLE',
+    'id' => 'AOS_PRODUCTS_QUOTES_GDRCP_GOODS_RECEIPT_1AOS_PRODUCTS_QUOTES_IDA',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'QUANTITY' => 
+  array (
+    'type' => 'decimal',
+    'label' => 'LBL_QUANTITY',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'QUANTITY_ORDERED_C' => 
+  array (
+    'type' => 'float',
+    'default' => true,
+    'label' => 'LBL_QUANTITY_ORDERED',
+    'width' => '10%',
+  ),
+  'QUANTITY_REJECTED_C' => 
+  array (
+    'type' => 'float',
+    'default' => true,
+    'label' => 'LBL_QUANTITY_REJECTED',
+    'width' => '10%',
+  ),
+  'QUANTITY_INVOICED_C' => 
+  array (
+    'type' => 'float',
+    'default' => true,
+    'label' => 'LBL_QUANTITY_INVOICED',
+    'width' => '10%',
+  ),
+  'STORAGE' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_STORAGE',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'CREATED_BY_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_CREATED',
+    'id' => 'CREATED_BY',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'DATE_ENTERED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_ENTERED',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'ASSIGNED_USER_NAME' => 
+  array (
+    'width' => '9%',
+    'label' => 'LBL_ASSIGNED_TO_NAME',
+    'module' => 'Employees',
+    'id' => 'ASSIGNED_USER_ID',
+    'default' => false,
+  ),
+  'RECEIPT_ID_C' => 
+  array (
+    'type' => 'autoincrement',
+    'default' => false,
+    'label' => 'LBL_RECEIPT_ID',
+    'width' => '10%',
+  ),
+  'PRODUCT_C' => 
+  array (
+    'type' => 'relate',
+    'default' => false,
+    'studio' => 'visible',
+    'label' => 'LBL_PRODUCT',
+    'id' => 'AOS_PRODUCTS_ID_C',
+    'link' => true,
+    'width' => '10%',
+  ),
+  'REMARKS' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_REMARKS',
+    'width' => '10%',
+    'default' => false,
+  ),
+);
+?>

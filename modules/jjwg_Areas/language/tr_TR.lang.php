@@ -1,0 +1,44 @@
+<?php
+
+$mod_strings['LBL_ASSIGNED_TO_ID'] = 'Kullanıcı ID\'ye Atama';
+$mod_strings['LBL_ASSIGNED_TO_NAME'] = 'Atama';
+$mod_strings['LBL_ID'] = 'ID';
+$mod_strings['LBL_DATE_ENTERED'] = 'Giriş Tarihi';
+$mod_strings['LBL_DATE_MODIFIED'] = 'Değiştirilme Tarihi';
+$mod_strings['LBL_MODIFIED'] = 'Değiştiren:';
+$mod_strings['LBL_MODIFIED_ID'] = 'Değiştiren ID:';
+$mod_strings['LBL_MODIFIED_NAME'] = 'Değiştiren Adı:';
+$mod_strings['LBL_CREATED'] = 'Oluşturan:';
+$mod_strings['LBL_CREATED_ID'] = 'Oluşturan Id:';
+$mod_strings['LBL_DESCRIPTION'] = 'Tanım';
+$mod_strings['LBL_DELETED'] = 'Silindi';
+$mod_strings['LBL_NAME'] = 'Paket Adı:';
+$mod_strings['LBL_CREATED_USER'] = 'Oluşturan Kullanıcı';
+$mod_strings['LBL_MODIFIED_USER'] = 'Değiştiren Kullanıcı';
+$mod_strings['LBL_LIST_NAME'] = 'Paket Adı:';
+$mod_strings['LBL_LIST_FORM_TITLE'] = 'Areas List';
+$mod_strings['LBL_MODULE_NAME'] = 'Alanlar';
+$mod_strings['LBL_MODULE_TITLE'] = 'Alanlar';
+$mod_strings['LBL_HOMEPAGE_TITLE'] = 'My Areas';
+$mod_strings['LNK_NEW_RECORD'] = 'Create Areas';
+$mod_strings['LNK_LIST'] = 'View Areas';
+$mod_strings['LNK_IMPORT_JJWG_AREAS'] = 'Import Areas';
+$mod_strings['LBL_SEARCH_FORM_TITLE'] = 'Search Areas';
+$mod_strings['LBL_HISTORY_SUBPANEL_TITLE'] = 'Tarihçe';
+$mod_strings['LBL_ACTIVITIES_SUBPANEL_TITLE'] = 'Etkinlikler';
+$mod_strings['LBL_JJWG_AREAS_SUBPANEL_TITLE'] = 'Alanlar';
+$mod_strings['LBL_NEW_FORM_TITLE'] = 'New Areas';
+$mod_strings['LBL_CITY'] = 'Şehir';
+$mod_strings['LBL_STATE'] = 'Eyalet';
+$mod_strings['LBL_COUNTRY'] = 'Ülke';
+$mod_strings['LBL_COORDINATES'] = 'Coordinates';
+$mod_strings['LBL_LIST_ASSIGNED_USER'] = 'Atama';
+$mod_strings['LBL_AREA_MAP'] = 'Area Map';
+
+$mod_strings['LBL_AREA_EDIT_TITLE'] = 'Area Creation Instructions:';
+$mod_strings['LBL_AREA_EDIT_DESC_1'] = 'Left click on the map, in a clockwise motion, to create marker points for the area.';
+$mod_strings['LBL_AREA_EDIT_DESC_2'] = 'Click on the first marker point to close the polygon area.';
+$mod_strings['LBL_AREA_EDIT_RESET'] = 'Sıfırla [Alt+R]';
+$mod_strings['LBL_AREA_EDIT_USE_AREA_COORDINATES'] = 'Use Area Coordinates';
+$mod_strings['LBL_AREA_EDIT_COORDINATE_RESULTS'] = 'Coordinate Results (lng,lat,elv):';
+$mod_strings['LBL_JJWG_MAPS_JJWG_AREAS_FROM_JJWG_MAPS_TITLE'] = 'Haritalar';

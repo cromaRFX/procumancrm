@@ -1,0 +1,212 @@
+<script>
+
+function manageMySQLManagementTabs(clickRef, divId) {
+	
+	$(clickRef).closest("div.mySQL").find('.content').hide();
+	$(clickRef).closest("div.mySQL").find('.'+divId).show();
+	$(clickRef).closest("div.mySQL").find('li.selected').removeClass('selected');
+	$(clickRef).closest("div.mySQL").find('.'+divId+'_Tab').closest('li').addClass('selected');
+	
+}
+
+</script>
+
+<div class='mySQL yui-navset detailview_tabs yui-navset-top'>
+
+	<ul class='yui-nav'>
+		<li class='flowcontrol_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "flowcontrol");'><em>控制流程函数</em></a></li>
+	   	<li class='arithmetic_Tab selected'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "arithmetic");'><em>算术操作符</em></a></li>
+	   	<li class='aggregate_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "aggregate");'><em>聚合函数</em></a></li>
+	   	<li class='datetime_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "datetime");'><em>日期时间函数</em></a></li>
+	   	<li class='integer_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "integer");'><em>数学函数</em></a></li>
+	   	<li class='string_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "string");'><em>字符串函数</em></a></li>
+	   	<li class='string2_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "string2");'><em>字符串函数2</em></a></li>
+	   	<li class='appendix_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "appendix");'><em>附录 *</em></a></li>
+	   	<li class='variables_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "variables");'><em>变量</em></a></li>
+	   	<li class='references_Tab' style='display: none'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "references");'><em>参考</em></a></li>
+	</ul>
+
+	<div id='asolReportSqlTips' class='yui-content'>
+	
+		<div class='content flowcontrol' style='display: none'>
+		  	<h3>控制流程</h3>
+		  	<span>Flow Control Operators returns a value depending on the result of a given condition.</span>
+		  	<table width='100%' class='edit view'>
+		   	  	<tr>
+		 			<th>操作符</th><th>说明</th><th>示例</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">IF</a>(Cmp_Expr, TRUE_Val, FALSE_Val)</td><td>If Cmp_Expr equals TRUE returns TRUE_Val, else returns FALSE_Val</td><td>IF(DAY(date_entered) > 15, '1st', '2nd')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">IFNULL</a>(Cmp_Expr, NULL_Val)</td><td>If Cmp_Expr equals NULL returns NULL_Val, else returns Cmp_Expr</td><td>IFNULL(type, 'Empty Value')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">NULLIF</a>(Cmp1, Cmp2)</td><td>If (Cmp1 == Cmp2) returns NULL, else returns Cmp1</td><td>NULLIF(date_entered, date_modified)</td></tr>
+			</table>
+		</div>
+		
+		
+		<div class='content arithmetic'>
+		  	<h3>算术操作符</h3>
+		  	<span>SQL Arithmetic Operators are used to make arithmetic return a single value.</span>
+		  	<table width='100%' class='edit view'>
+		   	  	<tr>
+		 			<th>操作符</th><th>说明</th><th>示例</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">+</a></td><td>Addition operator</td><td>amount + 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">-</a></td><td>Minus operator</td><td>amount - 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">*</a></td><td>Multiplication operator</td><td>amount * 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">/</a></td><td>Division operator</td><td>amount / 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">%</a></td><td>Modulo operator</td><td>amount % 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DIV</a></td><td>Integer division</td><td>amount DIV 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">-</a>(columnName)</td><td>Unary minus. It changes the sign of the argument.</td><td>-(amount)</td></tr>
+			</table>
+		</div>
+			
+			
+		<div class='content aggregate' style='display: none'>
+		  	<h3>聚合函数</h3>
+		  	<span>SQL Aggregate Functions returns a single value, calculated from values in a column.</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+					<th>函数</th><th>说明</th><th>示例</th>
+				</tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">AVG</a>(columnName)</td><td>Returns the average value</td><td>AVG(amount)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">COUNT</a>(columnName)</td><td>Returns the number of rows</td><td>COUNT(id)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">FIRST</a>(columnName)</td><td>Returns the first value</td><td>FIRST(name)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LAST</a>(columnName)</td><td>Returns the last value</td><td>LAST(name)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">MAX</a>(columnName)</td><td>Returns the largest value</td><td>MAX(date_entered)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">MIN</a>(columnName)</td><td>Returns the smallest value</td><td>MIN(date_entered)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">SUM</a>(columnName)</td><td>Returns the sum</td><td>SUM(amount)</td></tr>
+			</table>
+		</div>
+			
+			
+			
+		<div class='content datetime' style='display: none'>
+		  	<h3>日期时间函数</h3>
+		  	<span>SQL DateTime Functions returns a date/time value, based on the input value.</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+			  		<th>函数</th><th>说明</th><th>示例</th>
+				</tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">NOW</a>()</td><td>Returns the current system date and time</td><td>NOW()</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CURDATE</a>()</td><td>Returns the current date</td><td>CURDATE()</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CURTIME</a>()</td><td>Returns the current time</td><td>CURTIME()</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATE</a>(dateString)</td><td>Extracts the date part of a datetime expression</td><td>DATE('2010-01-01 18:00:00')</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">EXTRACT</a>(unit<span class='required'>*</span> FROM dateA)</td><td>Returns a single unit part of a datetime</td><td>EXTRACT(MONTH FROM date_entered)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATE_ADD</a>(dateA, INTERVAL time unit<span class='required'>*</span>)</td><td>Adds a specified time interval to a date</td><td>DATE_ADD(date_entered, INTERVAL 4 WEEK)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATE_SUB</a>(dateA, INTERVAL time unit<span class='required'>*</span>)</td><td>Subtracts a specified time interval from a date</td><td>DATE_SUB(date_entered, INTERVAL 2 DAY)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATEDIFF</a>(dateA, dateB)</td><td>Returns the number of days between two dates</td><td>DATEDIFF(date_entered, '2010-01-01')</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATE_FORMAT</a>(dateA, format<span class='required'>*</span>)</td><td>Displays datetime data in different formats</td><td>DATE_FORMAT(date_entered, '%d-%m-%Y')</td></tr>
+			</table>
+		</div>
+			
+			
+		<div class='content integer' style='display: none'>
+		  	<h3>数学函数</h3>
+		  	<span>SQL Integer Functions returns a single value, based on the numeric input value.</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+			  		<th>函数</th><th>说明</th><th>示例</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">BIN</a>(intA)</td><td>Returns binary value for IntA</td><td>BIN(9)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CHAR</a>(numA,... [USING charset])</td><td>Returns the character value of the given integer values</td><td>CHAR(0xC3BC USING utf8)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CONV</a>(numA, fromBase, toBase)</td><td>Converts numbers between different bases</td><td>CONV(8, 10, 2)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">ELT</a>(intA, str1, str2, str3,...)</td><td>Returns str1 if intA=1 and str2 if intA=2 and so on</td><td>SELECT(2, 'a', 'b', 'c')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">HEX</a>(intA)</td><td>Returns hexadecimal representation for intA</td><td>HEX(amount)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">OCT</a>(intA)</td><td>Returns octal representation for intA</td><td>OCT(15)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">ROUND</a>(numA, decimals)</td><td>Rounds a numeric field to the number of decimals specified</td><td>ROUND(3.14159, 4)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">FORMAT</a>(numA, decimals)</td><td>Formats the number according to the template '#,###.##', Rounding decimal</td><td>FORMAT(amount, 2)</td></tr>
+			</table>	
+		</div>
+			
+			
+		<div class='content string' style='display: none'>
+		  	<h3>字符串函数</h3>
+		  	<span>SQL String Functions returns a single string value, based on the input value.</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+			  		<th>函数</th><th>说明</th><th>示例</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">BIT_LENGTH</a>(strA)</td><td>Returns the String length in bits</td><td>BIT_LENGTH('a')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CHAR_LENGTH</a>(strA)</td><td>Returns the length of a text field</td><td>CHAR_LENGTH(name)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CHARACTER_LENGTH</a>(strA)</td><td>Returns the length of a text field</td><td>CHARACTER_LENGTH('abcdefg')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LENGTH/OCTET_LENGTH</a>(strA)</td><td>Returns the length of a text field in bytes</td><td>LENGTH('AlineaSol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CHARINDEX</a>(strA, strB [,start])</td><td>Returns the starting position of a character strA in StringB</td><td>CHARINDEX('Sol', 'AlineaSol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">ASCII</a>(strA)</td><td>Returns the ASCII code value of a keyboard char button</td><td>ASCII('A')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">UCASE/UPPER</a>(strA)</td><td>Converts a field to upper case</td><td>UCASE('alineasol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LCASE/LOWER</a>(strA)</td><td>Converts a field to lower case</td><td>LCASE(name)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">MID</a>(strA, start[, length])</td><td>Extract characters from a text field</td><td>MID(description, 5, 10)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CONCAT</a>(strA, strB,....)</td><td>Returns concatenated Strings</td><td>CONCAT('Alinea', 'Sol')</td></tr>
+			</table>
+		</div>
+			
+			
+			
+		<div class='content string2' style='display: none'>
+		  	<h3>字符串函数2</h3>
+		  	<span>SQL String Functions returns a single string value, based on the input value.</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+			  		<th>函数</th><th>说明</th><th>示例</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CONCAT_WS</a>(separator, strA, strB,....)</td><td>Returns concatenated Strings with separator char</td><td>CONCAT_WS(' ', name, surName)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">SPACE</a>(int)</td><td>Returns spaces in your SQL query</td><td>SPACE(2)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">REPLACE</a>(strA, strB, strC)</td><td>Replaces all occurrences of the strB in the strA with strC</td><td>REPLACE(description, 'a', 'z')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">INSERT</a>(strA, pos, len, newString)</td><td>Replaces into strA, newStr String</td><td>INSERT(name, 0, 1, 'Asol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">INSTR</a>(strA,subStr)</td><td>Return the position of first occurrence of subStr in strA</td><td>INSTR(description, 'AlineaSol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LEFT</a>(strA, int)</td><td>Returns left part of strA with int number of characters</td><td>LEFT(name, 5)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">RIGHT</a>(strA, int)</td><td>Returns right part of strA with int number of characters</td><td>RIGHT('AlineaSol', 3)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">SUBSTRING</a>(strA, startIndex, length)</td><td>Returns part of a strA</td><td>SUBSTRING(name, 0, 10)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">REVERSE</a>(strA)</td><td>Returns reverse of strA</td><td>REVERSE(name)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LTRIM</a>(strA)</td><td>Returns strA after removing leading blanks on Left side</td><td>LTRIM('     Z')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">RTRIM</a>(strA)</td><td>Returns strA after removing leading blanks on Right side</td><td>RTRIM('A     ')</td></tr>
+			</table>
+		</div>
+				
+				
+		<div class='content appendix' style='display: none'>
+		  	<h3>附录</h3>
+		  	<span>mySQL Used Constants</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+		  			<th>DateTime Units</th><th>DateTime Format</th>
+		  		</tr>
+		  		<tr>
+			  		<td style='vertical-align: top'>MICROSECOND<br>SECOND<br>MINUTE<br>HOUR<br>DAY<br>WEEK<br>MONTH<br>QUARTER<br>YEAR<br>SECOND_MICROSECOND<br>MINUTE_MICROSECOND<br>MINUTE_SECOND<br>HOUR_MICROSECOND<br>HOUR_SECOND<br>HOUR_MINUTE<br>DAY_MICROSECOND<br>DAY_SECOND<br>DAY_MINUTE<br>DAY_HOUR<br>YEAR_MONTH</td>
+			  		<td style='vertical-align: top'><b>%a</b> Abbreviated weekday name, <b>%b</b> Abbreviated month name<br><b>%c</b> Month, numeric, <b>%D</b> Day of month with English suffix<br><b>%d</b> Day of month, numeric (00-31), <b>%e</b> Day of month, numeric (0-31)<br><b>%f</b> Microseconds, <b>%H</b> Hour (00-23)<br><b>%h</b> Hour (01-12), <b>%I</b> Hour (01-12)<br><b>%i</b> Minutes, numeric (00-59), <b>%j</b> Day of year (001-366)<br><b>%k</b> Hour (0-23), <b>%l</b> Hour (1-12)<br><b>%M</b> Month name, <b>%m</b> Month, numeric (00-12)<br><b>%p</b> AM or PM, <b>%r</b> Time, 12-hour (hh:mm:ss AM or PM)<br><b>%S</b> Seconds (00-59), <b>%s</b> Seconds (00-59)<br><b>%T</b> Time, 24-hour (hh:mm:ss)<br><b>%U</b> Week (00-53) where Sunday is the first day of week<br><b>%u</b> Week (00-53) where Monday is the first day of week<br><b>%V</b> Week (01-53) where Sunday is the first day of week, used with %X<br><b>%v</b> Week (01-53) where Monday is the first day of week, used with %x<br><b>%W</b> Weekday name, <b>%w</b> Day of the week (0=Sunday, 6=Saturday)<br><b>%X</b> Year of the week where Sunday is the first day of week, four digits, used with %V<br><b>%x</b> Year of the week where Monday is the first day of week, four digits, used with %v<br><b>%Y</b> Year, four digits, <b>%y</b> Year, two digits</td>
+		  		</tr>
+			</table>
+		
+		</div>
+			
+		
+		<div class='content variables' style='display: none'>
+		  	<h3>变量</h3>
+		  	<span>Variables Definition Used by AlineaSol Reports.<br>The variables over related and/or custom fields can only be used if at least one field of that related/custom table is added to the report.</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+		  			<th>变量类型</th><th>说明</th><th>示例</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${this}</a></td><td>References the value of the current field</td><td>${this}</td></tr>
+			  	<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${bean->Field}</a></td><td>References a field of the current report module</td><td>${bean->name}</td></tr>
+			  	<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${bean_cstm->Field_c}</a></td><td>References a custom field of the current report module</td><td>${bean_cstm->account_type_c}</td></tr>
+			  	<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${ModName->LinkField->RelatedField}</a></td><td>References a related field value</td><td>${Accounts->account_id_c->name}</td></tr>
+			  	<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${ModName_Cstm->LinkField->RelatedField_c}</a></td><td>References a related custom field value</td><td>${Accounts_Cstm->account_id_c->account_type_c}</td></tr>
+			</table>
+		</div>
+		
+		
+		<div class='content references' style='display: none'>
+		  	<h3>参考</h3>
+		  	<span>References are used to be replaced by an existing field at report with any modification attached to it, such SQL code or Agregated functions.<br>Take into account that PHP code is executed after Query processing, so it is not available at this point.</span>
+		  	<table width='100%' class='edit view'>
+		  		<thead>
+		  			<th width="15%">参考源</th>
+		  			<th>参考代码</th>
+		  			<th>现场别名</th>
+		  		</thead>
+		  		<tbody></tbody>
+		  	</table>
+		</div>
+	
+	</div>
+
+</div>

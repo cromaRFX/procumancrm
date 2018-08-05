@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sugarlanguage version="1.0">
+        <charts>
+                <expandlegend>Expand Legend</expandlegend>
+                <collapselegend>Collapse Legend</collapselegend>
+                <clickfordrilldown>Click for Drilldown</clickfordrilldown>
+                <drilldownoptions>Drill Down Options</drilldownoptions>
+                <detailview>More Details...</detailview>
+                <piechart>Pie Chart</piechart>
+                <groupchart>Group Chart</groupchart>
+                <stackedchart>Stacked Chart</stackedchart>
+                <barchart>Bar Chart</barchart>
+                <horizontalbarchart>Horizontal Bar Chart</horizontalbarchart>
+                <linechart>Line Chart</linechart>
+                <noData>Data not available</noData>
+                <print>Print</print>
+                <pieWedgeName>sections</pieWedgeName>
+        </charts>
+</sugarlanguage>

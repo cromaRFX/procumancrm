@@ -1,0 +1,63 @@
+.asolFancyMultiEnum {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.asolFancyMultiEnum .asolFancyValues {
+	z-index: 1001;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	padding-bottom: 4px !important;
+    padding-top: 4px !important;
+    overflow: auto;
+    white-space: nowrap;
+    max-height: 200px; 
+}
+
+.asolFancyPlaceHolder {
+	display: table;
+	width: 100%;
+	border: 1px solid;
+	border-collapse: collapse;
+	padding-left: 4px;
+	padding-bottom: 1px;
+	padding-top: 1px;
+	overflow: auto;
+	cursor: default; 
+}
+
+.asolFancyPlaceHolder .asolFancyLabels {
+	background-color: white;
+	display: table-cell;
+	padding: 1px 2px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.asolFancyPlaceHolder .asolFancyArrows {
+	display: table-cell;
+	background-color: lightgray;
+	width: 16px;
+	text-align: center;
+}
+
+.asolFancyMultiEnum ul.asolFancyValues .asolFancySearchInput {
+	border: 1px inset;
+}
+
+.asolFancyMultiEnum ul.asolFancyValues {
+	position: absolute;
+	min-width: 125px;
+	padding: 0px;
+	background-color: #FFF;
+	border: 1px solid #999;
+}
+
+li.asolFancyGroup {
+	font-weight: bold;
+}
+
+ul.asolFancyGroupValues {
+	margin-left: 10px;
+}

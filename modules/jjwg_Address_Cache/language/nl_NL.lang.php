@@ -1,0 +1,37 @@
+<?php
+
+$mod_strings['LBL_ASSIGNED_TO_ID'] = 'Toegewezen Gebruiker ID';
+$mod_strings['LBL_ASSIGNED_TO_NAME'] = 'Toegewezen aan';
+$mod_strings['LBL_ID'] = 'Id';
+$mod_strings['LBL_DATE_ENTERED'] = 'Datum aangemaakt';
+$mod_strings['LBL_DATE_MODIFIED'] = 'Datum gewijzigd';
+$mod_strings['LBL_MODIFIED'] = 'Gewijzigd door';
+$mod_strings['LBL_MODIFIED_ID'] = 'Gewijzigd door ID';
+$mod_strings['LBL_MODIFIED_NAME'] = 'Gewijzigd door naam';
+$mod_strings['LBL_CREATED'] = 'Aangemaakt door';
+$mod_strings['LBL_CREATED_ID'] = 'Gemaakt door ID';
+$mod_strings['LBL_DESCRIPTION'] = 'Omschrijving';
+$mod_strings['LBL_DELETED'] = 'Verwijderd';
+$mod_strings['LBL_NAME'] = 'Adres';
+$mod_strings['LBL_CREATED_USER'] = 'Gemaakt door gebruiker';
+$mod_strings['LBL_MODIFIED_USER'] = 'Gewijzigd door gebruiker';
+$mod_strings['LBL_LIST_NAME'] = 'Adres';
+$mod_strings['LBL_LIST_FORM_TITLE'] = 'Adres cache lijst';
+$mod_strings['LBL_MODULE_NAME'] = 'Adres Cache';
+$mod_strings['LBL_MODULE_TITLE'] = 'Adres Cache';
+$mod_strings['LBL_HOMEPAGE_TITLE'] = 'Mijn adres cache';
+$mod_strings['LNK_NEW_RECORD'] = 'Aanmaken adres cache';
+$mod_strings['LNK_LIST'] = 'Overzicht adres cache';
+$mod_strings['LNK_IMPORT_JJWG_ADRESS_CACHE'] = 'Importeer adres cache';
+$mod_strings['LBL_SEARCH_FORM_TITLE'] = 'Zoek adres cache';
+$mod_strings['LBL_HISTORY_SUBPANEL_TITLE'] = 'Overzicht Geschiedenis';
+$mod_strings['LBL_ACTIVITIES_SUBPANEL_TITLE'] = 'Activiteiten';
+$mod_strings['LBL_JJWG_ADRESS_CACHE_SUBPANEL_TITLE'] = 'Adres Cache';
+$mod_strings['LBL_NEW_FORM_TITLE'] = 'Nieuw adres cache';
+$mod_strings['LBL_LAT'] = 'Breedtegraad';
+$mod_strings['LBL_LNG'] = 'Lengtegraad';
+$mod_strings['LBL_GEOCODE_STATUS'] = 'Geocode Status';
+$mod_strings['LBL_CURRENT_USER_FILTER'] = 'Mijn artikelen';
+$mod_strings['LBL_ASSIGNED_TO'] = 'Toegewezen gebruiker';
+$mod_strings['LNK_IMPORT_JJWG_ADDRESS_CACHE'] = 'Importeer adres cache';
+$mod_strings['LBL_JJWG_ADDRESS_CACHE_SUBPANEL_TITLE'] = 'Adres Cache';

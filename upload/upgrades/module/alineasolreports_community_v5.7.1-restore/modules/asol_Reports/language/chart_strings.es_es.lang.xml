@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sugarlanguage version="1.0">
+        <charts>
+                <expandlegend>Ampliar leyenda</expandlegend>
+                <collapselegend>Contraer leyenda</collapselegend>
+                <clickfordrilldown>Clic para desglosar</clickfordrilldown>
+                <drilldownoptions>Opciones de desglose</drilldownoptions>
+                <detailview>Más detalles...</detailview>
+                <piechart>Gráfico de pizza</piechart>
+                <groupchart>Gráfico de grupo</groupchart>
+                <stackedchart>Gráfico apilado</stackedchart>
+                <barchart>Gráfico de barras</barchart>
+                <horizontalbarchart>Gráfico de barras horizontales</horizontalbarchart>
+                <linechart>Gráfico lineal</linechart>
+                <noData>Datos no disponibles</noData>
+                <print>Imprimir</print>
+                <pieWedgeName>porciones</pieWedgeName>
+        </charts>
+</sugarlanguage>

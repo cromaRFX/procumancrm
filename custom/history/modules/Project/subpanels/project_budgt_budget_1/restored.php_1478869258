@@ -1,0 +1,19 @@
+<?php
+// created: 2016-11-11 13:00:53
+$layout_defs = array (
+  'name' => 
+  array (
+    'vname' => 'LBL_NAME',
+    'widget_class' => 'SubPanelDetailViewLink',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'edit_button' => 
+  array (
+    'vname' => 'LBL_EDIT_BUTTON',
+    'widget_class' => 'SubPanelEditButton',
+    'module' => 'budgt_Budget',
+    'width' => '90%',
+    'default' => true,
+  ),
+);

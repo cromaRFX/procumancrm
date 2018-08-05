@@ -1,0 +1,16 @@
+<table style="width:30%; border: 1px solid black;">
+	<tr>
+		<td colspan=2 style="border: 1px solid black; padding: 10px; "><b>Attachments</b></td>
+	</tr>
+	<tr>
+		<td  style="border: 1px solid black; padding: 10px;">Question</td>
+		<td  style="border: 1px solid black; padding: 10px;">File</td> 
+	</tr>
+  {foreach from=$PDFURLS key=index item=line_item}
+	<tr>
+		<td  style="border: 1px solid black; padding: 10px;">{$line_item[0]}</td>
+		<td  style="border: 1px solid black; padding: 10px;"><a href={$line_item[1]} target="_blank">Download Attachment</a></td> 
+	</tr>
+  {/foreach}
+</table>
+

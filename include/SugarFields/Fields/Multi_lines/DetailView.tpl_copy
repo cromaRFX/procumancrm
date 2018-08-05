@@ -1,0 +1,49 @@
+
+{assign var=multi_lines value="^|^"|explode:{{sugarvar key='value' string=true}}}
+{assign var=multi_lines_count value=0}
+
+{foreach name=outer item=multi_line from=$multi_lines}
+	{assign var=item value="^,^"|explode:$multi_line}
+
+<table width="100%" border="0" cellspacing="1" cellpadding="0" id="{$module}__table__{$multi_lines_count}" class="yui3-skin-sam edit view panelContainer" data-index_num="0">
+<tbody><tr>
+<td valign="top" id="{$module}__line_item_index__{$multi_lines_count}_label" width="12.5%" scope="col">
+line item index:
+</td>
+<td valign="top" width="37.5%">
+{$item.0}
+</td><td valign="top" id="{$module}__line_item_name__{$multi_lines_count}_label" width="12.5%" scope="col">
+line item name:
+</td>
+<td valign="top" width="37.5%">
+{$item.1}
+</td></tr>
+<tr>
+<td valign="top" id="{$module}__line_item_qty__{$multi_lines_count}_label" width="12.5%" scope="col">
+line item qty:
+</td>
+<td valign="top" width="37.5%">
+{$item.2}
+</td><td valign="top" id="{$module}__line_item_price__{$multi_lines_count}_label" width="12.5%" scope="col">
+line item price:
+</td>
+<td valign="top" width="37.5%">
+{$item.3}
+</td></tr>
+<tr>
+<td valign="top" id="{$module}__line_item_cost__{$multi_lines_count}_label" width="12.5%" scope="col">
+line item cost:
+</td>
+<td valign="top" width="37.5%">
+{$item.4}
+</td><td valign="top" id="{$module}__line_item_supplier_name__{$multi_lines_count}_label" width="12.5%" scope="col">
+line item supplier:
+</td>
+<td valign="top" width="37.5%">
+<a href="index.php?module=Accounts&action=DetailView&record={$item.6}">{$item.5}</a>
+</td></tr>
+</tbody></table>
+<br />
+
+{assign var=multi_lines_count value=$multi_lines_count+1}
+{/foreach}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sugarlanguage version="1.0">
+        <charts>
+                <expandlegend>打开图例</expandlegend>
+                <collapselegend>关闭图例</collapselegend>
+                <clickfordrilldown>单击获取更多信息</clickfordrilldown>
+                <drilldownoptions>获取何种信息</drilldownoptions>
+                <detailview>更多细节...</detailview>
+                <piechart>饼状图</piechart>
+                <groupchart>组图</groupchart>
+                <stackedchart>堆积图</stackedchart>
+                <barchart>柱形图</barchart>
+                <horizontalbarchart>水平条形图</horizontalbarchart>
+                <linechart>条形图</linechart>
+                <noData>数据不可用</noData>
+                <print>打印</print>
+                <pieWedgeName>段</pieWedgeName>
+        </charts>
+</sugarlanguage>

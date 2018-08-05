@@ -1,0 +1,44 @@
+<?php
+
+$mod_strings['LBL_ASSIGNED_TO_ID'] = 'Zugewiesene BenutzerID';
+$mod_strings['LBL_ASSIGNED_TO_NAME'] = 'Benutzer';
+$mod_strings['LBL_ID'] = 'ID';
+$mod_strings['LBL_DATE_ENTERED'] = 'Datum erstellt';
+$mod_strings['LBL_DATE_MODIFIED'] = 'Geändert am';
+$mod_strings['LBL_MODIFIED'] = 'Geändert von';
+$mod_strings['LBL_MODIFIED_ID'] = 'Geändert von ID';
+$mod_strings['LBL_MODIFIED_NAME'] = 'Geändert von Name';
+$mod_strings['LBL_CREATED'] = 'Erstellt von:';
+$mod_strings['LBL_CREATED_ID'] = 'Erstellt von ID:';
+$mod_strings['LBL_DESCRIPTION'] = 'Beschreibung';
+$mod_strings['LBL_DELETED'] = 'Gelöscht';
+$mod_strings['LBL_NAME'] = 'Name';
+$mod_strings['LBL_CREATED_USER'] = 'Erstellt von Benutzer:';
+$mod_strings['LBL_MODIFIED_USER'] = 'Geändert von';
+$mod_strings['LBL_LIST_NAME'] = 'Name';
+$mod_strings['LBL_LIST_FORM_TITLE'] = 'Gebietsliste';
+$mod_strings['LBL_MODULE_NAME'] = 'Bereiche';
+$mod_strings['LBL_MODULE_TITLE'] = 'Bereiche';
+$mod_strings['LBL_HOMEPAGE_TITLE'] = 'Meine Gebiete';
+$mod_strings['LNK_NEW_RECORD'] = 'Gebiete erstellen';
+$mod_strings['LNK_LIST'] = 'Gebiete ansehen';
+$mod_strings['LNK_IMPORT_JJWG_AREAS'] = 'Gebiete importieren';
+$mod_strings['LBL_SEARCH_FORM_TITLE'] = 'Gebiete suchen';
+$mod_strings['LBL_HISTORY_SUBPANEL_TITLE'] = 'Verlauf';
+$mod_strings['LBL_ACTIVITIES_SUBPANEL_TITLE'] = 'Aktivitäten';
+$mod_strings['LBL_JJWG_AREAS_SUBPANEL_TITLE'] = 'Bereiche';
+$mod_strings['LBL_NEW_FORM_TITLE'] = 'Neue Gebiete';
+$mod_strings['LBL_CITY'] = 'Stadt';
+$mod_strings['LBL_STATE'] = 'Bundesland';
+$mod_strings['LBL_COUNTRY'] = 'Land';
+$mod_strings['LBL_COORDINATES'] = 'Koordinaten';
+$mod_strings['LBL_LIST_ASSIGNED_USER'] = 'Benutzer';
+$mod_strings['LBL_AREA_MAP'] = 'Gebietskarte';
+
+$mod_strings['LBL_AREA_EDIT_TITLE'] = 'Hinweise zur Gebietserstellung:';
+$mod_strings['LBL_AREA_EDIT_DESC_1'] = 'Um für dieses Gebiet Markierungspunkte zu erstellen, klicken Sie im Uhrzeigersinn mit der linken Maustaste auf die Karte.';
+$mod_strings['LBL_AREA_EDIT_DESC_2'] = 'Klicken Sie auf den ersten Marker, um den Polygonbereich zu schließen.';
+$mod_strings['LBL_AREA_EDIT_RESET'] = 'Zurücksetzen';
+$mod_strings['LBL_AREA_EDIT_USE_AREA_COORDINATES'] = 'Gebietskoordinaten verwenden';
+$mod_strings['LBL_AREA_EDIT_COORDINATE_RESULTS'] = 'Ergebnisse koordinieren (lng,lat,elv):';
+$mod_strings['LBL_JJWG_MAPS_JJWG_AREAS_FROM_JJWG_MAPS_TITLE'] = 'Karten';

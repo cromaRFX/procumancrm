@@ -1,0 +1,92 @@
+<?php
+$module_name = 'gdrcp_Goods_Receipt';
+$listViewDefs [$module_name] = 
+array (
+  'RECEIPT_ID_C' => 
+  array (
+    'type' => 'autoincrement',
+    'default' => true,
+    'label' => 'LBL_RECEIPT_ID',
+    'width' => '10%',
+  ),
+  'RECEIVED_DATE' => 
+  array (
+    'type' => 'date',
+    'label' => 'LBL_RECEIVED_DATE',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'PRODUCT_C' => 
+  array (
+    'type' => 'relate',
+    'default' => true,
+    'studio' => 'visible',
+    'label' => 'LBL_PRODUCT',
+    'id' => 'AOS_PRODUCTS_ID_C',
+    'link' => true,
+    'width' => '10%',
+  ),
+  'QUANTITY' => 
+  array (
+    'type' => 'decimal',
+    'label' => 'LBL_QUANTITY',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'PURCHASE_ORDER_C' => 
+  array (
+    'type' => 'relate',
+    'default' => true,
+    'studio' => 'visible',
+    'label' => 'LBL_PURCHASE_ORDER',
+    'id' => 'AOS_QUOTES_ID_C',
+    'link' => true,
+    'width' => '10%',
+  ),
+  'PO_LINE_NUMBER_C' => 
+  array (
+    'type' => 'int',
+    'default' => true,
+    'label' => 'LBL_PO_LINE_NUMBER',
+    'width' => '10%',
+  ),
+  'STORAGE' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_STORAGE',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'CREATED_BY_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_CREATED',
+    'id' => 'CREATED_BY',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'DATE_ENTERED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_ENTERED',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'ASSIGNED_USER_NAME' => 
+  array (
+    'width' => '9%',
+    'label' => 'LBL_ASSIGNED_TO_NAME',
+    'module' => 'Employees',
+    'id' => 'ASSIGNED_USER_ID',
+    'default' => false,
+  ),
+  'REMARKS' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_REMARKS',
+    'width' => '10%',
+    'default' => false,
+  ),
+);
+?>

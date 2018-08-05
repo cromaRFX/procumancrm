@@ -1,0 +1,37 @@
+<?php
+
+$mod_strings['LBL_ASSIGNED_TO_ID'] = 'ID Pengguna yang ditugaskan';
+$mod_strings['LBL_ASSIGNED_TO_NAME'] = 'Ditugaskan kepada';
+$mod_strings['LBL_ID'] = 'ID';
+$mod_strings['LBL_DATE_ENTERED'] = 'Tanggal Dibuat';
+$mod_strings['LBL_DATE_MODIFIED'] = 'Tanggal diubah';
+$mod_strings['LBL_MODIFIED'] = 'Diubah Oleh';
+$mod_strings['LBL_MODIFIED_ID'] = 'Modifikasi berdasarkan ID';
+$mod_strings['LBL_MODIFIED_NAME'] = 'Modifikasi berdasarkan Nama';
+$mod_strings['LBL_CREATED'] = 'Dibuat Oleh';
+$mod_strings['LBL_CREATED_ID'] = 'Dibuat oleh Id';
+$mod_strings['LBL_DESCRIPTION'] = 'Deskripsi';
+$mod_strings['LBL_DELETED'] = 'Hapus';
+$mod_strings['LBL_NAME'] = 'Address';
+$mod_strings['LBL_CREATED_USER'] = 'Dibuat oleh Pemakai';
+$mod_strings['LBL_MODIFIED_USER'] = 'Modifikasi oleh Pemakai';
+$mod_strings['LBL_LIST_NAME'] = 'Address';
+$mod_strings['LBL_LIST_FORM_TITLE'] = 'Address Cache List';
+$mod_strings['LBL_MODULE_NAME'] = 'Address Cache';
+$mod_strings['LBL_MODULE_TITLE'] = 'Address Cache';
+$mod_strings['LBL_HOMEPAGE_TITLE'] = 'My Address Cache';
+$mod_strings['LNK_NEW_RECORD'] = 'Create Address Cache';
+$mod_strings['LNK_LIST'] = 'View Address Cache';
+$mod_strings['LNK_IMPORT_JJWG_ADRESS_CACHE'] = 'Import Address Cache';
+$mod_strings['LBL_SEARCH_FORM_TITLE'] = 'Search Address Cache';
+$mod_strings['LBL_HISTORY_SUBPANEL_TITLE'] = 'Lihat Histori';
+$mod_strings['LBL_ACTIVITIES_SUBPANEL_TITLE'] = 'Aktivitas';
+$mod_strings['LBL_JJWG_ADRESS_CACHE_SUBPANEL_TITLE'] = 'Address Cache';
+$mod_strings['LBL_NEW_FORM_TITLE'] = 'New Address Cache';
+$mod_strings['LBL_LAT'] = 'Latitude';
+$mod_strings['LBL_LNG'] = 'Longitude';
+$mod_strings['LBL_GEOCODE_STATUS'] = 'Geocode Status';
+$mod_strings['LBL_CURRENT_USER_FILTER'] = 'My Items';
+$mod_strings['LBL_ASSIGNED_TO'] = 'Pengguna yang ditugaskan';
+$mod_strings['LNK_IMPORT_JJWG_ADDRESS_CACHE'] = 'Import Address Cache';
+$mod_strings['LBL_JJWG_ADDRESS_CACHE_SUBPANEL_TITLE'] = 'Address Cache';

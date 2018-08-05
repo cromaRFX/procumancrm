@@ -1,0 +1,44 @@
+<?php
+
+$mod_strings['LBL_ASSIGNED_TO_ID'] = 'Tildelt brugerID';
+$mod_strings['LBL_ASSIGNED_TO_NAME'] = 'Bruger';
+$mod_strings['LBL_ID'] = 'ID';
+$mod_strings['LBL_DATE_ENTERED'] = 'Oprettelsesdato';
+$mod_strings['LBL_DATE_MODIFIED'] = 'Ændret dato';
+$mod_strings['LBL_MODIFIED'] = 'Ændret af';
+$mod_strings['LBL_MODIFIED_ID'] = 'Ændret af Id';
+$mod_strings['LBL_MODIFIED_NAME'] = 'Ændret af navn';
+$mod_strings['LBL_CREATED'] = 'Oprettet af';
+$mod_strings['LBL_CREATED_ID'] = 'Oprettet af Id';
+$mod_strings['LBL_DESCRIPTION'] = 'Beskrivelse';
+$mod_strings['LBL_DELETED'] = 'Slet';
+$mod_strings['LBL_NAME'] = 'Navn';
+$mod_strings['LBL_CREATED_USER'] = 'Oprettet af bruger';
+$mod_strings['LBL_MODIFIED_USER'] = 'Ændret af bruger';
+$mod_strings['LBL_LIST_NAME'] = 'Navn';
+$mod_strings['LBL_LIST_FORM_TITLE'] = 'Markers List';
+$mod_strings['LBL_MODULE_NAME'] = 'Markører';
+$mod_strings['LBL_MODULE_TITLE'] = 'Markører';
+$mod_strings['LBL_HOMEPAGE_TITLE'] = 'My Markers';
+$mod_strings['LNK_NEW_RECORD'] = 'Create Markers';
+$mod_strings['LNK_LIST'] = 'Markører';
+$mod_strings['LNK_IMPORT_JJWG_MARKERS'] = 'Import Markers';
+$mod_strings['LBL_SEARCH_FORM_TITLE'] = 'Search Markers';
+$mod_strings['LBL_HISTORY_SUBPANEL_TITLE'] = 'Vis historik';
+$mod_strings['LBL_ACTIVITIES_SUBPANEL_TITLE'] = 'Aktiviteter';
+$mod_strings['LBL_JJWG_MARKERS_SUBPANEL_TITLE'] = 'Markører';
+$mod_strings['LBL_NEW_FORM_TITLE'] = 'New Markers';
+$mod_strings['LBL_CITY'] = 'By';
+$mod_strings['LBL_STATE'] = 'Stat';
+$mod_strings['LBL_COUNTRY'] = 'Land';
+$mod_strings['LBL_JJWG_MAPS_LAT'] = 'Latitude';
+$mod_strings['LBL_JJWG_MAPS_LNG'] = 'Longitude';
+$mod_strings['LBL_MARKER_IMAGE'] = 'Marker Image Type';
+$mod_strings['LBL_LIST_ASSIGNED_USER'] = 'Tildelt til';
+$mod_strings['LBL_MARKER_MAP'] = 'Marker Map';
+
+$mod_strings['LBL_MARKER_MARKER_POSITION'] = 'Marker Position (Latitude, Longitude):';
+$mod_strings['LBL_MARKER_CLOSEST_MATCHING_ADDRESS'] = 'Closest Matching Address:';
+$mod_strings['LBL_MARKER_MARKER_STATUS'] = 'Marker Status';
+$mod_strings['LBL_MARKER_EDIT_DESCRIPTION'] = 'Click and drag the marker.';
+$mod_strings['LBL_JJWG_MAPS_JJWG_MARKERS_FROM_JJWG_MAPS_TITLE'] = 'Kort';

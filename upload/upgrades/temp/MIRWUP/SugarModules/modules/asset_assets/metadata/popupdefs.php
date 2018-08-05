@@ -1,0 +1,50 @@
+<?php
+$popupMeta = array (
+    'moduleMain' => 'asset_assets',
+    'varName' => 'asset_assets',
+    'orderBy' => 'asset_assets.name',
+    'whereClauses' => array (
+  'name' => 'asset_assets.name',
+  'short_description' => 'asset_assets.short_description',
+),
+    'searchInputs' => array (
+  1 => 'name',
+  2 => 'short_description',
+),
+    'searchdefs' => array (
+  'name' => 
+  array (
+    'type' => 'name',
+    'link' => true,
+    'label' => 'LBL_NAME',
+    'width' => '10%',
+    'name' => 'name',
+  ),
+  'short_description' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_SHORT_DESCRIPTION',
+    'width' => '10%',
+    'name' => 'short_description',
+  ),
+),
+    'listviewdefs' => array (
+  'NAME' => 
+  array (
+    'type' => 'name',
+    'link' => true,
+    'label' => 'LBL_NAME',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'name',
+  ),
+  'SHORT_DESCRIPTION' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_SHORT_DESCRIPTION',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'short_description',
+  ),
+),
+);

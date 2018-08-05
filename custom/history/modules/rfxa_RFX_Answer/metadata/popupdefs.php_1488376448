@@ -1,0 +1,111 @@
+<?php
+$popupMeta = array (
+    'moduleMain' => 'rfxa_RFX_Answer',
+    'varName' => 'rfxa_RFX_Answer',
+    'orderBy' => 'rfxa_rfx_answer.name',
+    'whereClauses' => array (
+  'name' => 'rfxa_rfx_answer.name',
+),
+    'searchInputs' => array (
+  0 => 'rfxa_rfx_answer_number',
+  1 => 'name',
+  2 => 'priority',
+  3 => 'status',
+),
+    'listviewdefs' => array (
+  'RFX_RFX_RFXA_RFX_ANSWER_1_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_RFX_RFX_RFXA_RFX_ANSWER_1_FROM_RFX_RFX_TITLE',
+    'id' => 'RFX_RFX_RFXA_RFX_ANSWER_1RFX_RFX_IDA',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'DESCRIPTION' => 
+  array (
+    'type' => 'text',
+    'studio' => 'visible',
+    'label' => 'LBL_DESCRIPTION',
+    'sortable' => false,
+    'width' => '10%',
+    'default' => true,
+  ),
+  'DOCUMENT_NAME' => 
+  array (
+    'width' => '10%',
+    'label' => 'LBL_NAME',
+    'link' => true,
+    'default' => true,
+    'name' => 'document_name',
+  ),
+  'SUPPLIER' => 
+  array (
+    'type' => 'relate',
+    'studio' => 'visible',
+    'label' => 'LBL_SUPPLIER',
+    'id' => 'ACCOUNT_ID_C',
+    'link' => true,
+    'width' => '10%',
+    'default' => true,
+    'name' => 'supplier',
+  ),
+  'SUPPLIER_NAME' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_SUPPLIER_NAME',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'supplier_name',
+  ),
+  'EMAIL' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_EMAIL',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'email',
+  ),
+  'EXP_DATE' => 
+  array (
+    'width' => '10%',
+    'label' => 'LBL_LIST_EXP_DATE',
+    'default' => true,
+    'name' => 'exp_date',
+  ),
+  'STATUS_ID' => 
+  array (
+    'type' => 'enum',
+    'default' => true,
+    'studio' => 'visible',
+    'label' => 'LBL_DOC_STATUS',
+    'width' => '10%',
+    'name' => 'status_id',
+  ),
+  'COMPARABLE_VALUE' => 
+  array (
+    'type' => 'currency',
+    'label' => 'LBL_COMPARABLE_VALUE',
+    'currency_format' => true,
+    'width' => '10%',
+    'default' => true,
+    'name' => 'comparable_value',
+  ),
+  'SELECTION_REMARK' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_SELECTION_REMARK',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'selection_remark',
+  ),
+  'DATE_ENTERED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_ENTERED',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'date_entered',
+  ),
+),
+);

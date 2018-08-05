@@ -1,0 +1,83 @@
+<?php
+// created: 2017-02-03 18:52:30
+$layout_defs = array (
+  'name' => 
+  array (
+    'vname' => 'LBL_NAME',
+    'widget_class' => 'SubPanelDetailViewLink',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'po_number_c' => 
+  array (
+    'type' => 'int',
+    'default' => true,
+    'vname' => 'LBL_PO_NUMBER',
+    'width' => '10%',
+  ),
+  'po_line_c' => 
+  array (
+    'type' => 'int',
+    'default' => true,
+    'vname' => 'LBL_PO_LINE',
+    'width' => '10%',
+  ),
+  'product_c' => 
+  array (
+    'type' => 'relate',
+    'default' => true,
+    'studio' => 'visible',
+    'vname' => 'LBL_PRODUCT',
+    'id' => 'AOS_PRODUCTS_ID_C',
+    'link' => true,
+    'width' => '10%',
+    'widget_class' => 'SubPanelDetailViewLink',
+    'target_module' => 'AOS_Products',
+    'target_record_key' => 'aos_products_id_c',
+  ),
+  'quantity' => 
+  array (
+    'type' => 'decimal',
+    'vname' => 'LBL_QUANTITY',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'quantity_rejected_c' => 
+  array (
+    'type' => 'float',
+    'default' => true,
+    'vname' => 'LBL_QUANTITY_REJECTED',
+    'width' => '10%',
+  ),
+  'quantity_invoiced_c' => 
+  array (
+    'type' => 'float',
+    'default' => true,
+    'vname' => 'LBL_QUANTITY_INVOICED',
+    'width' => '10%',
+  ),
+  'invoiced_amount_c' => 
+  array (
+    'type' => 'currency',
+    'default' => true,
+    'vname' => 'LBL_INVOICED_AMOUNT',
+    'currency_format' => true,
+    'width' => '10%',
+  ),
+  'edit_button' => 
+  array (
+    'vname' => 'LBL_EDIT_BUTTON',
+    'widget_class' => 'SubPanelEditButton',
+    'module' => 'gdrcp_Goods_Receipt',
+    'width' => '4%',
+    'default' => true,
+  ),
+  'remove_button' => 
+  array (
+    'vname' => 'LBL_REMOVE',
+    'widget_class' => 'SubPanelRemoveButton',
+    'module' => 'gdrcp_Goods_Receipt',
+    'width' => '5%',
+    'default' => true,
+  ),
+);

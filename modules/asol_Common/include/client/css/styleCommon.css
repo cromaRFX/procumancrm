@@ -1,0 +1,12 @@
+.alineasol_common .asol_icon {
+	margin-right: 5px;
+}
+
+.alineasol_common .clickable {
+	cursor: pointer;
+	cursor: hand;
+}
+html[dir="rtl"] .alineasol_common .asol_icon{
+	margin-left: 5px;
+	margin-right: inherit;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sugarlanguage version="1.0">
+        <charts>
+                <expandlegend>Elargir la légende</expandlegend>
+                <collapselegend>Réduire la légende</collapselegend>
+                <clickfordrilldown>Cliquer pour zoomer</clickfordrilldown>
+                <drilldownoptions>Options du zoom</drilldownoptions>
+                <detailview>Plus de détails...</detailview>
+                <piechart>Graphique circulaire</piechart>
+                <groupchart>Graphique par barres</groupchart>
+                <stackedchart>Graphique empilé</stackedchart>
+                <barchart>Graphique par barres</barchart>
+                <horizontalbarchart>Graphique par barres horizontales</horizontalbarchart>
+                <linechart>Graphique par ligne</linechart>
+                <noData>Données indisponibles</noData>
+                <print>Impression</print>
+                <pieWedgeName>Sections</pieWedgeName>
+        </charts>
+</sugarlanguage>

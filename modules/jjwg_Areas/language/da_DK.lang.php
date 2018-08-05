@@ -1,0 +1,44 @@
+<?php
+
+$mod_strings['LBL_ASSIGNED_TO_ID'] = 'Tildelt brugerID';
+$mod_strings['LBL_ASSIGNED_TO_NAME'] = 'Bruger';
+$mod_strings['LBL_ID'] = 'ID';
+$mod_strings['LBL_DATE_ENTERED'] = 'Oprettelsesdato';
+$mod_strings['LBL_DATE_MODIFIED'] = 'Ændret dato';
+$mod_strings['LBL_MODIFIED'] = 'Ændret af';
+$mod_strings['LBL_MODIFIED_ID'] = 'Ændret af Id';
+$mod_strings['LBL_MODIFIED_NAME'] = 'Ændret af navn';
+$mod_strings['LBL_CREATED'] = 'Oprettet af';
+$mod_strings['LBL_CREATED_ID'] = 'Oprettet af Id';
+$mod_strings['LBL_DESCRIPTION'] = 'Beskrivelse';
+$mod_strings['LBL_DELETED'] = 'Slet';
+$mod_strings['LBL_NAME'] = 'Navn';
+$mod_strings['LBL_CREATED_USER'] = 'Oprettet af bruger';
+$mod_strings['LBL_MODIFIED_USER'] = 'Ændret af bruger';
+$mod_strings['LBL_LIST_NAME'] = 'Navn';
+$mod_strings['LBL_LIST_FORM_TITLE'] = 'Areas List';
+$mod_strings['LBL_MODULE_NAME'] = 'Områder';
+$mod_strings['LBL_MODULE_TITLE'] = 'Områder';
+$mod_strings['LBL_HOMEPAGE_TITLE'] = 'My Areas';
+$mod_strings['LNK_NEW_RECORD'] = 'Create Areas';
+$mod_strings['LNK_LIST'] = 'View Areas';
+$mod_strings['LNK_IMPORT_JJWG_AREAS'] = 'Import Areas';
+$mod_strings['LBL_SEARCH_FORM_TITLE'] = 'Search Areas';
+$mod_strings['LBL_HISTORY_SUBPANEL_TITLE'] = 'Vis historik';
+$mod_strings['LBL_ACTIVITIES_SUBPANEL_TITLE'] = 'Aktiviteter';
+$mod_strings['LBL_JJWG_AREAS_SUBPANEL_TITLE'] = 'Områder';
+$mod_strings['LBL_NEW_FORM_TITLE'] = 'New Areas';
+$mod_strings['LBL_CITY'] = 'By';
+$mod_strings['LBL_STATE'] = 'Stat';
+$mod_strings['LBL_COUNTRY'] = 'Land';
+$mod_strings['LBL_COORDINATES'] = 'Coordinates';
+$mod_strings['LBL_LIST_ASSIGNED_USER'] = 'Bruger';
+$mod_strings['LBL_AREA_MAP'] = 'Area Map';
+
+$mod_strings['LBL_AREA_EDIT_TITLE'] = 'Area Creation Instructions:';
+$mod_strings['LBL_AREA_EDIT_DESC_1'] = 'Left click on the map, in a clockwise motion, to create marker points for the area.';
+$mod_strings['LBL_AREA_EDIT_DESC_2'] = 'Click on the first marker point to close the polygon area.';
+$mod_strings['LBL_AREA_EDIT_RESET'] = 'Nulstil [Alt+R]';
+$mod_strings['LBL_AREA_EDIT_USE_AREA_COORDINATES'] = 'Use Area Coordinates';
+$mod_strings['LBL_AREA_EDIT_COORDINATE_RESULTS'] = 'Coordinate Results (lng,lat,elv):';
+$mod_strings['LBL_JJWG_MAPS_JJWG_AREAS_FROM_JJWG_MAPS_TITLE'] = 'Kort';

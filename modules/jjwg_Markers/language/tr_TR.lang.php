@@ -1,0 +1,44 @@
+<?php
+
+$mod_strings['LBL_ASSIGNED_TO_ID'] = 'Kullanıcı ID\'ye Atama';
+$mod_strings['LBL_ASSIGNED_TO_NAME'] = 'Atama';
+$mod_strings['LBL_ID'] = 'ID';
+$mod_strings['LBL_DATE_ENTERED'] = 'Giriş Tarihi';
+$mod_strings['LBL_DATE_MODIFIED'] = 'Değiştirilme Tarihi';
+$mod_strings['LBL_MODIFIED'] = 'Değiştiren:';
+$mod_strings['LBL_MODIFIED_ID'] = 'Değiştiren ID:';
+$mod_strings['LBL_MODIFIED_NAME'] = 'Değiştiren Adı:';
+$mod_strings['LBL_CREATED'] = 'Oluşturan:';
+$mod_strings['LBL_CREATED_ID'] = 'Oluşturan Id:';
+$mod_strings['LBL_DESCRIPTION'] = 'Tanım';
+$mod_strings['LBL_DELETED'] = 'Silindi';
+$mod_strings['LBL_NAME'] = 'Paket Adı:';
+$mod_strings['LBL_CREATED_USER'] = 'Oluşturan Kullanıcı';
+$mod_strings['LBL_MODIFIED_USER'] = 'Değiştiren Kullanıcı';
+$mod_strings['LBL_LIST_NAME'] = 'Paket Adı:';
+$mod_strings['LBL_LIST_FORM_TITLE'] = 'Markers List';
+$mod_strings['LBL_MODULE_NAME'] = 'İşaretleyiciler';
+$mod_strings['LBL_MODULE_TITLE'] = 'İşaretleyiciler';
+$mod_strings['LBL_HOMEPAGE_TITLE'] = 'My Markers';
+$mod_strings['LNK_NEW_RECORD'] = 'Create Markers';
+$mod_strings['LNK_LIST'] = 'İşaretleyiciler';
+$mod_strings['LNK_IMPORT_JJWG_MARKERS'] = 'Import Markers';
+$mod_strings['LBL_SEARCH_FORM_TITLE'] = 'Search Markers';
+$mod_strings['LBL_HISTORY_SUBPANEL_TITLE'] = 'Tarihçe';
+$mod_strings['LBL_ACTIVITIES_SUBPANEL_TITLE'] = 'Etkinlikler';
+$mod_strings['LBL_JJWG_MARKERS_SUBPANEL_TITLE'] = 'İşaretleyiciler';
+$mod_strings['LBL_NEW_FORM_TITLE'] = 'New Markers';
+$mod_strings['LBL_CITY'] = 'Şehir';
+$mod_strings['LBL_STATE'] = 'Eyalet';
+$mod_strings['LBL_COUNTRY'] = 'Ülke';
+$mod_strings['LBL_JJWG_MAPS_LAT'] = 'Enlem';
+$mod_strings['LBL_JJWG_MAPS_LNG'] = 'Boylam';
+$mod_strings['LBL_MARKER_IMAGE'] = 'Marker Image Type';
+$mod_strings['LBL_LIST_ASSIGNED_USER'] = 'LBL_ASSIGNED_USER_NAME';
+$mod_strings['LBL_MARKER_MAP'] = 'Marker Map';
+
+$mod_strings['LBL_MARKER_MARKER_POSITION'] = 'Marker Position (Latitude, Longitude):';
+$mod_strings['LBL_MARKER_CLOSEST_MATCHING_ADDRESS'] = 'Closest Matching Address:';
+$mod_strings['LBL_MARKER_MARKER_STATUS'] = 'Marker Status';
+$mod_strings['LBL_MARKER_EDIT_DESCRIPTION'] = 'Click and drag the marker.';
+$mod_strings['LBL_JJWG_MAPS_JJWG_MARKERS_FROM_JJWG_MAPS_TITLE'] = 'Haritalar';

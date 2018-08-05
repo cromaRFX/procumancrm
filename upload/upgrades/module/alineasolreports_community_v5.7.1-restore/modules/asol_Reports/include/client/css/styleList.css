@@ -1,0 +1,21 @@
+/*CRM Instance bugs*/
+
+input[type="file"] {
+    display: inline !important;
+}
+
+#copyright_data div#dialog,
+#copyright_data div#dialog2 {
+	display: none;
+}
+
+/*CRM Instance bugs*/
+
+.alineasol_reports .asol_icon {
+	margin-right: 5px;
+}
+
+.alineasol_reports .clickable {
+	cursor: pointer;
+	cursor: hand;
+}

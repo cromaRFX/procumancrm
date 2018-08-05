@@ -1,0 +1,48 @@
+<?php
+$popupMeta = array (
+    'moduleMain' => 'costc_cost_center',
+    'varName' => 'costc_cost_center',
+    'orderBy' => 'costc_cost_center.name',
+    'whereClauses' => array (
+  'name' => 'costc_cost_center.name',
+  'department_c' => 'costc_cost_center_cstm.department_c',
+),
+    'searchInputs' => array (
+  1 => 'name',
+  2 => 'department_c',
+),
+    'searchdefs' => array (
+  'name' => 
+  array (
+    'name' => 'name',
+    'width' => '10%',
+  ),
+  'department_c' => 
+  array (
+    'type' => 'enum',
+    'studio' => 'visible',
+    'label' => 'LBL_DEPARTMENT',
+    'width' => '10%',
+    'name' => 'department_c',
+  ),
+),
+    'listviewdefs' => array (
+  'NAME' => 
+  array (
+    'width' => '32%',
+    'label' => 'LBL_NAME',
+    'default' => true,
+    'link' => true,
+    'name' => 'name',
+  ),
+  'DESCRIPTION' => 
+  array (
+    'type' => 'text',
+    'label' => 'LBL_DESCRIPTION',
+    'sortable' => false,
+    'width' => '10%',
+    'default' => true,
+    'name' => 'description',
+  ),
+),
+);

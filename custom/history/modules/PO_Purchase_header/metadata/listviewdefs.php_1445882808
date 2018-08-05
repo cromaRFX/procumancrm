@@ -1,0 +1,37 @@
+<?php
+$module_name = 'PO_Purchase_header';
+$listViewDefs [$module_name] = 
+array (
+  'PO_NUMBER' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_PO_NUMBER',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'WAYBILL_NR' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_WAYBILL_NR',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'PO_PURCHASE_HEADER_ACCOUNTS_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_PO_PURCHASE_HEADER_ACCOUNTS_FROM_ACCOUNTS_TITLE',
+    'id' => 'PO_PURCHASE_HEADER_ACCOUNTSACCOUNTS_IDA',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'PO_STATUS' => 
+  array (
+    'type' => 'enum',
+    'default' => true,
+    'studio' => 'visible',
+    'label' => 'LBL_PO_STATUS',
+    'width' => '10%',
+  ),
+);
+?>

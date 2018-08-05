@@ -1,0 +1,32 @@
+<?php
+$popupMeta = array (
+    'moduleMain' => 'gla_GL_Accounts',
+    'varName' => 'gla_GL_Accounts',
+    'orderBy' => 'gla_gl_accounts.name',
+    'whereClauses' => array (
+  'name' => 'gla_gl_accounts.name',
+),
+    'searchInputs' => array (
+  0 => 'gla_gl_accounts_number',
+  1 => 'name',
+  2 => 'priority',
+  3 => 'status',
+),
+    'listviewdefs' => array (
+  'NAME' => 
+  array (
+    'type' => 'name',
+    'link' => true,
+    'label' => 'LBL_NAME',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'ACCOUNT_DESCRIPTION' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_ACCOUNT_DESCRIPTION',
+    'width' => '10%',
+    'default' => true,
+  ),
+),
+);

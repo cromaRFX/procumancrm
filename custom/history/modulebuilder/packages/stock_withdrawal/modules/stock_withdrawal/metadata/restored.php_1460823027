@@ -1,0 +1,45 @@
+<?php
+// created: 2016-04-16 16:10:22
+$layout_defs = array (
+  'top_buttons' => 
+  array (
+    0 => 
+    array (
+      'widget_class' => 'SubPanelTopCreateButton',
+    ),
+    1 => 
+    array (
+      'widget_class' => 'SubPanelTopSelectButton',
+      'popup_module' => 'stkwd_stock_withdrawal',
+    ),
+  ),
+  'where' => '',
+  'list_fields' => 
+  array (
+    'name' => 
+    array (
+      'vname' => 'LBL_NAME',
+      'widget_class' => 'SubPanelDetailViewLink',
+      'width' => '45%',
+    ),
+    'date_modified' => 
+    array (
+      'vname' => 'LBL_DATE_MODIFIED',
+      'width' => '45%',
+    ),
+    'edit_button' => 
+    array (
+      'vname' => 'LBL_EDIT_BUTTON',
+      'widget_class' => 'SubPanelEditButton',
+      'module' => 'stkwd_stock_withdrawal',
+      'width' => '4%',
+    ),
+    'remove_button' => 
+    array (
+      'vname' => 'LBL_REMOVE',
+      'widget_class' => 'SubPanelRemoveButton',
+      'module' => 'stkwd_stock_withdrawal',
+      'width' => '5%',
+    ),
+  ),
+);

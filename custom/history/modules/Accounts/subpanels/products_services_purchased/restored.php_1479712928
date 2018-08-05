@@ -1,0 +1,39 @@
+<?php
+// created: 2016-11-21 07:22:03
+$layout_defs = array (
+  'name' => 
+  array (
+    'vname' => 'LBL_PRODUCTS_SERVICES',
+    'widget_class' => 'SubPanelDetailViewLink',
+    'target_record_key' => 'product_id',
+    'target_module' => 'AOS_Products',
+    'width' => '25%',
+  ),
+  'parent_name' => 
+  array (
+    'vname' => 'LBL_ACCOUNT_PRODUCT_QUOTE_LINK',
+    'widget_class' => 'SubPanelDetailViewLink',
+    'target_record_key' => 'parent_id',
+    'target_module_key' => 'parent_type',
+  ),
+  'product_qty' => 
+  array (
+    'vname' => 'LBL_PRODUCT_QTY',
+  ),
+  'product_list_price' => 
+  array (
+    'vname' => 'LBL_PRODUCT_LIST_PRICE',
+  ),
+  'product_discount' => 
+  array (
+    'vname' => 'LBL_PRODUCT_DISCOUNT',
+  ),
+  'product_unit_price' => 
+  array (
+    'vname' => 'LBL_ACCOUNT_PRODUCT_SALE_PRICE',
+  ),
+  'product_total_price' => 
+  array (
+    'vname' => 'LBL_PRODUCT_TOTAL_PRICE',
+  ),
+);

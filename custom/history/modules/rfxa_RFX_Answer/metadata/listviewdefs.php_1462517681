@@ -1,0 +1,94 @@
+<?php
+$module_name = 'rfxa_RFX_Answer';
+$OBJECT_NAME = 'RFXA_RFX_ANSWER';
+$listViewDefs [$module_name] = 
+array (
+  'DOCUMENT_NAME' => 
+  array (
+    'width' => '10%',
+    'label' => 'LBL_NAME',
+    'link' => true,
+    'default' => true,
+  ),
+  'SUPPLIER' => 
+  array (
+    'type' => 'relate',
+    'studio' => 'visible',
+    'label' => 'LBL_SUPPLIER',
+    'id' => 'ACCOUNT_ID_C',
+    'link' => true,
+    'width' => '10%',
+    'default' => true,
+  ),
+  'SUPPLIER_NAME' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_SUPPLIER_NAME',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'EMAIL' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_EMAIL',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'EXP_DATE' => 
+  array (
+    'width' => '10%',
+    'label' => 'LBL_LIST_EXP_DATE',
+    'default' => true,
+  ),
+  'STATUS_ID' => 
+  array (
+    'type' => 'enum',
+    'default' => true,
+    'studio' => 'visible',
+    'label' => 'LBL_DOC_STATUS',
+    'width' => '10%',
+  ),
+  'COMPARABLE_VALUE' => 
+  array (
+    'type' => 'currency',
+    'label' => 'LBL_COMPARABLE_VALUE',
+    'currency_format' => true,
+    'width' => '10%',
+    'default' => true,
+  ),
+  'SELECTION_REMARK' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_SELECTION_REMARK',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'DATE_ENTERED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_ENTERED',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'RFXA_ID' => 
+  array (
+    'type' => 'autoincrement',
+    'label' => 'LBL_RFXA_ID',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'MODIFIED_BY_NAME' => 
+  array (
+    'width' => '10%',
+    'label' => 'LBL_MODIFIED_USER',
+    'module' => 'Users',
+    'id' => 'USERS_ID',
+    'default' => false,
+    'sortable' => false,
+    'related_fields' => 
+    array (
+      0 => 'modified_user_id',
+    ),
+  ),
+);
+?>

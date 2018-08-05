@@ -1,0 +1,40 @@
+<?php
+// created: 2016-11-11 12:47:57
+$layout_defs = array (
+  'name' => 
+  array (
+    'vname' => 'LBL_NAME',
+    'widget_class' => 'SubPanelDetailViewLink',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'budget' => 
+  array (
+    'type' => 'currency',
+    'vname' => 'LBL_BUDGET',
+    'currency_format' => true,
+    'width' => '10%',
+    'default' => true,
+  ),
+  'start_date' => 
+  array (
+    'type' => 'date',
+    'vname' => 'LBL_START_DATE',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'end_date' => 
+  array (
+    'type' => 'date',
+    'vname' => 'LBL_END_DATE',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'edit_button' => 
+  array (
+    'width' => '4%',
+    'vname' => 'LBL_EDIT_BUTTON',
+    'default' => true,
+    'widget_class' => 'SubPanelEditButton',
+  ),
+);

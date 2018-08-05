@@ -1,0 +1,212 @@
+<script>
+
+function manageMySQLManagementTabs(clickRef, divId) {
+	
+	$(clickRef).closest("div.mySQL").find('.content').hide();
+	$(clickRef).closest("div.mySQL").find('.'+divId).show();
+	$(clickRef).closest("div.mySQL").find('li.selected').removeClass('selected');
+	$(clickRef).closest("div.mySQL").find('.'+divId+'_Tab').closest('li').addClass('selected');
+	
+}
+
+</script>
+
+<div class='mySQL yui-navset detailview_tabs yui-navset-top'>
+
+	<ul class='yui-nav'>
+		<li class='flowcontrol_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "flowcontrol");'><em>Stroomcontrole</em></a></li>
+	   	<li class='arithmetic_Tab selected'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "arithmetic");'><em>>Wiskundig</em></a></li>
+	   	<li class='aggregate_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "aggregate");'><em>Samenstellen</em></a></li>
+	   	<li class='datetime_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "datetime");'><em>Data</em></a></li>
+	   	<li class='integer_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "integer");'><em>Numeriek</em></a></li>
+	   	<li class='string_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "string");'><em>Karakterreeks</em></a></li>
+	   	<li class='string2_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "string2");'><em>Karakterreeks 2</em></a></li>
+	   	<li class='appendix_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "appendix");'><em>Appendix *</em></a></li>
+	   	<li class='variables_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "variables");'><em>Variabelen</em></a></li>
+	   	<li class='references_Tab' style='display: none'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "references");'><em>Referenties</em></a></li>
+	</ul>
+
+	<div id='asolReportSqlTips' class='yui-content'>
+	
+		<div class='content flowcontrol' style='display: none'>
+		  	<h3>Stroomcontrole</h3>
+		  	<span>Stroomcomtrole bewerkingen geven een waarde terug die afhangt van een bepaalde voorwaarde.</span>
+		  	<table width='100%' class='edit view'>
+		   	  	<tr>
+		 			<th>Bewerking</th><th>Beschrijving</th><th>Voorbeeld</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">IF</a>(Cmp_Expr, TRUE_Val, FALSE_Val)</td><td>Als Cmp_Expr is gelijk aan TRUE geeft terug TRUE_Val, anders geef terug FALSE_Val</td><td>IF(DAY(dag_ingevoerd) &gt; 15, '1e', '2e')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">IFNULL</a>(Cmp_Expr, NULL_Val)</td><td>Als Cmp_Expr is gelijk aan NULL geeft terug NULL_Val, anders geef terug Cmp_Expr</td><td>IFNULL(type, 'Lege waarde')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">NULLIF</a>(Cmp1, Cmp2)</td><td>If (Cmp1 == Cmp2) geeft terug NULL, anders geef terug Cmp1</td><td>NULLIF(datum_ingevoerd, datum_gewijzigd)</td></tr>
+			</table>
+		</div>
+		
+		
+		<div class='content arithmetic'>
+		  	<h3>Wiskundige bewerkingen</h3>
+		  	<span>SQL wiskundige bewerkingen gebruikt u om berekeningen een enkele waarde terug te laten  geven</span>
+		  	<table width='100%' class='edit view'>
+		   	  	<tr>
+		 			<th>Bewerking</th><th>Beschrijving</th><th>Voorbeeld</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">+</a></td><td>Optellen berekening</td><td>hoeveelheid + 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">-</a></td><td>Aftrekken berekening</td><td>hoeveelheid - 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">*</a></td><td>Vermenigvuldigen berekening</td><td>hoeveelheid * 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">/</a></td><td>Delen door berekening</td><td>hoeveelheid / 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">%</a></td><td>Percentage berekening</td><td>hoeveelheid % 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DIV</a></td><td>Geheel getal delen</td><td>hoeveelheid DIV 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">-</a>(kolomNaam)</td><td>Unaire minus Wijzigt het teken van de variabele</td><td>-(hoeveelheid)</td></tr>
+			</table>
+		</div>
+			
+			
+		<div class='content aggregate' style='display: none'>
+		  	<h3>Samenstellen functies</h3>
+		  	<span>SQL Samenstellen functien geven een enkele waarde terug, berekend met de waardes in een kolom</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+					<th>Functie</th><th>Beschrijving</th><th>Voorbeeld</th>
+				</tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">AVG</a>(kolomNaam)</td><td>Geeft de gemiddelde waarde terug</td><td>AVG(hoeveelheid)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">COUNT</a>(kolomNaam)</td><td>Geeft het aantal regels terug</td><td>COUNT(id)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">FIRST</a>(kolomNaam)</td><td>Geeft de eerste waarde terug</td><td>FIRST(naam)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LAST</a>(kolomNaam)</td><td>Geeft de laatste waarde terug</td><td>LAST(naam)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">MAX</a>(kolomNaam)</td><td>Geeft de grootste waarde terug</td><td>MAX(datum_ingevoerd)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">MIN</a>(kolomNaam)</td><td>Geeft de kleinste waarde terug</td><td>MIN(datum_ingevoerd)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">SUM</a>(kolomNaam)</td><td>Geeft de opgetelde waarde terug</td><td>SUM(hoeveelheid)</td></tr>
+			</table>
+		</div>
+			
+			
+			
+		<div class='content datetime' style='display: none'>
+		  	<h3>Datumtijd functies</h3>
+		  	<span>SQL Datumtijd functies geven een datum/tijd waarde terug, op basis van de ingevoerde waarde.</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+			  		<th>Functie</th><th>Beschrijving</th><th>Voorbeeld</th>
+				</tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">NOW</a>()</td><td>Geeft de huidige systeemdatum en -tijd terug</td><td>NOW()</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CURDATE</a>()</td><td>Geeft de huidige waarde terug</td><td>CURDATE()</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CURTIME</a>()</td><td>Geeft de huidige tijd terug</td><td>CURTIME()</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATE</a>(datumKarakterreeks)</td><td>Haalt de datum uit een datumtijd</td><td>DATE('2010-01-01 18:00:00')</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">EXTRACT</a>(eenheid* FROM datumA)<span class='required'></span></td><td>Geeft een enkel deel van een datumtijd</td><td>EXTRACT(MONTH FROM datum_ingevoerd)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATE_ADD</a>(datumA, INTERVAL tijdseenheid*)<span class='required'></span></td><td>Voeg een specifieke tijdsinterval toe aan een datum</td><td>DATE_ADD(datum_ingevoerd, INTERVAL 4 WEEK)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATE_SUB</a>(datumA, INTERVAL tijdseenheid*)<span class='required'></span></td><td>Verwijdert een specifieke tijdsinterval van een datum</td><td>DATE_SUB(datum_ingevoerd, INTERVAL 2 DAY)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATEDIFF</a>(datumA, datumB)</td><td>Geeft het aantal dagen tussen twee data</td><td>DATEDIFF(datum_ingevoerd, '2010-01-01')</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATE_FORMAT</a>(datumA, formaat*)<span class='required'></span></td><td>Geeft de datumtijd data in verschillende formaten weer</td><td>DATE_FORMAT(datum_ingevoerd, '%d-%m-%Y')</td></tr>
+			</table>
+		</div>
+			
+			
+		<div class='content integer' style='display: none'>
+		  	<h3>Numerieke functies</h3>
+		  	<span>SQL numerieke functies geven een enkele waarde terug, gebaseerdn op de numerieke ingevoerde waarde</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+			  		<th>Functie</th><th>Beschrijving</th><th>Voorbeeld</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">BIN</a>(intA)</td><td>Geeft een binaire waarde terug voor IntA</td><td>BIN(9)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CHAR</a>(numA,... [USING charset])</td><td>Geeft de karakterwaarde terug van de ingegeven hele waardes</td><td>CHAR(0xC3BC USING utf8)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CONV</a>(numA, vanBase, naarBase)</td><td>Converteer getallen tussen verschillende bases</td><td>CONV(8, 10, 2)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">ELT</a>(intA, str1, str2, str3,...)</td><td>Geeft str1 als intA=1 en str2 als intA=2 enzovoorts</td><td>SELECT(2, 'a', 'b', 'c')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">HEX</a>(intA)</td><td>Geeft de hexadecimale representatie van intA</td><td>HEX(hoeveelheid)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">OCT</a>(intA)</td><td>Geeft de octale representatie terug van intA</td><td>OCT(15)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">ROUND</a>(numA, decimalen)</td><td>Rondt een numeriek veld af naar het aantal gespecificeerde decimalen</td><td>ROUND(3.14159, 4)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">FORMAT</a>(numA, decimalen)</td><td>Formatteert het getal naar de template '#,###.##', afgerond op decimalen</td><td>FORMAT(hoeveelheid, 2)</td></tr>
+			</table>	
+		</div>
+			
+			
+		<div class='content string' style='display: none'>
+		  	<h3>Karakterreeks functies</h3>
+		  	<span>SQL karakterreeks functies geeft een enkele karakterreeks terug, gebaseerd op de ingevoerde waarde</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+			  		<th>Functie</th><th>Beschrijving</th><th>Voorbeeld</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">BIT_LENGTH</a>(strA)</td><td>Geeft de lengte van de karakterreeks terug in bits</td><td>BIT_LENGTH('a')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CHAR_LENGTH</a>(strA)</td><td>Geeft de lengte van een tekstveld terug</td><td>CHAR_LENGTH(naam)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CHARACTER_LENGTH</a>(strA)</td><td>Geeft de lengte van een tekstveld terug</td><td>CHARACTER_LENGTH('abcdefg')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LENGTH/OCTET_LENGTH</a>(strA)</td><td>Geeft de lengte van een tekstveld in bytes terug</td><td>LENGTH('AlineaSol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CHARINDEX</a>(strA, strB [,start])</td><td>Geeft de startpositie van een karakter strA in ReeksB</td><td>CHARINDEX('Sol', 'AlineaSol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">ASCII</a>(strA)</td><td>Geeft de ASCII code waarde terug van een toetsenbord karaktertoets</td><td>ASCII('A')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">UCASE/UPPER</a>(strA)</td><td>Converteert een veld naar hoofdletters</td><td>UCASE('alineasol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LCASE/LOWER</a>(strA)</td><td>Converteert een veld naar kleine letters</td><td>LCASE(naam)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">MID</a>(strA, start[, lengte])</td><td>Haal karakters uit een tekstveld</td><td>MID(description, 5, 10)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CONCAT</a>(strA, strB,....)</td><td>Geef samengevoegde karakterreeksen</td><td>CONCAT('Alinea', 'Sol')</td></tr>
+			</table>
+		</div>
+			
+			
+			
+		<div class='content string2' style='display: none'>
+		  	<h3>Karakterreeks functies 2</h3>
+		  	<span>SQL karakterreeks functies geeft een enkele karakterreeks terug, gebaseerd op de ingevoerde waarde</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+			  		<th>Functie</th><th>Beschrijving</th><th>Voorbeeld</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CONCAT_WS</a>(scheidingsteken, strA, strB,....)</td><td>Geef samengevoegde karakterreeksen terug met scheidingsteken</td><td>CONCAT_WS(' ', naam, achterNaam)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">SPACE</a>(int)</td><td>Geeft spaties in SQL queries terug</td><td>SPACE(2)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">REPLACE</a>(strA, strB, strC)</td><td>Vervangt alle keren dat strB voorkomt in strA met met strC</td><td>REPLACE(beschrijving, 'a', 'z')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">INSERT</a>(strA, pos, len, nieuwString)</td><td>Vervangt in straA, nieuwStr karakterreeks</td><td>INSERT(naam, 0, 1, 'Asol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">INSTR</a>(strA,subStr)</td><td>Geeft de positie van de eerste keer dat subStr voorkomt in strA</td><td>INSTR(beschrijving, 'AlineaSol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LEFT</a>(strA, int)</td><td>Geeft het linkergedeelte van strA met int aantal karakters</td><td>LEFT(naam, 5)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">RIGHT</a>(strA, int)</td><td>Geeft het rechtergedeelte van strA met int aantal karakters</td><td>RIGHT('AlineaSol', 3)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">SUBSTRING</a>(strA, startIndex, lengte)</td><td>Geeft een deel van strA terug</td><td>SUBSTRING(naam, 0, 10)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">REVERSE</a>(strA)</td><td>Geeft het karakterreeks omgekeerd terug</td><td>REVERSE(naam)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LTRIM</a>(strA)</td><td>Geeft strA terug na verwijdern van blanco tekens aan de linker zijde</td><td>LTRIM('     Z')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">RTRIM</a>(strA)</td><td>Geeft strA terug na verwijdern van blanco tekens aan de rechter zijde</td><td>RTRIM('A     ')</td></tr>
+			</table>
+		</div>
+				
+				
+		<div class='content appendix' style='display: none'>
+		  	<h3>Appendix</h3>
+		  	<span>MySQL gebruikte constanten</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+		  			<th>Datumtijd eenheden</th><th>Datumtijd formaat</th>
+		  		</tr>
+		  		<tr>
+			  		<td style='vertical-align: top'>MICROSECONDE<br>SECONDE<br>MINUUT<br>UUR<br>DAG<br>WEEK<br>MAAND<br>KWARTAAL<br>JAAR<br>SECONDE_MICROSECONDE<br>MINUUT_MICROSECONDE<br>MINUUT_SECONDE<br>UUR_MICROSECONDE<br>UUR_SECONDE<br>UUR_MINuUT<br>DAG_MICROSECONDE<br>DAG_SECONDE<br>DAG_MINUUT<br>DAG_UUR<br>JAAR_MAAND</td>
+			  		<td style='vertical-align: top'><b>%a</b> Afgekorte weekdag naam, <b>%b</b> Afgekorte maandnaam<br><b>%c</b> Maand, numeriek, <b>%D</b> Dag van de maand met Engels achtervoegsel<br><b>%d</b> Dag van de maand, numeriek (00-31), <b>%e</b> Dag van de maand, numeriek (0-31)<br><b>%f</b> Microsecondes, <b>%H</b> Uur (00-23)<br><b>%h</b> Uur (01-12), <b>%I</b> Uur (01-12)<br><b>%i</b> Minuten, numeriek (00-59), <b>%j</b> Dag van het jaar (001-366)<br><b>%k</b> Uur (0-23), %l Uur (1-12)<br><b>%M</b> Maandnaam, <b>%m</b> Maand, numeriek (00-12)<br><b>%p</b> AM of PM, <b>%r</b> Tijd, 12-uur (uu:mm:ss AM of PM)<br><b>%S</b> Secondes (00-59), <b>%s</b> Secondes (00-59)<br><b>%T</b> Tijd, 24-uur (uu:mm:ss)<br><b>%U</b> Week (00-53) waar zondag de eerste dag van de week is<br><b>%u</b> Week (00-53) waar maandag de eerste dag van de week is<br><b>%V</b> Week (01-53) waar zondag de eerste dag van de week is, gebruikt met <b>%X</b><br><b>%v</b> Week (01-53) waar maandag de eerste dag van de week is, gebruikt met <b>%x</b><br><b>%W</b> Weekdag naam, <b>%w</b> Dag van de week (0=Zondag, 6=Zaterdag)<br><b>%X</b> Jaar van de week waar zondag de eerste dag van de week is, vier getallen, gebruikt met <b>%V</b><br><b>%x</b> Jaar van de week waar maandag de eerste dag van de week is, vier getallen, gebruikt met <b>%v</b><br><b>%Y</b> Jaar, vier getallen, <b>%y</b> Jaar, twee getallen</td>
+		  		</tr>
+			</table>
+		
+		</div>
+			
+		
+		<div class='content variables' style='display: none'>
+		  	<h3>Variabelen</h3>
+		  	<span>Variabelen definities gebruikt door AlineaSol Reports. De variabelen van gerelateerde en/of eigen velden kunnen alleen worden gebruikt indien tenminste een veld van die gerelateerde/eigen tabel is toegevoegd aan het rapport.<br></span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+		  			<th>Variabele type</th><th>Beschrijving</th><th>Voorbeeld</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${this}</a></td><td>Refereert aan de waarde van het huidige veld</td><td>${this}</td></tr>
+			  	<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${bean->Veld}</a></td><td>Refereert aan een veld van de huidige rapportagemodule</td><td>${bean->naam}</td></tr>
+			  	<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${bean_cstm->Veld_c}</a></td><td>Refereert aan een eigen veld van de huidige rapportagemodule</td><td>${bean_cstm->account_type_c}</td></tr>
+			  	<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${ModName->LinkField->RelatedField}</a></td><td>Refereert aan de waarde van een gerelateerd veld</td><td>${Accounts->account_id_c->name}</td></tr>
+			  	<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${ModName_Cstm->LinkField->RelatedField_c}</a></td><td>Refereert aan de waarde van een gerelateerd eigen veld</td><td>${Accounts_Cstm->account_id_c->account_type_c}</td></tr>
+			</table>
+		</div>
+	
+	
+		<div class='content references' style='display: none'>
+		  	<h3>Referenties</h3>
+		  	<span>Referenties worden gebruikt om bestaande veld te vervangen rapport met elke wijziging die eraan verbonden zijn, zoals SQL-code of Agregated functies.<br/>Rekening mee dat PHP code wordt uitgevoerd na de query processing, dus het is niet beschikbaar op dit moment.</span>
+		  	<table width='100%' class='edit view'>
+		  		<thead>
+		  			<th width="15%">Referentiebron</th>
+		  			<th>Referentiecode</th>
+		  			<th>Veldalias</th>
+		  		</thead>
+		  		<tbody></tbody>
+		  	</table>
+		</div>
+	
+	</div>
+
+</div>

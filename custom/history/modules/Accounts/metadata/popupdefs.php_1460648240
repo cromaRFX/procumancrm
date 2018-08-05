@@ -1,0 +1,112 @@
+<?php
+$popupMeta = array (
+    'moduleMain' => 'Account',
+    'varName' => 'ACCOUNT',
+    'orderBy' => 'name',
+    'whereClauses' => array (
+  'name' => 'accounts.name',
+  'shipping_address_city' => 'accounts.shipping_address_city',
+  'shipping_address_state' => 'accounts.shipping_address_state',
+  'shipping_address_postalcode' => 'accounts.shipping_address_postalcode',
+  'shipping_address_country' => 'accounts.shipping_address_country',
+),
+    'searchInputs' => array (
+  0 => 'name',
+  9 => 'shipping_address_city',
+  10 => 'shipping_address_state',
+  11 => 'shipping_address_postalcode',
+  12 => 'shipping_address_country',
+),
+    'create' => array (
+  'formBase' => 'AccountFormBase.php',
+  'formBaseClass' => 'AccountFormBase',
+  'getFormBodyParams' => 
+  array (
+    0 => '',
+    1 => '',
+    2 => 'AccountSave',
+  ),
+  'createButton' => 'LNK_NEW_ACCOUNT',
+),
+    'searchdefs' => array (
+  'name' => 
+  array (
+    'name' => 'name',
+    'width' => '10%',
+  ),
+  'shipping_address_city' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_SHIPPING_ADDRESS_CITY',
+    'width' => '10%',
+    'name' => 'shipping_address_city',
+  ),
+  'shipping_address_state' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_SHIPPING_ADDRESS_STATE',
+    'width' => '10%',
+    'name' => 'shipping_address_state',
+  ),
+  'shipping_address_postalcode' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_SHIPPING_ADDRESS_POSTALCODE',
+    'width' => '10%',
+    'name' => 'shipping_address_postalcode',
+  ),
+  'shipping_address_country' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_SHIPPING_ADDRESS_COUNTRY',
+    'width' => '10%',
+    'name' => 'shipping_address_country',
+  ),
+),
+    'listviewdefs' => array (
+  'NAME' => 
+  array (
+    'width' => '40%',
+    'label' => 'LBL_LIST_ACCOUNT_NAME',
+    'link' => true,
+    'default' => true,
+    'name' => 'name',
+  ),
+  'ACCOUNT_TYPE' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_TYPE',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'account_type',
+  ),
+  'BILLING_ADDRESS_CITY' => 
+  array (
+    'width' => '10%',
+    'label' => 'LBL_LIST_CITY',
+    'default' => true,
+    'name' => 'billing_address_city',
+  ),
+  'BILLING_ADDRESS_STATE' => 
+  array (
+    'width' => '7%',
+    'label' => 'LBL_STATE',
+    'default' => true,
+    'name' => 'billing_address_state',
+  ),
+  'BILLING_ADDRESS_COUNTRY' => 
+  array (
+    'width' => '10%',
+    'label' => 'LBL_COUNTRY',
+    'default' => true,
+    'name' => 'billing_address_country',
+  ),
+  'ASSIGNED_USER_NAME' => 
+  array (
+    'width' => '2%',
+    'label' => 'LBL_LIST_ASSIGNED_USER',
+    'default' => true,
+    'name' => 'assigned_user_name',
+  ),
+),
+);

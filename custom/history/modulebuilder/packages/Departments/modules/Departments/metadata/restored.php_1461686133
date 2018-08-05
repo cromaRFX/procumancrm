@@ -1,0 +1,45 @@
+<?php
+// created: 2016-04-26 15:55:28
+$layout_defs = array (
+  'top_buttons' => 
+  array (
+    0 => 
+    array (
+      'widget_class' => 'SubPanelTopCreateButton',
+    ),
+    1 => 
+    array (
+      'widget_class' => 'SubPanelTopSelectButton',
+      'popup_module' => 'dprt_Departments',
+    ),
+  ),
+  'where' => '',
+  'list_fields' => 
+  array (
+    'name' => 
+    array (
+      'vname' => 'LBL_NAME',
+      'widget_class' => 'SubPanelDetailViewLink',
+      'width' => '45%',
+    ),
+    'date_modified' => 
+    array (
+      'vname' => 'LBL_DATE_MODIFIED',
+      'width' => '45%',
+    ),
+    'edit_button' => 
+    array (
+      'vname' => 'LBL_EDIT_BUTTON',
+      'widget_class' => 'SubPanelEditButton',
+      'module' => 'dprt_Departments',
+      'width' => '4%',
+    ),
+    'remove_button' => 
+    array (
+      'vname' => 'LBL_REMOVE',
+      'widget_class' => 'SubPanelRemoveButton',
+      'module' => 'dprt_Departments',
+      'width' => '5%',
+    ),
+  ),
+);

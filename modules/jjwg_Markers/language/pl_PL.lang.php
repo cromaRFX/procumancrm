@@ -1,0 +1,44 @@
+<?php
+
+$mod_strings['LBL_ASSIGNED_TO_ID'] = 'ID Przydzielonego Użytkownika';
+$mod_strings['LBL_ASSIGNED_TO_NAME'] = 'Użytkownik';
+$mod_strings['LBL_ID'] = 'ID';
+$mod_strings['LBL_DATE_ENTERED'] = 'Wprowadzona Data';
+$mod_strings['LBL_DATE_MODIFIED'] = 'Data Modyfikacji:';
+$mod_strings['LBL_MODIFIED'] = 'Zmodyfikowane Przez';
+$mod_strings['LBL_MODIFIED_ID'] = 'ID Modyfikującego';
+$mod_strings['LBL_MODIFIED_NAME'] = 'Imię Modyfikującego';
+$mod_strings['LBL_CREATED'] = 'Utworzone przez';
+$mod_strings['LBL_CREATED_ID'] = 'ID Tworzącego';
+$mod_strings['LBL_DESCRIPTION'] = 'Opis';
+$mod_strings['LBL_DELETED'] = 'Usunięte';
+$mod_strings['LBL_NAME'] = 'Nazwa';
+$mod_strings['LBL_CREATED_USER'] = 'Utworzomy przez Użytkownika';
+$mod_strings['LBL_MODIFIED_USER'] = 'Zmodyfikowany przez Użytkownika';
+$mod_strings['LBL_LIST_NAME'] = 'Nazwa';
+$mod_strings['LBL_LIST_FORM_TITLE'] = 'Markers List';
+$mod_strings['LBL_MODULE_NAME'] = 'Znaczniki';
+$mod_strings['LBL_MODULE_TITLE'] = 'Znaczniki';
+$mod_strings['LBL_HOMEPAGE_TITLE'] = 'Moje znaczniki';
+$mod_strings['LNK_NEW_RECORD'] = 'Utwórz Znaczniki';
+$mod_strings['LNK_LIST'] = 'View Markers';
+$mod_strings['LNK_IMPORT_JJWG_MARKERS'] = 'Import Markers';
+$mod_strings['LBL_SEARCH_FORM_TITLE'] = 'Search Markers';
+$mod_strings['LBL_HISTORY_SUBPANEL_TITLE'] = 'Historia';
+$mod_strings['LBL_ACTIVITIES_SUBPANEL_TITLE'] = 'Działania';
+$mod_strings['LBL_JJWG_MARKERS_SUBPANEL_TITLE'] = 'Znaczniki';
+$mod_strings['LBL_NEW_FORM_TITLE'] = 'New Markers';
+$mod_strings['LBL_CITY'] = 'Miasto';
+$mod_strings['LBL_STATE'] = 'Województwo';
+$mod_strings['LBL_COUNTRY'] = 'Kraj';
+$mod_strings['LBL_JJWG_MAPS_LAT'] = 'Szerokości geograficznej';
+$mod_strings['LBL_JJWG_MAPS_LNG'] = 'Długość geograficzna';
+$mod_strings['LBL_MARKER_IMAGE'] = 'Marker Image Type';
+$mod_strings['LBL_LIST_ASSIGNED_USER'] = 'Przypisany do';
+$mod_strings['LBL_MARKER_MAP'] = 'Marker Map';
+
+$mod_strings['LBL_MARKER_MARKER_POSITION'] = 'Marker Position (Latitude, Longitude):';
+$mod_strings['LBL_MARKER_CLOSEST_MATCHING_ADDRESS'] = 'Closest Matching Address:';
+$mod_strings['LBL_MARKER_MARKER_STATUS'] = 'Marker Status';
+$mod_strings['LBL_MARKER_EDIT_DESCRIPTION'] = 'Click and drag the marker.';
+$mod_strings['LBL_JJWG_MAPS_JJWG_MARKERS_FROM_JJWG_MAPS_TITLE'] = 'Mapy';

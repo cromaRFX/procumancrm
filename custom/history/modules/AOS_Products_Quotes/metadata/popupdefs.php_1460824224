@@ -1,0 +1,23 @@
+<?php
+$popupMeta = array (
+    'moduleMain' => 'AOS_Products_Quotes',
+    'varName' => 'AOS_Products_Quotes',
+    'orderBy' => 'aos_products_quotes.name',
+    'whereClauses' => array (
+  'name' => 'aos_products_quotes.name',
+),
+    'searchInputs' => array (
+  1 => 'name',
+),
+    'searchdefs' => array (
+  'name' => 
+  array (
+    'type' => 'text',
+    'link' => true,
+    'label' => 'LBL_NAME',
+    'sortable' => false,
+    'width' => '10%',
+    'name' => 'name',
+  ),
+),
+);

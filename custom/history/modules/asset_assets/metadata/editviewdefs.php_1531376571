@@ -1,0 +1,81 @@
+<?php
+$module_name = 'asset_assets';
+$viewdefs [$module_name] = 
+array (
+  'EditView' => 
+  array (
+    'templateMeta' => 
+    array (
+      'maxColumns' => '2',
+      'widths' => 
+      array (
+        0 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+        1 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+      ),
+      'useTabs' => false,
+      'tabDefs' => 
+      array (
+        'DEFAULT' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+      ),
+      'syncDetailEditViews' => true,
+    ),
+    'panels' => 
+    array (
+      'default' => 
+      array (
+        1 => 
+        array (
+          0 => 
+          array (
+            'name' => 'asset_main_no_text_c',
+            'label' => 'LBL_ASSET_MAIN_NO_TEXT',
+          ),
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'inventory_number_c',
+            'label' => 'LBL_INVENTORY_NUMBER',
+          ),
+          1 => 
+          array (
+            'name' => 'description_2_c',
+            'label' => 'LBL_DESCRIPTION_2',
+          ),
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'description',
+            'comment' => 'Full text of the note',
+            'label' => 'LBL_DESCRIPTION',
+          ),
+        ),
+        6 => 
+        array (
+          1 => 
+          array (
+            'name' => 'evaluation_gp_5_c',
+            'label' => 'LBL_EVALUATION_GP_5',
+          ),
+        ),
+      ),
+    ),
+  ),
+);
+;
+?>

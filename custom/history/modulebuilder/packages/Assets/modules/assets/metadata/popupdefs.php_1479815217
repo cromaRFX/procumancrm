@@ -1,0 +1,25 @@
+<?php
+$popupMeta = array (
+    'moduleMain' => 'asset_assets',
+    'varName' => 'asset_assets',
+    'orderBy' => 'asset_assets.name',
+    'whereClauses' => array (
+  'name' => 'asset_assets.name',
+),
+    'searchInputs' => array (
+  0 => 'asset_assets_number',
+  1 => 'name',
+  2 => 'priority',
+  3 => 'status',
+),
+    'listviewdefs' => array (
+  'NAME' => 
+  array (
+    'type' => 'name',
+    'link' => true,
+    'label' => 'LBL_NAME',
+    'width' => '10%',
+    'default' => true,
+  ),
+),
+);

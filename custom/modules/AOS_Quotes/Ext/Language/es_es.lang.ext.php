@@ -1,0 +1,13 @@
+<?php 
+ //WARNING: The contents of this file are auto-generated
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_GLA_GL_ACCOUNTS_AOS_QUOTES_FROM_GLA_GL_ACCOUNTS_TITLE'] = 'GL Accounts';
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_AOS_QUOTES_DOCUMENTS_1_FROM_DOCUMENTS_TITLE'] = 'Documents';
+$mod_strings['LBL_COSTC_COST_CENTER_AOS_QUOTES_1_FROM_COSTC_COST_CENTER_TITLE'] = 'Cost Center';
+
+?>

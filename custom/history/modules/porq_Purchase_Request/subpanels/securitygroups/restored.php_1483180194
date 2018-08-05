@@ -1,0 +1,22 @@
+<?php
+// created: 2016-12-31 10:29:49
+$layout_defs = array (
+  'name' => 
+  array (
+    'vname' => 'LBL_NAME',
+    'widget_class' => 'SubPanelDetailViewLink',
+    'width' => '9999%',
+  ),
+  'description' => 
+  array (
+    'vname' => 'LBL_DESCRIPTION',
+    'width' => '9999%',
+    'sortable' => false,
+  ),
+  'remove_button' => 
+  array (
+    'widget_class' => 'SubPanelRemoveButton',
+    'module' => 'SecurityGroups',
+    'width' => '5%',
+  ),
+);

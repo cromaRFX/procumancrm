@@ -1,0 +1,211 @@
+<script>
+
+function manageMySQLManagementTabs(clickRef, divId) {
+	
+	$(clickRef).closest("div.mySQL").find('.content').hide();
+	$(clickRef).closest("div.mySQL").find('.'+divId).show();
+	$(clickRef).closest("div.mySQL").find('li.selected').removeClass('selected');
+	$(clickRef).closest("div.mySQL").find('.'+divId+'_Tab').closest('li').addClass('selected');
+	
+}
+
+</script>
+
+<div class='mySQL yui-navset detailview_tabs yui-navset-top'>
+
+	<ul class='yui-nav'>
+		<li class='flowcontrol_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "flowcontrol");'><em>Control de Flujo</em></a></li>
+	   	<li class='arithmetic_Tab selected'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "arithmetic");'><em>Aritmética</em></a></li>
+	   	<li class='aggregate_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "aggregate");'><em>Agregados</em></a></li>
+	   	<li class='datetime_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "datetime");'><em>Fechas</em></a></li>
+	   	<li class='integer_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "integer");'><em>Números</em></a></li>
+	   	<li class='string_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "string");'><em>Cadenas</em></a></li>
+	   	<li class='string2_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "string2");'><em>Cadenas 2</em></a></li>
+	   	<li class='appendix_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "appendix");'><em>Apéndice *</em></a></li>
+	   	<li class='variables_Tab'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs(this, "variables");'><em>Variables</em></a></li>
+	   	<li class='references_Tab' style='display: none'><a href='javascript: void(0);' onClick='manageMySQLManagementTabs("references");'><em>Referencias</em></a></li>
+	</ul>
+
+	<div id='asolReportSqlTips' class='yui-content'>
+
+		<div class='content flowcontrol' style='display: none'>
+		  	<h3>Control de Flujo</h3>
+		  	<span>Los Operadores de Control de Flujo devuelven un valor dependiendo del resultado de una condición dada.</span>
+		  	<table width='100%' class='edit view'>
+		   	  	<tr>
+		 			<th>Operador</th><th>Descripción</th><th>Ejemplo</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">IF</a>(Cmp_Expr, TRUE_Val, FALSE_Val)</td><td>Si Cmp_Expr es TRUE devuelve TRUE_Val, sino devuelve FALSE_Val</td><td>IF(DAY(date_entered) > 15, '1st', '2nd')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">IFNULL</a>(Cmp_Expr, NULL_Val)</td><td>Si Cmp_Expr es NULL devuelve NULL_Val, sino devuelve Cmp_Expr</td><td>IFNULL(type, 'Empty Value')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">NULLIF</a>(Cmp1, Cmp2)</td><td>Si (Cmp1 == Cmp2) devuelve NULL, sino devuelve Cmp1</td><td>NULLIF(date_entered, date_modified)</td></tr>
+			</table>
+		</div>
+		
+		
+		<div class='content arithmetic'>
+		  	<h3>Operadores Aritméticos</h3>
+		  	<span>Los Operadores Aritméticos de SQL se utilizan para hacer operaciones aritméticas que devuelven un solo valor.</span>
+		  	<table width='100%' class='edit view'>
+		   	  	<tr>
+		 			<th>Operador</th><th>Descripción</th><th>Ejemplo</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">+</a></td><td>Operador Suma</td><td>amount + 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">-</a></td><td>Operador Resta</td><td>amount - 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">*</a></td><td>Operador Multiplicación</td><td>amount * 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">/</a></td><td>Operador División</td><td>amount / 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">%</a></td><td>Operador Resto</td><td>amount % 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DIV</a></td><td>División Entera</td><td>amount DIV 2</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">-</a>(columnName)</td><td>Menos unario, cambia el signo del argumento</td><td>-(amount)</td></tr>
+			</table>
+		</div>
+			
+			
+		<div class='content aggregate' style='display: none'>
+		  	<h3>Funciones de Agregados</h3>
+		  	<span>Las Funciones de Agregados de SQL devuelven un solo valor, calculado a partir de los valores de una columna.</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+					<th>Función</th><th>Descripción</th><th>Ejemplo</th>
+				</tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">AVG</a>(columnName)</td><td>Devuelve la media aritmética</td><td>AVG(amount)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">COUNT</a>(columnName)</td><td>Devuelve el número de filas</td><td>COUNT(id)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">FIRST</a>(columnName)</td><td>Devuelve el primer valor</td><td>FIRST(name)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LAST</a>(columnName)</td><td>Devuelve el último valor</td><td>LAST(name)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">MAX</a>(columnName)</td><td>Devuelve el mayor valor</td><td>MAX(date_entered)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">MIN</a>(columnName)</td><td>Devuelve el menor valor</td><td>MIN(date_entered)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">SUM</a>(columnName)</td><td>Devuelve la suma</td><td>SUM(amount)</td></tr>
+			</table>
+		</div>
+			
+			
+		<div class='content datetime' style='display: none'>
+		  	<h3>Funciones sobre Fechas</h3>
+		  	<span>Las Funciones sobre Fechas de SQL devuleven una fecha, basado en el valor de entrada.</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+			  		<th>Función</th><th>Descripción</th><th>Ejemplo</th>
+				</tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">NOW</a>()</td><td>Devuelve la fecha y hora actual del sistema</td><td>NOW()</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CURDATE</a>()</td><td>Devuelve la fecha actual</td><td>CURDATE()</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CURTIME</a>()</td><td>Devuelve la hora actual</td><td>CURTIME()</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATE</a>(dateString)</td><td>Obtiene la parte fecha de una expresion Fecha/Hora</td><td>DATE('2010-01-01 18:00:00')</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">EXTRACT</a>(unit<span class='required'>*</span> FROM dateA)</td><td>Devuelve una parte unitaria de una Fecha/Hora</td><td>EXTRACT(MONTH FROM date_entered)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATE_ADD</a>(dateA, INTERVAL time unit<span class='required'>*</span>)</td><td>Suma un determinado intervalo de tiempo a dateA</td><td>DATE_ADD(date_entered, INTERVAL 4 WEEK)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATE_SUB</a>(dateA, INTERVAL time unit<span class='required'>*</span>)</td><td>Resta un determinado intervalo de tiempo a dateA</td><td>DATE_SUB(date_entered, INTERVAL 2 DAY)</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATEDIFF</a>(dateA, dateB)</td><td>Devuelve el número de días entre dos fechas</td><td>DATEDIFF(date_entered, '2010-01-01')</td></tr>
+				<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">DATE_FORMAT</a>(dateA, format<span class='required'>*</span>)</td><td>Muestra fechas en diferentes formatos</td><td>DATE_FORMAT(date_entered, '%d-%m-%Y')</td></tr>
+			</table>
+		</div>
+			
+			
+		<div class='content integer' style='display: none'>
+		  	<h3>Fuciones sobre Números</h3>
+		  	<span>Las Funciones sobre Números de SQL devuelven un solo valor, basado en el valor numérico de entrada.</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+			  		<th>Función</th><th>Descripción</th><th>Ejemplo</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">BIN</a>(intA)</td><td>Devuelve el valor binario para IntA</td><td>BIN(9)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CHAR</a>(numA,... [USING charset])</td><td>Devuelve el valor del caracter para un número entero dado</td><td>CHAR(0xC3BC USING utf8)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CONV</a>(numA, fromBase, toBase)</td><td>Convierte números entre distintas bases</td><td>CONV(8, 10, 2)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">ELT</a>(intA, str1, str2, str3,...)</td><td>Devuelve str1 si intA=1 y str2 si intA=2... etcétera</td><td>SELECT(2, 'a', 'b', 'c')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">HEX</a>(intA)</td><td>Devuelve la representaciñon hexadecimal para intA</td><td>HEX(amount)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">OCT</a>(intA)</td><td>Devuelve la representaciñon hexadecimal para intA</td><td>OCT(15)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">ROUND</a>(numA, decimals)</td><td>Redondea un campo numérico al número de decimales especificado</td><td>ROUND(3.14159, 4)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">FORMAT</a>(numA, decimals)</td><td>Formatea un número en base a la plantilla '#,###.##', Redondeando decimales</td><td>FORMAT(amount, 2)</td></tr>
+			</table>	
+		</div>
+			
+			
+		<div class='content string' style='display: none'>
+		  	<h3>Funciones sobre Cadenas</h3>
+		  	<span>Las Funciones sobre Cadenas de SQL devuelven un único valor de cadena, basado en el valor de entrada.</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+			  		<th>Función</th><th>Descripción</th><th>Ejemplo</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">BIT_LENGTH</a>(strA)</td><td>Devuelve el tamaño de la cadena en bits</td><td>BIT_LENGTH('a')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CHAR_LENGTH</a>(strA)</td><td>Devuelve el tamaño de una cadena</td><td>CHAR_LENGTH(name)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CHARACTER_LENGTH</a>(strA)</td><td>Devuelve el tamaño de una cadena</td><td>CHARACTER_LENGTH('abcdefg')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LENGTH/OCTET_LENGTH</a>(strA)</td><td>Devuelve el tamaño de una cadena en bytes</td><td>LENGTH('AlineaSol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CHARINDEX</a>(strA, strB [,start])</td><td>Devuelve la posición inicial de la cadena strA dentro de StringB</td><td>CHARINDEX('Sol', 'AlineaSol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">ASCII</a>(strA)</td><td>Devuelve el código de tecla ASCII</td><td>ASCII('A')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">UCASE/UPPER</a>(strA)</td><td>Convierte un campo a Mayúsculas</td><td>UCASE('alineasol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LCASE/LOWER</a>(strA)</td><td>Convierte un campo a Minúsculas</td><td>LCASE(name)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">MID</a>(strA, start[, length])</td><td>Extrae carateres de un campo tipo cadena</td><td>MID(description, 5, 10)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CONCAT</a>(strA, strB,....)</td><td>Devuelve cadenas concatenadas</td><td>CONCAT('Alinea', 'Sol')</td></tr>
+			</table>
+		</div>
+			
+			
+			
+		<div class='content string2' style='display: none'>
+		  	<h3>Funciones sobre Cadenas 2</h3>
+		  	<span>Las Funciones sobre Cadenas de SQL devuelven un único valor de cadena, basado en el valor de entrada.</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+			  		<th>Función</th><th>Descripción</th><th>Ejemplo</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">CONCAT_WS</a>(separator, strA, strB,....)</td><td>Devuelve cadenas concatenadas con caracter separador</td><td>CONCAT_WS(' ', name, surName)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">SPACE</a>(int)</td><td>Devuelve espacios la sentencia SQL</td><td>SPACE(2)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">REPLACE</a>(strA, strB, strC)</td><td>Reemplaza todas las apariciones de strB en strA con strC</td><td>REPLACE(description, 'a', 'z')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">INSERT</a>(strA, pos, len, newStr)</td><td>Sustituye dentro de strA, la cadena newStr</td><td>INSERT(name, 0, 1, 'Asol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">INSTR</a>(strA,subStr)</td><td>Devuelve la posición de la primera aparición de subStr en strA</td><td>INSTR(description, 'AlineaSol')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LEFT</a>(strA, int)</td><td>Devuelve la parte izquierda de strA con int número de caracteres</td><td>LEFT(name, 5)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">RIGHT</a>(strA, int)</td><td>Devuelve la parte derecha de strA con int número de caracteres</td><td>RIGHT('AlineaSol', 3)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">SUBSTRING</a>(strA, startIndex, length)</td><td>Devuelve parte de la cadena strA</td><td>SUBSTRING(name, 0, 10)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">REVERSE</a>(strA)</td><td>Devuelve la inversa de la cadena strA</td><td>REVERSE(name)</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">LTRIM</a>(strA)</td><td>Devuelve strA después de quitar los espacios de la izquierda</td><td>LTRIM('     Z')</td></tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">RTRIM</a>(strA)</td><td>Devuelve strA después de quitar los espacios de la derecha</td><td>RTRIM('A     ')</td></tr>
+			</table>
+		</div>
+				
+				
+		<div class='content appendix' style='display: none'>
+		  	<h3>Apéndice</h3>
+		  	<span>Constantes Usadas por mySQL</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+		  			<th>Unidades de Fecha</th><th>Formato de Fecha</th>
+		  		</tr>
+		  		<tr>
+			  		<td style='vertical-align: top'>MICROSECOND<br>SECOND<br>MINUTE<br>HOUR<br>DAY<br>WEEK<br>MONTH<br>QUARTER<br>YEAR<br>SECOND_MICROSECOND<br>MINUTE_MICROSECOND<br>MINUTE_SECOND<br>HOUR_MICROSECOND<br>HOUR_SECOND<br>HOUR_MINUTE<br>DAY_MICROSECOND<br>DAY_SECOND<br>DAY_MINUTE<br>DAY_HOUR<br>YEAR_MONTH</td>
+			  		<td style='vertical-align: top'><b>%a</b> Nombre del día de la semana abreviado, <b>%b</b> Nombre abreviado del mes<br><b>%c</b> Mes, numérico, <b>%D</b> Día del mes con sufijo Inglés<br><b>%d</b> Día del mes, numérico (00-31), <b>%e</b> Día del mes, numérico (0-31)<br><b>%f</b> Microsegundos, <b>%H</b> Hora (00-23)<br><b>%h</b> Hora (01-12), <b>%I</b> Hora (01-12)<br><b>%i</b> Minutos, numérico (00-59), <b>%j</b> Día del año (001-366)<br><b>%k</b> Hora (0-23), <b>%l</b> Hora (1-12)<br><b>%M</b> Nombre del mes, <b>%m</b> Mes, numérico (00-12)<br><b>%p</b> AM o PM, <b>%r</b> Hora, 12-horas (hh:mm:ss AM or PM)<br><b>%S</b> Segundos (00-59), <b>%s</b> Segundos (00-59)<br><b>%T</b> Hora, 24-horas (hh:mm:ss)<br><b>%U</b> Semana (00-53) donde Domingo es el primer día de la semana<br><b>%u</b> Semana (00-53) donde Lunes es el primer día de la semana<br><b>%V</b> Semana (01-53) donde Domingo es el primer día de la semana, usado con %X<br><b>%v</b> Semana (01-53) donde Lunes es el primer día de la semana, usado con %x<br><b>%W</b> Nombre del día de la semana, <b>%w</b> Día de la semana (0=Domingo 6=Sábado)<br><b>%X</b> Año de la semana donde Domingo es el primer día de al semana, cuatro dígitos, usado con %V<br><b>%x</b> Año de la semana donde Lunes es el primer día de la semana, cuatro dígitos, usado con %v<br><b>%Y</b> Año, cuatro dígitos, <b>%y</b> Año, dos dígitos</td>
+		  		</tr>
+			</table>
+		
+		</div>
+			
+		
+		<div class='content variables' style='display: none'>
+		  	<h3>Variables Informes</h3>
+		  	<span>Definición de Variables usadas por AlineaSol Reports.<br>Las variables sobre campos relacionados y/o custom sólo podrán ser usadas si al menos un campo de la tabla de ese related/custom field es añadido al informe.</span>
+		  	<table width='100%' class='edit view'>
+			  	<tr>
+		  			<th>Tipo de Variable</th><th>Descripción</th><th>Ejemplo</th>
+		  		</tr>
+		  		<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${this}</a></td><td>Referencia al valor del campo actual</td><td>${this}</td></tr>
+			  	<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${bean->Field}</a></td><td>Referencia un campo del módulo principal</td><td>${bean->name}</td></tr>
+			  	<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${bean_cstm->Field_c}</a></td><td>Referencia un campo custom del módulo principal</td><td>${bean_cstm->account_type_c}</td></tr>
+			  	<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${ModName->LinkField->RelField}</a></td><td>Referencia al valor de un campo relacionado</td><td>${Accounts->account_id_c->name}</td></tr>
+			  	<tr><td><a href="javascript: void(0)" onClick="insertAtActiveCodeMirrorCursor(this)">${ModName_Cstm->LinkField->RelField_c}</a></td><td>Referencia al valor de campo relacionado custom</td><td>${Accounts_Cstm->account_id_c->type_c}</td></tr>
+			</table>
+		</div>
+			
+
+		<div class='content references' style='display: none'>
+		  	<h3>Referencias</h3>
+		  	<span>Referencias son usadas para ser reemplazadas por un campo existente del informe con cualquier modificación que pudiera tener vinculada, como código SQL o funciones agregadas.<br>Hay que tener en cuenta que el código PHP es ejecutado después del procesado de consultas, por lo que no está disponible en este punto.</span>
+		  	<table width='100%' class='edit view'>
+		  		<thead>
+		  			<th width="15%">Origen de Referencia</th>
+		  			<th>Código de Referencia</th>
+		  			<th>Alias del Campo</th>
+		  		</thead>
+		  		<tbody></tbody>
+		  	</table>
+		</div>
+
+	</div>
+
+</div>

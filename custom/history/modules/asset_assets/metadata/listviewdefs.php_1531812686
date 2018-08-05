@@ -1,0 +1,278 @@
+<?php
+$module_name = 'asset_assets';
+$listViewDefs [$module_name] = 
+array (
+  'COMPANY_CODE_C' => 
+  array (
+    'type' => 'enum',
+    'default' => true,
+    'studio' => 'visible',
+    'label' => 'LBL_COMPANY_CODE',
+    'width' => '10%',
+  ),
+  'ASSET_NUMBER_C' => 
+  array (
+    'type' => 'varchar',
+    'default' => true,
+    'label' => 'LBL_ASSET_NUMBER',
+    'width' => '10%',
+  ),
+  'ASSET_CLASS_C' => 
+  array (
+    'type' => 'relate',
+    'default' => true,
+    'studio' => 'visible',
+    'label' => 'LBL_ASSET_CLASS',
+    'id' => 'EPS_ASSET_CLASS_ID_C',
+    'link' => true,
+    'width' => '10%',
+  ),
+  'DESCRIPTION' => 
+  array (
+    'type' => 'text',
+    'label' => 'LBL_DESCRIPTION',
+    'sortable' => false,
+    'width' => '10%',
+    'default' => true,
+  ),
+  'DESCRIPTION_2_C' => 
+  array (
+    'type' => 'varchar',
+    'default' => false,
+    'label' => 'LBL_DESCRIPTION_2',
+    'width' => '10%',
+  ),
+  'EVALUATION_GP_3_C' => 
+  array (
+    'type' => 'relate',
+    'default' => false,
+    'studio' => 'visible',
+    'label' => 'LBL_EVALUATION_GP_3',
+    'id' => 'EPS_EVALUATION_GP_3_ID_C',
+    'link' => true,
+    'width' => '10%',
+  ),
+  'CIP_NUMBER_C' => 
+  array (
+    'type' => 'varchar',
+    'default' => false,
+    'label' => 'LBL_CIP_NUMBER',
+    'width' => '10%',
+  ),
+  'BUSINESS_AREA_C' => 
+  array (
+    'type' => 'relate',
+    'default' => false,
+    'studio' => 'visible',
+    'label' => 'LBL_BUSINESS_AREA',
+    'id' => 'EPS_BUSINESS_AREA_ID_C',
+    'link' => true,
+    'width' => '10%',
+  ),
+  'INVENTORY_NOTE_C' => 
+  array (
+    'type' => 'varchar',
+    'default' => false,
+    'label' => 'LBL_INVENTORY_NOTE',
+    'width' => '10%',
+  ),
+  'EVALUATION_GP_4_C' => 
+  array (
+    'type' => 'relate',
+    'default' => false,
+    'studio' => 'visible',
+    'label' => 'LBL_EVALUATION_GP_4',
+    'id' => 'EPS_EVALUATION_GP_4_ID_C',
+    'link' => true,
+    'width' => '10%',
+  ),
+  'CAPITALIZED_ON_C' => 
+  array (
+    'type' => 'varchar',
+    'default' => false,
+    'label' => 'LBL_CAPITALIZED_ON',
+    'width' => '10%',
+  ),
+  'WARRANTY' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_WARRANTY',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'INVENTORY_NUMBER_C' => 
+  array (
+    'type' => 'varchar',
+    'default' => false,
+    'label' => 'LBL_INVENTORY_NUMBER',
+    'width' => '10%',
+  ),
+  'SUB_NUMBER_C' => 
+  array (
+    'type' => 'varchar',
+    'default' => false,
+    'label' => 'LBL_SUB_NUMBER',
+    'width' => '10%',
+  ),
+  'DECOMMISSION_DATE' => 
+  array (
+    'type' => 'date',
+    'label' => 'LBL_DECOMMISSION_DATE',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'ROOM' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_ROOM',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'ASSET_VALUE' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_ASSET_VALUE',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'ADDRESS' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_ADDRESS',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'PURCHASE_DATE' => 
+  array (
+    'type' => 'date',
+    'label' => 'LBL_PURCHASE_DATE',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'BUILDING' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_BUILDING',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'PROJECT' => 
+  array (
+    'type' => 'relate',
+    'studio' => 'visible',
+    'label' => 'LBL_PROJECT',
+    'id' => 'PROJECT_ID_C',
+    'link' => true,
+    'width' => '10%',
+    'default' => false,
+  ),
+  'PURCHASE_ORDER' => 
+  array (
+    'type' => 'relate',
+    'studio' => 'visible',
+    'label' => 'LBL_PURCHASE_ORDER',
+    'id' => 'AOS_QUOTES_ID_C',
+    'link' => true,
+    'width' => '10%',
+    'default' => false,
+  ),
+  'SERIAL_NR' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_SERIAL_NR',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'CREATED_BY_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_CREATED',
+    'id' => 'CREATED_BY',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'MODIFIED_BY_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_MODIFIED_NAME',
+    'id' => 'MODIFIED_USER_ID',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'DATE_MODIFIED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_MODIFIED',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'DATE_ENTERED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_ENTERED',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'CONTACT' => 
+  array (
+    'type' => 'relate',
+    'studio' => 'visible',
+    'label' => 'LBL_CONTACT',
+    'id' => 'CONTACT_ID_C',
+    'link' => true,
+    'width' => '10%',
+    'default' => false,
+  ),
+  'ASSIGNED_USER_NAME' => 
+  array (
+    'link' => true,
+    'type' => 'relate',
+    'label' => 'LBL_ASSIGNED_TO_NAME',
+    'id' => 'ASSIGNED_USER_ID',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'LAST_INSPECTION' => 
+  array (
+    'type' => 'date',
+    'label' => 'LBL_LAST_INSPECTION',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'PRODUCT' => 
+  array (
+    'type' => 'relate',
+    'studio' => 'visible',
+    'label' => 'LBL_PRODUCT',
+    'id' => 'AOS_PRODUCTS_ID_C',
+    'link' => true,
+    'width' => '10%',
+    'default' => false,
+  ),
+  'ASSET_TYPE' => 
+  array (
+    'type' => 'enum',
+    'studio' => 'visible',
+    'label' => 'LBL_ASSET_TYPE',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'SHORT_DESCRIPTION' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_SHORT_DESCRIPTION',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'NAME' => 
+  array (
+    'width' => '32%',
+    'label' => 'LBL_NAME',
+    'default' => false,
+    'link' => true,
+  ),
+);
+;
+?>

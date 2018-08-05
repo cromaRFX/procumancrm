@@ -1,0 +1,276 @@
+<?php
+if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+/*********************************************************************************
+ * SugarCRM Community Edition is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
+ *
+ * SuiteCRM is an extension to SugarCRM Community Edition developed by Salesagility Ltd.
+ * Copyright (C) 2011 - 2016 Salesagility Ltd.
+ *
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ *
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ *
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU Affero General Public License version 3.
+ *
+ * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * reasonably feasible for  technical reasons, the Appropriate Legal Notices must
+ * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ ********************************************************************************/
+
+/*********************************************************************************
+ * Description:  Defines the English language pack for the base application.
+ * Portions created by SugarCRM are Copyright (C) SugarCRM, Inc.
+ * All Rights Reserved.
+ * Contributor(s): ______________________________________..
+ ********************************************************************************/
+
+$mod_strings = array(
+    //DON'T CONVERT THESE THEY ARE MAPPINGS
+    'db_last_name' => 'LBL_LIST_LAST_NAME',
+    'db_first_name' => 'LBL_LIST_FIRST_NAME',
+    'db_title' => 'LBL_LIST_TITLE',
+    'db_email1' => 'LBL_LIST_EMAIL_ADDRESS',
+    'db_account_name' => 'LBL_LIST_ACCOUNT_NAME',
+    'db_email2' => 'LBL_LIST_EMAIL_ADDRESS',
+
+    //END DON'T CONVERT
+    'ERR_DELETE_RECORD' => 'Bu Potansiyeli silmek için kayıt nosu belirtilmelidir.',
+    'LBL_ACCOUNT_DESCRIPTION' => 'Müşteri Tanımı',
+    'LBL_ACCOUNT_ID' => 'Müşteri ID',
+    'LBL_ACCOUNT_NAME' => 'Müşteri Adı:',
+    'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Aktiviteler',
+    'LBL_ADD_BUSINESSCARD' => 'Kartvizit Ekle',
+    'LBL_ADDRESS_INFORMATION' => 'Adres Bilgisi',
+    'LBL_ALT_ADDRESS_CITY' => 'Alternatif Adres Şehir',
+    'LBL_ALT_ADDRESS_COUNTRY' => 'Alternatif Adres Ülke',
+    'LBL_ALT_ADDRESS_POSTALCODE' => 'Alternatif Adres Posta Kodu',
+    'LBL_ALT_ADDRESS_STATE' => 'Alternatif Adres Eyalet',
+    'LBL_ALT_ADDRESS_STREET_2' => 'Alternatif Adres Sokak 2',
+    'LBL_ALT_ADDRESS_STREET_3' => 'Alternatif Adres Sokak 3',
+    'LBL_ALT_ADDRESS_STREET' => 'Alternatif Adres Sokak',
+    'LBL_ALTERNATE_ADDRESS' => 'Diğer Adres:',
+    'LBL_ALT_ADDRESS' => 'Diğer Adres:',
+    'LBL_ANY_ADDRESS' => 'Adres:',
+    'LBL_ANY_EMAIL' => 'E-Posta:',
+    'LBL_ANY_PHONE' => 'Telefon:',
+    'LBL_ASSIGNED_TO_NAME' => 'Atanan Kişi',
+    'LBL_ASSIGNED_TO_ID' => 'Atanan Kullanıcı ID:',
+    'LBL_BACKTOLEADS' => 'Potansiyellere Geri Dön',
+    'LBL_BUSINESSCARD' => 'Potansiyeli Dönüştür',
+    'LBL_CITY' => 'Şehir:',
+    'LBL_CONTACT_ID' => 'Kontak ID',
+    'LBL_CONTACT_INFORMATION' => 'Potansiyellere Genel Bakış',
+    'LBL_CONTACT_NAME' => 'Potansiyel Adı:',
+    'LBL_CONTACT_OPP_FORM_TITLE' => 'Potansiyel-Fırsat:',
+    'LBL_CONTACT_ROLE' => 'Rol:',
+    'LBL_CONTACT' => 'Potansiyel:',
+    'LBL_CONVERTED_ACCOUNT' => 'Dönüştürülen Müşteri:',
+    'LBL_CONVERTED_CONTACT' => 'Dönüştürülen Kontak:',
+    'LBL_CONVERTED_OPP' => 'Dönüştürülen Fırsat:',
+    'LBL_CONVERTED' => 'Dönüştü',
+    'LBL_CONVERTLEAD_BUTTON_KEY' => 'V',
+    'LBL_CONVERTLEAD_TITLE' => 'Potansiyeli Dönüştür [Alt+V]',
+    'LBL_CONVERTLEAD' => 'Potansiyeli Dönüştür',
+    'LBL_CONVERTLEAD_WARNING' => 'Uyarı: Değiştirmek istediğiniz Potansiyel\'in statüsü "Değiştirilmiş". Potansiyelden halihazırda Kontak Hesap kayıtları oluşturulmuş olabilir. Eğer Potansiyeli değiştirmek istiyorsanız Kaydet butonuna tıklayın. Değişiklik yapmadan geri dönmek için İptal butonuna tıklayın.',
+    'LBL_CONVERTLEAD_WARNING_INTO_RECORD' => 'Olası Kontak:',
+    'LBL_COUNTRY' => 'Ülke:',
+    'LBL_CREATED_NEW' => 'Yeni oluşturuldu',
+    'LBL_CREATED_ACCOUNT' => 'Yeni müşteri Oluşturuldu',
+    'LBL_CREATED_CALL' => 'Yeni bir tel.Araması oluşturuldu',
+    'LBL_CREATED_CONTACT' => 'Yeni bir kontak oluşturuldu',
+    'LBL_CREATED_MEETING' => 'Yeni bir toplantı oluşturuldu',
+    'LBL_CREATED_OPPORTUNITY' => 'Yeni bir fırsat oluşturuldu',
+    'LBL_DEFAULT_SUBPANEL_TITLE' => 'Potansiyeller',
+    'LBL_DEPARTMENT' => 'Departman:',
+    'LBL_DESCRIPTION_INFORMATION' => 'Tanım Bilgisi',
+    'LBL_DESCRIPTION' => 'Tanım:',
+    'LBL_DO_NOT_CALL' => 'Tel. İle Aramayın:',
+    'LBL_DUPLICATE' => 'Benzer Potansiyeller',
+    'LBL_EMAIL_ADDRESS' => 'E-Posta Adresi:',
+    'LBL_EMAIL_OPT_OUT' => 'Liste Dışı E-Posta:',
+    'LBL_EXISTING_ACCOUNT' => 'Varolan müşteri kullanıldı',
+    'LBL_EXISTING_CONTACT' => 'Varolan kontak kullanıldı',
+    'LBL_EXISTING_OPPORTUNITY' => 'Varolan fırsat Kullanıldı',
+    'LBL_FAX_PHONE' => 'Faks:',
+    'LBL_FIRST_NAME' => 'Adı:',
+    'LBL_FULL_NAME' => 'Tam Adı:',
+    'LBL_HISTORY_SUBPANEL_TITLE' => 'Tarihçe',
+    'LBL_HOME_PHONE' => 'Ev Telefonu:',
+    'LBL_IMPORT_VCARD' => 'vCard Verisini Yükle',
+    'LBL_VCARD' => 'vCard',
+    'LBL_IMPORT_VCARDTEXT' => 'Dosya Sisteminden vCard yüklenerek, yeni bir Potansiyel otomatik olarak yaratıldı.',
+    'LBL_INVALID_EMAIL' => 'Geçersiz E-Posta:',
+    'LBL_INVITEE' => 'Doğrudan Raporlar',
+    'LBL_LAST_NAME' => 'Soyadı:',
+    'LBL_LEAD_SOURCE_DESCRIPTION' => 'Potansiyel Kaynak Tanımı:',
+    'LBL_LEAD_SOURCE' => 'Potansiyel Kaynağı:',
+    'LBL_LIST_ACCEPT_STATUS' => 'Kabul Durumu',
+    'LBL_LIST_ACCOUNT_NAME' => 'Müşteri Adı',
+    'LBL_LIST_CONTACT_NAME' => 'Potansiyel Adı',
+    'LBL_LIST_CONTACT_ROLE' => 'Rol',
+    'LBL_LIST_DATE_ENTERED' => 'Oluşturulma Tarihi:',
+    'LBL_LIST_EMAIL_ADDRESS' => 'E-Posta',
+    'LBL_LIST_FIRST_NAME' => 'Adı',
+    'LBL_VIEW_FORM_TITLE' => 'Potansiyel Görüntüsü',
+    'LBL_LIST_FORM_TITLE' => 'Potansiyel Listesi',
+    'LBL_LIST_LAST_NAME' => 'Soyadı',
+    'LBL_LIST_LEAD_SOURCE_DESCRIPTION' => 'Potansiyel Kaynak Tanımı',
+    'LBL_LIST_LEAD_SOURCE' => 'Potansiyel Kaynağı',
+    'LBL_LIST_MY_LEADS' => 'Potansiyellerim',
+    'LBL_LIST_NAME' => 'İsim',
+    'LBL_LIST_PHONE' => 'Ofis Telefonu',
+    'LBL_LIST_REFERED_BY' => 'Tavsiye Eden',
+    'LBL_LIST_STATUS' => 'Durum',
+    'LBL_LIST_TITLE' => 'Ünvan',
+    'LBL_MOBILE_PHONE' => 'Cep Telefonu:',
+    'LBL_MODULE_NAME' => 'Potansiyeller',
+    'LBL_MODULE_TITLE' => 'Potansiyeller:Ana Sayfa',
+    'LBL_NAME' => 'İsim:',
+    'LBL_NEW_FORM_TITLE' => 'Yeni Potansiyel',
+    'LBL_NEW_PORTAL_PASSWORD' => 'Yeni Portal Şifresi:',
+    'LBL_OFFICE_PHONE' => 'Ofis Telefonu:',
+    'LBL_OPP_NAME' => 'Fırsat Adı:',
+    'LBL_OPPORTUNITY_AMOUNT' => 'Fırsat Miktarı:',
+    'LBL_OPPORTUNITY_ID' => 'Fırsat ID',
+    'LBL_OPPORTUNITY_NAME' => 'Fırsat Adı:',
+    'LBL_OTHER_EMAIL_ADDRESS' => 'Diğer E-Posta:',
+    'LBL_OTHER_PHONE' => 'Diğer Telefon:',
+    'LBL_PHONE' => 'Telefon:',
+    'LBL_PORTAL_ACTIVE' => 'Portal Etkinleştir:',
+    'LBL_PORTAL_APP' => 'Portal Uygulaması',
+    'LBL_PORTAL_INFORMATION' => 'Portal Bilgisi',
+    'LBL_PORTAL_NAME' => 'Portal Adı:',
+    'LBL_PORTAL_PASSWORD_ISSET' => 'Portal Şifresi Belirlendi:',
+    'LBL_POSTAL_CODE' => 'Posta Kodu:',
+    'LBL_STREET' => 'Sokak',
+    'LBL_PRIMARY_ADDRESS_CITY' => 'Asıl Adres Şehir',
+    'LBL_PRIMARY_ADDRESS_COUNTRY' => 'Asıl Adres Ülke',
+    'LBL_PRIMARY_ADDRESS_POSTALCODE' => 'Asıl Adres Posta Kodu',
+    'LBL_PRIMARY_ADDRESS_STATE' => 'Asıl Adres Eyalet',
+    'LBL_PRIMARY_ADDRESS_STREET_2' => 'Asıl Adres Sokak 2',
+    'LBL_PRIMARY_ADDRESS_STREET_3' => 'Asıl Adres Sokak 3',
+    'LBL_PRIMARY_ADDRESS_STREET' => 'Asıl Adres Sokak',
+    'LBL_PRIMARY_ADDRESS' => 'Asıl Adres:',
+    'LBL_REFERED_BY' => 'Tavsiye Eden:',
+    'LBL_REPORTS_TO_ID' => 'Rapor Edilen Kişi ID',
+    'LBL_REPORTS_TO' => 'Rapor Edilen Kişi:',
+    'LBL_REPORTS_FROM' => 'Reports From:',
+    'LBL_SALUTATION' => 'Hitap',
+    'LBL_MODIFIED' => 'Değiştiren',
+    'LBL_MODIFIED_ID' => 'Değiştiren ID',
+    'LBL_CREATED' => 'Oluşturan',
+    'LBL_CREATED_ID' => 'Oluşturan ID',
+    'LBL_SEARCH_FORM_TITLE' => 'Potansiyel Arama',
+    'LBL_SELECT_CHECKED_BUTTON_LABEL' => 'İşaretli Potansiyelleri Seç',
+    'LBL_SELECT_CHECKED_BUTTON_TITLE' => 'İşaretli Potansiyelleri Seç',
+    'LBL_STATE' => 'Eyalet:',
+    'LBL_STATUS_DESCRIPTION' => 'Durum Tanımı:',
+    'LBL_STATUS' => 'Durum:',
+    'LBL_TITLE' => 'Ünvan:',
+    'LNK_IMPORT_VCARD' => 'vCard\'tan Potansiyel Oluştur',
+    'LNK_LEAD_LIST' => 'Potansiyelleri Görüntüle',
+    'LNK_NEW_ACCOUNT' => 'Müşteri Oluştur',
+    'LNK_NEW_APPOINTMENT' => 'Randevu Oluştur',
+    'LNK_NEW_CONTACT' => 'Kontak Oluştur',
+    'LNK_NEW_LEAD' => 'Potansiyel Oluştur',
+    'LNK_NEW_NOTE' => 'Not Oluştur',
+    'LNK_NEW_TASK' => 'Görev Oluştur',
+    'LNK_NEW_CASE' => 'Talep Oluştur',
+    'LNK_NEW_CALL' => 'Tel. Araması Planla',
+    'LNK_NEW_MEETING' => 'Toplantı Planla',
+    'LNK_NEW_OPPORTUNITY' => 'Fırsat Oluştur',
+    'LNK_SELECT_ACCOUNTS' => 'VEYA Hesap Seç',
+    'LNK_SELECT_CONTACTS' => ' <b>OR</b> Select Contact',
+    'NTC_COPY_ALTERNATE_ADDRESS' => 'Alternatif Adresi Asıl Adrese Kopyala',
+    'NTC_COPY_PRIMARY_ADDRESS' => 'Asıl Adresi Alternatif Adrese Kopyala',
+    'NTC_DELETE_CONFIRMATION' => 'Bu kaydı silmek istediğinizden emin misiniz?',
+    'NTC_OPPORTUNITY_REQUIRES_ACCOUNT' => 'Bir Fırsat yaratılabilmesi için Müşteri kaydı olması gerekir.\n Lütfen yeni bir Müşteri yaratın veya varolan Müşteri kaydını seçin.',
+    'NTC_REMOVE_CONFIRMATION' => 'Bu talepten bu potansiyeli silmek istediğinize emin misiniz?',
+    'NTC_REMOVE_DIRECT_REPORT_CONFIRMATION' => 'Doğrudan raporlanan kişi olarak bu kaydı silmek istediğinizden emin misiniz?',
+    'LBL_CAMPAIGN_LIST_SUBPANEL_TITLE' => 'Kampanyalar',
+    'LBL_TARGET_OF_CAMPAIGNS' => 'Başarılı Kampanya:',
+    'LBL_TARGET_BUTTON_LABEL' => 'Hedeflenen',
+    'LBL_TARGET_BUTTON_TITLE' => 'Hedeflenen',
+    'LBL_TARGET_BUTTON_KEY' => 'T',
+    'LBL_CAMPAIGN' => 'Kampanya:',
+    'LBL_LIST_ASSIGNED_TO_NAME' => 'Atandığı Kullanıcı',
+    'LBL_PROSPECT_LIST' => 'Aday Müşteri Listesi',
+    'LBL_CAMPAIGN_LEAD' => 'Kampanyalar',
+    'LBL_BIRTHDATE' => 'Doğum Tarihi:',
+    'LBL_THANKS_FOR_SUBMITTING_LEAD' => 'Potansiyel Oluşturulması için verdiğiniz bilgiye Teşekkürler.',
+    'LBL_SERVER_IS_CURRENTLY_UNAVAILABLE' => 'Üzgünüz, sunucu şu anda erişilebilir değil, daha sonra tekrar deneyin.',
+    'LBL_ASSISTANT_PHONE' => 'Asistan Telefonu',
+    'LBL_ASSISTANT' => 'Asistan',
+    'LBL_REGISTRATION' => 'Kayıt',
+    'LBL_MESSAGE' => 'Bilginizi lütfen aşağıya girin. Sizin için bilgi ve/veya bir müşteri kaydı oluşturulacak, onay beklenecek.',
+    'LBL_SAVED' => 'Kayıt için teşekkürler. Müşteri kaydınız yaratılacak ve en kısa sürede size geri dönülecektir.',
+    'LBL_CLICK_TO_RETURN' => 'Portala Geri Dön',
+    'LBL_CREATED_USER' => 'Oluşturan Kullanıcı',
+    'LBL_MODIFIED_USER' => 'Değiştiren Kullanıcı',
+    'LBL_CAMPAIGNS' => 'Kampanyalar',
+    'LBL_CAMPAIGNS_SUBPANEL_TITLE' => 'Kampanyalar',
+    'LBL_CONVERT_MODULE_NAME' => 'Modül',
+    'LBL_CONVERT_REQUIRED' => 'Gerekli',
+    'LBL_CONVERT_SELECT' => 'Seçime İzin Ver',
+    'LBL_CONVERT_COPY' => 'Veri Kopyala',
+    'LBL_CONVERT_EDIT' => 'Düzenle',
+    'LBL_CONVERT_DELETE' => 'Sil',
+    'LBL_CONVERT_ADD_MODULE' => 'Modül Ekle',
+    'LBL_CREATE' => 'Oluştur',
+    'LBL_SELECT' => 'VEYA Seç',
+    'LBL_WEBSITE' => 'Web Sitesi',
+    'LNK_IMPORT_LEADS' => 'Sisteme Potansiyel Al',
+    'LBL_NOTICE_OLD_LEAD_CONVERT_OVERRIDE' => 'Bilgi: Mevcut Potansiyel Değiştirme ekranı, özel alanlar içermekte. Potansiyel Değiştirme ekranını ilk kez özelleştirirken, plana gereken şekilde özel alanları eklemeniz gerekecektir. Daha önce olduğu gibi özel alanlar planda otomatik olarak gözükmeyecektir.',
+//Convert lead tooltips
+    'LBL_MODULE_TIP' => 'Yeni bir kayıt yaratmak için modül.',
+    'LBL_REQUIRED_TIP' => 'Potansiyel değiştirilmeden önce gerekli modülün yaratılmış veya seçilmiş olması gerekmekte',
+    'LBL_COPY_TIP' => 'Eğer seçiliyse, Potansiyeldeki alanlar, yeni kayıtlardaki aynı adlı alanlara kopyalanacak.',
+    'LBL_SELECTION_TIP' => 'Potansiyel değiştirme süreci yerine Kontaklardaki ilişki alanı bulunan modüller seçilebilir.',
+    'LBL_EDIT_TIP' => 'Bu modül için olan dönüştürülen düzeni biçimlendir.',
+    'LBL_DELETE_TIP' => 'Bu modülü dönüştürülen düzenden çıkar.',
+
+    'LBL_ACTIVITIES_MOVE' => 'Move Activities to',
+    'LBL_ACTIVITIES_COPY' => 'Copy Activities to',
+    'LBL_ACTIVITIES_MOVE_HELP' => "Select the record to which to move the Lead's activities. Tasks, Calls, Meetings, Notes and Emails will be moved to the selected record(s).",
+    'LBL_ACTIVITIES_COPY_HELP' => "Select the record(s) for which to create copies of the Lead's activities. New Tasks, Calls, Meetings and Notes will be created for each of the selected record(s). Emails will be related to the selected record(s).",
+    //For export labels
+    'LBL_PHONE_HOME' => 'Telefon ev',
+    'LBL_PHONE_MOBILE' => 'Cep Telefonu',
+    'LBL_PHONE_WORK' => 'Telefon iş',
+    'LBL_PHONE_OTHER' => 'Diğer telefon',
+    'LBL_PHONE_FAX' => 'Faks:',
+    'LBL_CAMPAIGN_ID' => 'Kampanya ID',
+    'LBL_EXPORT_ASSIGNED_USER_NAME' => 'Atanmış kullanıcı adı',
+    'LBL_EXPORT_ASSIGNED_USER_ID' => 'Atanmış kullanıcı ID',
+    'LBL_EXPORT_MODIFIED_USER_ID' => 'Değiştiren ID:',
+    'LBL_EXPORT_CREATED_BY' => 'Oluşturan Id:',
+    'LBL_EXPORT_PHONE_MOBILE' => 'Cep Telefonu',
+    'LBL_EXPORT_EMAIL2' => 'Diğer e-posta adresi',
+    'LBL_EDITLAYOUT' => 'Sayfa Görünümü Düzenleme' /*for 508 compliance fix*/,
+    'LBL_ENTERDATE' => 'Tarih Giriþi' /*for 508 compliance fix*/,
+    'LBL_LOADING' => 'Yükleniyor...' /*for 508 compliance fix*/,
+    'LBL_EDIT_INLINE' => 'Düzenle' /*for 508 compliance fix*/,
+    'LBL_FP_EVENTS_LEADS_1_FROM_FP_EVENTS_TITLE' => 'Etkinlikler',
+);
+?>

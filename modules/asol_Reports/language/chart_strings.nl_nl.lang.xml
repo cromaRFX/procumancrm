@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sugarlanguage version="1.0">
+        <charts>
+                <expandlegend>Klap legenda uit</expandlegend>
+                <collapselegend>Vouw legenda in</collapselegend>
+                <clickfordrilldown>Klik voor details</clickfordrilldown>
+                <drilldownoptions>Opties voor details</drilldownoptions>
+                <detailview>Meer details...</detailview>
+                <piechart>Taartdiagram</piechart>
+                <groupchart>Groepdiagram</groupchart>
+                <stackedchart>Gestapelde diagram</stackedchart>
+                <barchart>Staafdiagram</barchart>
+                <horizontalbarchart>Horizontale staafdiagram</horizontalbarchart>
+                <linechart>Lijndiagram</linechart>
+                <noData>Geen gegevens beschikbaar</noData>
+                <print>Print</print>
+                <pieWedgeName>onderdelen</pieWedgeName>
+        </charts>
+</sugarlanguage>

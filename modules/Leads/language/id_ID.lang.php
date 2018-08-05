@@ -1,0 +1,276 @@
+<?php
+if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+/*********************************************************************************
+ * SugarCRM Community Edition is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
+ *
+ * SuiteCRM is an extension to SugarCRM Community Edition developed by Salesagility Ltd.
+ * Copyright (C) 2011 - 2016 Salesagility Ltd.
+ *
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ *
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ *
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU Affero General Public License version 3.
+ *
+ * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * reasonably feasible for  technical reasons, the Appropriate Legal Notices must
+ * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ ********************************************************************************/
+
+/*********************************************************************************
+ * Description:  Defines the English language pack for the base application.
+ * Portions created by SugarCRM are Copyright (C) SugarCRM, Inc.
+ * All Rights Reserved.
+ * Contributor(s): ______________________________________..
+ ********************************************************************************/
+
+$mod_strings = array(
+    //DON'T CONVERT THESE THEY ARE MAPPINGS
+    'db_last_name' => 'LBL_LIST_LAST_NAME',
+    'db_first_name' => 'LBL_LIST_FIRST_NAME',
+    'db_title' => 'LBL_LIST_TITLE',
+    'db_email1' => 'LBL_LIST_EMAIL_ADDRESS',
+    'db_account_name' => 'LBL_LIST_ACCOUNT_NAME',
+    'db_email2' => 'LBL_LIST_EMAIL_ADDRESS',
+
+    //END DON'T CONVERT
+    'ERR_DELETE_RECORD' => 'Nomor Record harus ditentukan untuk menghapus lead.',
+    'LBL_ACCOUNT_DESCRIPTION' => 'Deskripsi Account',
+    'LBL_ACCOUNT_ID' => 'ID Account',
+    'LBL_ACCOUNT_NAME' => 'Nama Account:',
+    'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Kegiatan',
+    'LBL_ADD_BUSINESSCARD' => 'Tambah Business Card',
+    'LBL_ADDRESS_INFORMATION' => 'Informasi Alamat',
+    'LBL_ALT_ADDRESS_CITY' => 'Alt Alamat Kota',
+    'LBL_ALT_ADDRESS_COUNTRY' => 'Alt Alamat Negara',
+    'LBL_ALT_ADDRESS_POSTALCODE' => 'Alt Alamat Kode Pos',
+    'LBL_ALT_ADDRESS_STATE' => 'Alt Alamat Negara',
+    'LBL_ALT_ADDRESS_STREET_2' => 'Alt Alamat Jalan 2',
+    'LBL_ALT_ADDRESS_STREET_3' => 'Alt Alamat Jalan 3',
+    'LBL_ALT_ADDRESS_STREET' => 'Alt Alamat Jalan',
+    'LBL_ALTERNATE_ADDRESS' => 'Alamat Lainnya:',
+    'LBL_ALT_ADDRESS' => 'Alamat Lainnya:',
+    'LBL_ANY_ADDRESS' => 'Setiap Alamat:',
+    'LBL_ANY_EMAIL' => 'Setiap Email:',
+    'LBL_ANY_PHONE' => 'Setiap Telepon:',
+    'LBL_ASSIGNED_TO_NAME' => 'ditugaskan kepada',
+    'LBL_ASSIGNED_TO_ID' => 'ditugaskan ke Pengguna:',
+    'LBL_BACKTOLEADS' => 'Kembali Ke Lead',
+    'LBL_BUSINESSCARD' => 'Konversi Lead',
+    'LBL_CITY' => 'Kota:',
+    'LBL_CONTACT_ID' => 'Kontak ID',
+    'LBL_CONTACT_INFORMATION' => 'Lead Informasi',
+    'LBL_CONTACT_NAME' => 'Nama Lead:',
+    'LBL_CONTACT_OPP_FORM_TITLE' => 'Peluang Lead:',
+    'LBL_CONTACT_ROLE' => 'Peran:',
+    'LBL_CONTACT' => 'Lead:',
+    'LBL_CONVERTED_ACCOUNT' => 'Account di konversi:',
+    'LBL_CONVERTED_CONTACT' => 'Kontak dikonversi:',
+    'LBL_CONVERTED_OPP' => 'Peluang dikonversi:',
+    'LBL_CONVERTED' => 'Konversi',
+    'LBL_CONVERTLEAD_BUTTON_KEY' => 'V',
+    'LBL_CONVERTLEAD_TITLE' => 'Mengkonversi Lead [Alt + V]',
+    'LBL_CONVERTLEAD' => 'Konversi Lead',
+    'LBL_CONVERTLEAD_WARNING' => 'Peringatan: Status dari Lead yang Anda akan konversi adalah "Converted". Record Kontak dan/atau Account mungkin sudah dibuat dari Lead. Jika Anda ingin melanjutkan dengan mengkonversi Lead ini, klik Save. Untuk kembali ke Lead tanpa melakukan konversi,klik Cancel.',
+    'LBL_CONVERTLEAD_WARNING_INTO_RECORD' => ' Kontak yang mungkin: ',
+    'LBL_COUNTRY' => 'Negara:',
+    'LBL_CREATED_NEW' => 'Baru dibuat sebuah ',
+    'LBL_CREATED_ACCOUNT' => 'Baru account baru',
+    'LBL_CREATED_CALL' => 'Dibuat panggilan baru',
+    'LBL_CREATED_CONTACT' => 'Dibuat kontak baru',
+    'LBL_CREATED_MEETING' => 'Dibuat pertemuan baru',
+    'LBL_CREATED_OPPORTUNITY' => 'Dibuat Peluang baru',
+    'LBL_DEFAULT_SUBPANEL_TITLE' => 'Lead',
+    'LBL_DEPARTMENT' => 'Departemen:',
+    'LBL_DESCRIPTION_INFORMATION' => 'Informasi Deskripsi',
+    'LBL_DESCRIPTION' => 'Deskripsi',
+    'LBL_DO_NOT_CALL' => 'Tidak Ada Panggilan:',
+    'LBL_DUPLICATE' => 'Lead terdekat',
+    'LBL_EMAIL_ADDRESS' => 'Email:',
+    'LBL_EMAIL_OPT_OUT' => 'Email Keluar',
+    'LBL_EXISTING_ACCOUNT' => 'Digunakan account yang ada',
+    'LBL_EXISTING_CONTACT' => 'Digunakan kontak yang sudah ada',
+    'LBL_EXISTING_OPPORTUNITY' => 'Digunakan Peluang yang ada',
+    'LBL_FAX_PHONE' => 'Fax:',
+    'LBL_FIRST_NAME' => 'Nama Awal:',
+    'LBL_FULL_NAME' => 'Nama Lengkap:',
+    'LBL_HISTORY_SUBPANEL_TITLE' => 'Histori',
+    'LBL_HOME_PHONE' => 'Home: Telepon:',
+    'LBL_IMPORT_VCARD' => 'Impor vCard',
+    'LBL_VCARD' => 'vCard',
+    'LBL_IMPORT_VCARDTEXT' => 'otomatis membuat petunjuk baru dengan mengimpor vCard dari sistem file Anda.',
+    'LBL_INVALID_EMAIL' => 'Email tidak valid',
+    'LBL_INVITEE' => 'langsung Laporan',
+    'LBL_LAST_NAME' => 'Nama akhir:',
+    'LBL_LEAD_SOURCE_DESCRIPTION' => 'Deskripsi Sumber Lead:',
+    'LBL_LEAD_SOURCE' => 'Sumber Lead:',
+    'LBL_LIST_ACCEPT_STATUS' => 'Terima Status',
+    'LBL_LIST_ACCOUNT_NAME' => 'Nama Account',
+    'LBL_LIST_CONTACT_NAME' => 'Nama Lead',
+    'LBL_LIST_CONTACT_ROLE' => 'Peran',
+    'LBL_LIST_DATE_ENTERED' => 'Tanggal Dibuat',
+    'LBL_LIST_EMAIL_ADDRESS' => 'E-Mail',
+    'LBL_LIST_FIRST_NAME' => 'Nama Awal',
+    'LBL_VIEW_FORM_TITLE' => 'Lihat Lead',
+    'LBL_LIST_FORM_TITLE' => 'Daftar Lead',
+    'LBL_LIST_LAST_NAME' => 'Nama Akhir',
+    'LBL_LIST_LEAD_SOURCE_DESCRIPTION' => 'Deskripsi sumber lead',
+    'LBL_LIST_LEAD_SOURCE' => 'Sumber Lead ',
+    'LBL_LIST_MY_LEADS' => 'Lead saya',
+    'LBL_LIST_NAME' => 'Nama',
+    'LBL_LIST_PHONE' => 'Kantor Telepon',
+    'LBL_LIST_REFERED_BY' => 'yang dimaksud Oleh',
+    'LBL_LIST_STATUS' => 'Status',
+    'LBL_LIST_TITLE' => 'Judul',
+    'LBL_MOBILE_PHONE' => 'Mobile:',
+    'LBL_MODULE_NAME' => 'Lead',
+    'LBL_MODULE_TITLE' => 'Lead: Home',
+    'LBL_NAME' => 'Nama:',
+    'LBL_NEW_FORM_TITLE' => 'Lead baru',
+    'LBL_NEW_PORTAL_PASSWORD' => 'Password Portal Baru:',
+    'LBL_OFFICE_PHONE' => 'Telepon kantor:',
+    'LBL_OPP_NAME' => 'Nama Peluang:',
+    'LBL_OPPORTUNITY_AMOUNT' => 'Jumlah Peluang:',
+    'LBL_OPPORTUNITY_ID' => 'Peluang ID',
+    'LBL_OPPORTUNITY_NAME' => 'Nama Peluang:',
+    'LBL_OTHER_EMAIL_ADDRESS' => 'Email lainnya:',
+    'LBL_OTHER_PHONE' => 'Telepon Lainnya:',
+    'LBL_PHONE' => 'Telepon:',
+    'LBL_PORTAL_ACTIVE' => 'Portal Aktif:',
+    'LBL_PORTAL_APP' => 'Portal Applikasi',
+    'LBL_PORTAL_INFORMATION' => 'Portal Informasi',
+    'LBL_PORTAL_NAME' => 'Nama Portal:',
+    'LBL_PORTAL_PASSWORD_ISSET' => 'Portal password diset:',
+    'LBL_POSTAL_CODE' => 'Kode Pos:',
+    'LBL_STREET' => 'Jalan',
+    'LBL_PRIMARY_ADDRESS_CITY' => 'Alamat Kota Utama',
+    'LBL_PRIMARY_ADDRESS_COUNTRY' => 'Alamat Negara Utama',
+    'LBL_PRIMARY_ADDRESS_POSTALCODE' => 'Alamat Kode Pos Utama',
+    'LBL_PRIMARY_ADDRESS_STATE' => 'Alamat Negara Bagian Utama',
+    'LBL_PRIMARY_ADDRESS_STREET_2' => 'Alamat Jalan Utama 2',
+    'LBL_PRIMARY_ADDRESS_STREET_3' => 'Alamat Jalan 3 Utama',
+    'LBL_PRIMARY_ADDRESS_STREET' => 'Alamat Jalan Utama',
+    'LBL_PRIMARY_ADDRESS' => 'Alamat Utama:',
+    'LBL_REFERED_BY' => 'dimaksud Oleh:',
+    'LBL_REPORTS_TO_ID' => 'Laporan Untuk ID',
+    'LBL_REPORTS_TO' => 'Laporan Untuk:',
+    'LBL_REPORTS_FROM' => 'Reports From:',
+    'LBL_SALUTATION' => 'Salutation',
+    'LBL_MODIFIED' => 'Diubah Oleh',
+    'LBL_MODIFIED_ID' => 'Diubah oleh Id',
+    'LBL_CREATED' => 'Dibuat Oleh',
+    'LBL_CREATED_ID' => 'Dibuat oleh Id',
+    'LBL_SEARCH_FORM_TITLE' => 'Cari Lead',
+    'LBL_SELECT_CHECKED_BUTTON_LABEL' => 'Pilih Lead yang dipilih',
+    'LBL_SELECT_CHECKED_BUTTON_TITLE' => 'Pilih Lead yang dipilih',
+    'LBL_STATE' => 'Negara:',
+    'LBL_STATUS_DESCRIPTION' => 'Deskripsi Status:',
+    'LBL_STATUS' => 'Status',
+    'LBL_TITLE' => 'Judul:',
+    'LNK_IMPORT_VCARD' => 'Buat Lead Dari vCard',
+    'LNK_LEAD_LIST' => 'Lihat Lead',
+    'LNK_NEW_ACCOUNT' => 'Buat Account',
+    'LNK_NEW_APPOINTMENT' => 'Membuat Janji Temu',
+    'LNK_NEW_CONTACT' => 'Buat Kontak',
+    'LNK_NEW_LEAD' => 'Buat Lead',
+    'LNK_NEW_NOTE' => 'Buat Catatan',
+    'LNK_NEW_TASK' => 'Buat Tugas',
+    'LNK_NEW_CASE' => 'Buat',
+    'LNK_NEW_CALL' => 'Log Panggilan Telp',
+    'LNK_NEW_MEETING' => 'Menjadwalkan Rapat',
+    'LNK_NEW_OPPORTUNITY' => 'Buat Peluang',
+    'LNK_SELECT_ACCOUNTS' => ' <b>OR</b> Pilih Acccount',
+    'LNK_SELECT_CONTACTS' => ' <b>OR</b> Select Contact',
+    'NTC_COPY_ALTERNATE_ADDRESS' => 'Salin alamat alternatif ke alamat utama',
+    'NTC_COPY_PRIMARY_ADDRESS' => 'Salin alamat utama ke alamat alternatif',
+    'NTC_DELETE_CONFIRMATION' => 'Apakah Anda yakin ingin menghapus record ini?',
+    'NTC_OPPORTUNITY_REQUIRES_ACCOUNT' => 'Membuat Peluang memerlukan account.\n Harap membuat yang baru atau pilih yang sudah ada.',
+    'NTC_REMOVE_CONFIRMATION' => 'Apakah anda yakin ingin menghapus Lead ini dari kasus ini?',
+    'NTC_REMOVE_DIRECT_REPORT_CONFIRMATION' => 'Apakah anda yakin ingin menghapus record ini sebagai laporan langsung?',
+    'LBL_CAMPAIGN_LIST_SUBPANEL_TITLE' => 'Kampanye',
+    'LBL_TARGET_OF_CAMPAIGNS' => 'Kampanye yang Sukses:',
+    'LBL_TARGET_BUTTON_LABEL' => 'Target',
+    'LBL_TARGET_BUTTON_TITLE' => 'Target',
+    'LBL_TARGET_BUTTON_KEY' => 'T',
+    'LBL_CAMPAIGN' => 'Kampanye:',
+    'LBL_LIST_ASSIGNED_TO_NAME' => 'User yang ditugaskan',
+    'LBL_PROSPECT_LIST' => 'Daftar Prospek',
+    'LBL_CAMPAIGN_LEAD' => 'Kampanye',
+    'LBL_BIRTHDATE' => 'Tanggal lahir:',
+    'LBL_THANKS_FOR_SUBMITTING_LEAD' => 'Terima Kasih Untuk Submission Anda.',
+    'LBL_SERVER_IS_CURRENTLY_UNAVAILABLE' => 'Maaf, server saat ini tidak tersedia, silakan coba lagi nanti.',
+    'LBL_ASSISTANT_PHONE' => 'Telepon Asisten',
+    'LBL_ASSISTANT' => 'Asisten',
+    'LBL_REGISTRATION' => 'Registrasi',
+    'LBL_MESSAGE' => 'Masukkan informasi Anda di bawah ini. Informasi dan/atau account akan dibuat untuk Anda menunggu persetujuan. ',
+    'LBL_SAVED' => 'Terima kasih untuk mendaftar. Account Anda akan dibuat dan seseorang akan menghubungi Anda segera. ',
+    'LBL_CLICK_TO_RETURN' => 'Kembali ke Portal',
+    'LBL_CREATED_USER' => 'Dibuat oleh User',
+    'LBL_MODIFIED_USER' => 'Diubah oleh User',
+    'LBL_CAMPAIGNS' => 'Kampanye',
+    'LBL_CAMPAIGNS_SUBPANEL_TITLE' => 'Kampanye',
+    'LBL_CONVERT_MODULE_NAME' => 'Modul',
+    'LBL_CONVERT_REQUIRED' => 'Dibutuhkan',
+    'LBL_CONVERT_SELECT' => 'Mengijinkan Pilihan',
+    'LBL_CONVERT_COPY' => 'Copy Data',
+    'LBL_CONVERT_EDIT' => 'Ubah',
+    'LBL_CONVERT_DELETE' => 'Hapus',
+    'LBL_CONVERT_ADD_MODULE' => 'Tambah Module',
+    'LBL_CREATE' => 'Buat',
+    'LBL_SELECT' => ' <b>ATAU</b> Pilih',
+    'LBL_WEBSITE' => 'Website',
+    'LNK_IMPORT_LEADS' => 'Impor Lead',
+    'LBL_NOTICE_OLD_LEAD_CONVERT_OVERRIDE' => 'Peringatan: Layar Conver Lead saat ini mengandung custom fields. Jika Anda mengkustomisasi layar Conver Lead di Studio untuk pertama kalina, Anda perlu menambahkan custom field ke layout sebagaimana diperlukan. Custom field mungkin tidak tampil di layout, sebagaimana sebelumnya. ',
+//Convert lead tooltips
+    'LBL_MODULE_TIP' => 'Modul untuk membuat record baru dalam.',
+    'LBL_REQUIRED_TIP' => 'Modul yang diperlukan harus dibuat atau dipilih sebelum lead dikonversi.',
+    'LBL_COPY_TIP' => 'Jika di-cek, field ada lead akan dicopy ke field dengan nama yang sama di record yang baru dibuat.',
+    'LBL_SELECTION_TIP' => 'Modul dengan field terkait dalam Kontak akan bisa dipilih daripada membuat saat proses konversi lead.',
+    'LBL_EDIT_TIP' => 'Ubah layout konversi untuk modul ini.',
+    'LBL_DELETE_TIP' => 'Hapus modul ini dari layout konversi.',
+
+    'LBL_ACTIVITIES_MOVE' => 'Move Activities to',
+    'LBL_ACTIVITIES_COPY' => 'Copy Activities to',
+    'LBL_ACTIVITIES_MOVE_HELP' => "Select the record to which to move the Lead's activities. Tasks, Calls, Meetings, Notes and Emails will be moved to the selected record(s).",
+    'LBL_ACTIVITIES_COPY_HELP' => "Select the record(s) for which to create copies of the Lead's activities. New Tasks, Calls, Meetings and Notes will be created for each of the selected record(s). Emails will be related to the selected record(s).",
+    //For export labels
+    'LBL_PHONE_HOME' => 'Phone Home',
+    'LBL_PHONE_MOBILE' => 'Phone Mobile',
+    'LBL_PHONE_WORK' => 'Phone Work',
+    'LBL_PHONE_OTHER' => 'Phone Other',
+    'LBL_PHONE_FAX' => 'Fax:',
+    'LBL_CAMPAIGN_ID' => 'ID Kampanye',
+    'LBL_EXPORT_ASSIGNED_USER_NAME' => 'Assigned User Name',
+    'LBL_EXPORT_ASSIGNED_USER_ID' => 'Assigned User ID',
+    'LBL_EXPORT_MODIFIED_USER_ID' => 'Modified By ID',
+    'LBL_EXPORT_CREATED_BY' => 'Created By ID',
+    'LBL_EXPORT_PHONE_MOBILE' => 'Handphone',
+    'LBL_EXPORT_EMAIL2' => 'Other Email Address',
+    'LBL_EDITLAYOUT' => 'Edit Layout' /*for 508 compliance fix*/,
+    'LBL_ENTERDATE' => 'Tanggal Masuk' /*for 508 compliance fix*/,
+    'LBL_LOADING' => 'Loading' /*for 508 compliance fix*/,
+    'LBL_EDIT_INLINE' => 'Edit' /*for 508 compliance fix*/,
+    'LBL_FP_EVENTS_LEADS_1_FROM_FP_EVENTS_TITLE' => 'Events',
+);
+?>

@@ -1,0 +1,276 @@
+<?php
+if (!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+/*********************************************************************************
+ * SugarCRM Community Edition is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
+ *
+ * SuiteCRM is an extension to SugarCRM Community Edition developed by Salesagility Ltd.
+ * Copyright (C) 2011 - 2016 Salesagility Ltd.
+ *
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ *
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ *
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU Affero General Public License version 3.
+ *
+ * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * reasonably feasible for  technical reasons, the Appropriate Legal Notices must
+ * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ ********************************************************************************/
+
+/*********************************************************************************
+ * Description:  Defines the English language pack for the base application.
+ * Portions created by SugarCRM are Copyright (C) SugarCRM, Inc.
+ * All Rights Reserved.
+ * Contributor(s): ______________________________________..
+ ********************************************************************************/
+
+$mod_strings = array(
+    //DON'T CONVERT THESE THEY ARE MAPPINGS
+    'db_last_name' => 'LBL_LIST_LAST_NAME',
+    'db_first_name' => 'LBL_LIST_FIRST_NAME',
+    'db_title' => 'LBL_LIST_TITLE',
+    'db_email1' => 'LBL_LIST_EMAIL_ADDRESS',
+    'db_account_name' => 'LBL_LIST_ACCOUNT_NAME',
+    'db_email2' => 'LBL_LIST_EMAIL_ADDRESS',
+
+    //END DON'T CONVERT
+    'ERR_DELETE_RECORD' => 'Um número de registro deve ser especificado para eliminar Potencial.',
+    'LBL_ACCOUNT_DESCRIPTION' => 'Descrição da conta',
+    'LBL_ACCOUNT_ID' => 'ID da conta',
+    'LBL_ACCOUNT_NAME' => 'Nome da conta:',
+    'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Atividades',
+    'LBL_ADD_BUSINESSCARD' => 'Adicionar Cartão de Visita',
+    'LBL_ADDRESS_INFORMATION' => 'Informação do Endereço',
+    'LBL_ALT_ADDRESS_CITY' => 'Cidade Endereço Alternativo',
+    'LBL_ALT_ADDRESS_COUNTRY' => 'País Endereço Alternativo',
+    'LBL_ALT_ADDRESS_POSTALCODE' => 'Código Postal Endereço Alternativo',
+    'LBL_ALT_ADDRESS_STATE' => 'Estado',
+    'LBL_ALT_ADDRESS_STREET_2' => 'Rua',
+    'LBL_ALT_ADDRESS_STREET_3' => 'Rua',
+    'LBL_ALT_ADDRESS_STREET' => 'Rua',
+    'LBL_ALTERNATE_ADDRESS' => 'Outro Endereço:',
+    'LBL_ALT_ADDRESS' => 'Outro Endereço:',
+    'LBL_ANY_ADDRESS' => 'Endereço:',
+    'LBL_ANY_EMAIL' => 'Email:',
+    'LBL_ANY_PHONE' => 'Telefone:',
+    'LBL_ASSIGNED_TO_NAME' => 'Atribuí­do a',
+    'LBL_ASSIGNED_TO_ID' => 'Atribuído a',
+    'LBL_BACKTOLEADS' => 'Voltar aos Potenciais',
+    'LBL_BUSINESSCARD' => 'Converter Potencial',
+    'LBL_CITY' => 'Cidade',
+    'LBL_CONTACT_ID' => 'ID do contato',
+    'LBL_CONTACT_INFORMATION' => 'Informação Potencial',
+    'LBL_CONTACT_NAME' => 'Nome do Potencial',
+    'LBL_CONTACT_OPP_FORM_TITLE' => 'Potencial-oportunidade',
+    'LBL_CONTACT_ROLE' => 'Perfil',
+    'LBL_CONTACT' => 'Contato',
+    'LBL_CONVERTED_ACCOUNT' => 'Conta Convertida',
+    'LBL_CONVERTED_CONTACT' => 'Contato Convertido',
+    'LBL_CONVERTED_OPP' => 'Oportunidade Convertida',
+    'LBL_CONVERTED' => 'Convertido',
+    'LBL_CONVERTLEAD_BUTTON_KEY' => 'Converter Potencial',
+    'LBL_CONVERTLEAD_TITLE' => 'Converter Potencial [Alt+V]',
+    'LBL_CONVERTLEAD' => 'Converter Potencial',
+    'LBL_CONVERTLEAD_WARNING' => 'Atenção: O status do Potencial que está prestes a converter é "Convertido". registros de contato e/ou conta podem já ter sido criado a partir do potencial. Se quiser continuar com a conversão do Potencial, clique em Gravar. Para voltar ao potencial sem a converter, clique em Cancelar.',
+    'LBL_CONVERTLEAD_WARNING_INTO_RECORD' => 'contato possível:',
+    'LBL_COUNTRY' => 'País:',
+    'LBL_CREATED_NEW' => 'Criou um novo registro em',
+    'LBL_CREATED_ACCOUNT' => 'Nova conta criada',
+    'LBL_CREATED_CALL' => 'Nova ligação criada',
+    'LBL_CREATED_CONTACT' => 'Novo contato criado',
+    'LBL_CREATED_MEETING' => 'Nova reunião criada',
+    'LBL_CREATED_OPPORTUNITY' => 'Nova oportunidade criada',
+    'LBL_DEFAULT_SUBPANEL_TITLE' => 'Potenciais',
+    'LBL_DEPARTMENT' => 'Departamento:',
+    'LBL_DESCRIPTION_INFORMATION' => 'Informação de Descrição',
+    'LBL_DESCRIPTION' => 'Descrição:',
+    'LBL_DO_NOT_CALL' => 'Não Telefonar:',
+    'LBL_DUPLICATE' => 'Potenciais Semelhantes',
+    'LBL_EMAIL_ADDRESS' => 'E-mail:',
+    'LBL_EMAIL_OPT_OUT' => 'Não deseja receber E-mails:',
+    'LBL_EXISTING_ACCOUNT' => 'Usada uma conta existente',
+    'LBL_EXISTING_CONTACT' => 'Usado um contato existente',
+    'LBL_EXISTING_OPPORTUNITY' => 'Usada uma oportunidade existente',
+    'LBL_FAX_PHONE' => 'Fax:',
+    'LBL_FIRST_NAME' => 'Nome:',
+    'LBL_FULL_NAME' => 'Nome Completo:',
+    'LBL_HISTORY_SUBPANEL_TITLE' => 'Histórico',
+    'LBL_HOME_PHONE' => 'Telefone residencial:',
+    'LBL_IMPORT_VCARD' => 'Importar a partir de um vCard',
+    'LBL_VCARD' => 'vCard',
+    'LBL_IMPORT_VCARDTEXT' => 'Criar nova lead automaticamente importando um vCard do seu sistema de ficheiros.',
+    'LBL_INVALID_EMAIL' => 'E-mail Inválido:',
+    'LBL_INVITEE' => 'Relatórios',
+    'LBL_LAST_NAME' => 'Último Nome:',
+    'LBL_LEAD_SOURCE_DESCRIPTION' => 'Descrição da Fonte do potencial:',
+    'LBL_LEAD_SOURCE' => 'Fonte do Potencial:',
+    'LBL_LIST_ACCEPT_STATUS' => 'Status de Aceitação',
+    'LBL_LIST_ACCOUNT_NAME' => 'Nome da conta',
+    'LBL_LIST_CONTACT_NAME' => 'Nome do Potencial',
+    'LBL_LIST_CONTACT_ROLE' => 'Função',
+    'LBL_LIST_DATE_ENTERED' => 'Data de Criação',
+    'LBL_LIST_EMAIL_ADDRESS' => 'E-mail',
+    'LBL_LIST_FIRST_NAME' => 'Primeiro Nome',
+    'LBL_VIEW_FORM_TITLE' => 'Visualização da Lead',
+    'LBL_LIST_FORM_TITLE' => 'Lista de Potenciais',
+    'LBL_LIST_LAST_NAME' => 'Último Nome:',
+    'LBL_LIST_LEAD_SOURCE_DESCRIPTION' => 'Descrição da Fonte da Lead',
+    'LBL_LIST_LEAD_SOURCE' => 'Origem da Lead',
+    'LBL_LIST_MY_LEADS' => 'Meus Potenciais',
+    'LBL_LIST_NAME' => 'Nome',
+    'LBL_LIST_PHONE' => 'Telefone Comercial',
+    'LBL_LIST_REFERED_BY' => 'Indicado Por',
+    'LBL_LIST_STATUS' => 'Estado',
+    'LBL_LIST_TITLE' => 'Título',
+    'LBL_MOBILE_PHONE' => 'Mobile',
+    'LBL_MODULE_NAME' => 'Potenciais',
+    'LBL_MODULE_TITLE' => 'Potenciais: Tela Principal',
+    'LBL_NAME' => 'Nome:',
+    'LBL_NEW_FORM_TITLE' => 'Novo Potencial',
+    'LBL_NEW_PORTAL_PASSWORD' => 'Nova Senha para o Portal:',
+    'LBL_OFFICE_PHONE' => 'Telefone do Escritório:',
+    'LBL_OPP_NAME' => 'Nome da Oportunidade:',
+    'LBL_OPPORTUNITY_AMOUNT' => 'Valor da Oportunidade:',
+    'LBL_OPPORTUNITY_ID' => 'ID da Oportunidade',
+    'LBL_OPPORTUNITY_NAME' => 'Nome da Oportunidade:',
+    'LBL_OTHER_EMAIL_ADDRESS' => 'Outro E-mail:',
+    'LBL_OTHER_PHONE' => 'Outro Telefone:',
+    'LBL_PHONE' => 'Telefone:',
+    'LBL_PORTAL_ACTIVE' => 'Portal Ativo:',
+    'LBL_PORTAL_APP' => 'Aplicação do Portal',
+    'LBL_PORTAL_INFORMATION' => 'Informação do Portal',
+    'LBL_PORTAL_NAME' => 'Nome no Portal:',
+    'LBL_PORTAL_PASSWORD_ISSET' => 'Senha do Portal está definida:',
+    'LBL_POSTAL_CODE' => 'Código Postal:',
+    'LBL_STREET' => 'Rua',
+    'LBL_PRIMARY_ADDRESS_CITY' => 'Cidade Endereço Principal',
+    'LBL_PRIMARY_ADDRESS_COUNTRY' => 'País Endereço Principal',
+    'LBL_PRIMARY_ADDRESS_POSTALCODE' => 'Código Postal Endereço Principal',
+    'LBL_PRIMARY_ADDRESS_STATE' => 'Estado Endereço Principal',
+    'LBL_PRIMARY_ADDRESS_STREET_2' => 'Rua Endereço Principal 2',
+    'LBL_PRIMARY_ADDRESS_STREET_3' => 'Rua Endereço Principal 3',
+    'LBL_PRIMARY_ADDRESS_STREET' => 'Rua Endereço Principal',
+    'LBL_PRIMARY_ADDRESS' => 'Endereço Principal:',
+    'LBL_REFERED_BY' => 'Indicado Por:',
+    'LBL_REPORTS_TO_ID' => 'Reporta ao ID',
+    'LBL_REPORTS_TO' => 'Reporta a:',
+    'LBL_REPORTS_FROM' => 'Relatórios de',
+    'LBL_SALUTATION' => 'Saudação',
+    'LBL_MODIFIED' => 'Modificado por',
+    'LBL_MODIFIED_ID' => 'Modificado Por Id',
+    'LBL_CREATED' => 'Criado por',
+    'LBL_CREATED_ID' => 'Criado Por ID',
+    'LBL_SEARCH_FORM_TITLE' => 'Pesquisar Lead',
+    'LBL_SELECT_CHECKED_BUTTON_LABEL' => 'Selecionar as Potenciais Marcadas',
+    'LBL_SELECT_CHECKED_BUTTON_TITLE' => 'Selecionar as Potenciais Marcadas',
+    'LBL_STATE' => 'Estado:',
+    'LBL_STATUS_DESCRIPTION' => 'Descrição do Status:',
+    'LBL_STATUS' => 'Status:',
+    'LBL_TITLE' => 'Cargo:',
+    'LNK_IMPORT_VCARD' => 'Criar a partir de um vCard',
+    'LNK_LEAD_LIST' => 'Potenciais',
+    'LNK_NEW_ACCOUNT' => 'Nova conta',
+    'LNK_NEW_APPOINTMENT' => 'Novo Compromisso',
+    'LNK_NEW_CONTACT' => 'Novo contato',
+    'LNK_NEW_LEAD' => 'Novo Potencial',
+    'LNK_NEW_NOTE' => 'Nova Nota',
+    'LNK_NEW_TASK' => 'Nova Tarefa',
+    'LNK_NEW_CASE' => 'Nova Ocorrência',
+    'LNK_NEW_CALL' => 'Nova Ligação',
+    'LNK_NEW_MEETING' => 'Nova Reunião',
+    'LNK_NEW_OPPORTUNITY' => 'Nova Oportunidade',
+    'LNK_SELECT_ACCOUNTS' => '<b>OU</b> Selecione uma conta',
+    'LNK_SELECT_CONTACTS' => '<b>OU</b> Selecionar Contato',
+    'NTC_COPY_ALTERNATE_ADDRESS' => 'Copiar endereço alternativo para endereço principal',
+    'NTC_COPY_PRIMARY_ADDRESS' => 'Copiar endereço principal para endereço alternativo',
+    'NTC_DELETE_CONFIRMATION' => 'Tem a certeza que pretende eliminar este registro?',
+    'NTC_OPPORTUNITY_REQUIRES_ACCOUNT' => 'A criação de uma Oportunidade requer uma conta. Por favor crie uma nova ou Selecione uma já existente.',
+    'NTC_REMOVE_CONFIRMATION' => 'Tem a certeza que pretende remover este potencial desta ocorrência?',
+    'NTC_REMOVE_DIRECT_REPORT_CONFIRMATION' => 'Tem a certeza que pretende remover este registro como um relatório?',
+    'LBL_CAMPAIGN_LIST_SUBPANEL_TITLE' => 'Campanhas',
+    'LBL_TARGET_OF_CAMPAIGNS' => 'Campanhas com Sucesso:',
+    'LBL_TARGET_BUTTON_LABEL' => 'Definir como Target',
+    'LBL_TARGET_BUTTON_TITLE' => 'Definir como Target',
+    'LBL_TARGET_BUTTON_KEY' => 'Target',
+    'LBL_CAMPAIGN' => 'Campanha',
+    'LBL_LIST_ASSIGNED_TO_NAME' => 'Atribuído a',
+    'LBL_PROSPECT_LIST' => 'Lista de Potenciais Clientes',
+    'LBL_CAMPAIGN_LEAD' => 'Campanhas',
+    'LBL_BIRTHDATE' => 'Data de Nascimento:',
+    'LBL_THANKS_FOR_SUBMITTING_LEAD' => 'Obrigado Pela Sua Inscrição.',
+    'LBL_SERVER_IS_CURRENTLY_UNAVAILABLE' => 'Pedimos desculpa, de momento o servidor está indisponível, por favor tente novamente mais tarde.',
+    'LBL_ASSISTANT_PHONE' => 'Telefone do Assistente',
+    'LBL_ASSISTANT' => 'Assistente',
+    'LBL_REGISTRATION' => 'registro',
+    'LBL_MESSAGE' => 'Por favor introduza a sua informação abaixo. Informação e/ou uma conta será criada para a sua aprovação pendente.',
+    'LBL_SAVED' => 'Obrigado pelo seu registro. A sua conta será criada e alguém irá contactá-lo brevemente.',
+    'LBL_CLICK_TO_RETURN' => 'Regressar ao Portal',
+    'LBL_CREATED_USER' => 'Usuário Criado',
+    'LBL_MODIFIED_USER' => 'Usuário Modificado',
+    'LBL_CAMPAIGNS' => 'Campanhas',
+    'LBL_CAMPAIGNS_SUBPANEL_TITLE' => 'Campanhas',
+    'LBL_CONVERT_MODULE_NAME' => 'Módulo',
+    'LBL_CONVERT_REQUIRED' => 'Obrigatório',
+    'LBL_CONVERT_SELECT' => 'Permitir a selecção',
+    'LBL_CONVERT_COPY' => 'Copiar dados',
+    'LBL_CONVERT_EDIT' => 'Editar',
+    'LBL_CONVERT_DELETE' => 'Eliminar',
+    'LBL_CONVERT_ADD_MODULE' => 'Adicionar Módulo',
+    'LBL_CREATE' => 'Criar',
+    'LBL_SELECT' => '<b>OU</b> Selecione',
+    'LBL_WEBSITE' => 'Site Internet',
+    'LNK_IMPORT_LEADS' => 'Importar Potenciais',
+    'LBL_NOTICE_OLD_LEAD_CONVERT_OVERRIDE' => 'Aviso: Tela de converter conduzir corrente contém campos personalizados. Quando você personaliza a tela de converter o chumbo em estúdio pela primeira vez, você precisará adicionar campos personalizados para o layout, conforme necessário. Os campos personalizados não automaticamente aparecerá no layout, como fizeram anteriormente.',
+//Convert lead tooltips
+    'LBL_MODULE_TIP' => 'O módulo no qual será criado um novo registro',
+    'LBL_REQUIRED_TIP' => 'Todos os módulos obrigatórios devem ser criados ou selecionados para o potencial poder ser convertido.',
+    'LBL_COPY_TIP' => 'Quando selecionado, campos do potencial serão copiados para campos com o mesmo nome nos registros a criar.',
+    'LBL_SELECTION_TIP' => 'Módulos com um campo relate nos contatos podem ser seleccionados em vez de criados durante o processo de conversão.',
+    'LBL_EDIT_TIP' => 'Modificar o layout de conversão para este módulo.',
+    'LBL_DELETE_TIP' => 'Remover este módulo do layout de conversão.',
+
+    'LBL_ACTIVITIES_MOVE' => 'MOver Atividades para',
+    'LBL_ACTIVITIES_COPY' => 'Copiar Atividades para',
+    'LBL_ACTIVITIES_MOVE_HELP' => "Selecionar o registro para o qual mover as atividades do Lead . Tarefas, ligações, reuniões, anotações  e e-mails serão movidos para o registro selecionado (s).",
+    'LBL_ACTIVITIES_COPY_HELP' => "Selecionar o registro (s) para o qual criar cópias das atividades do Lead. Tarefas novas, ligações, reuniões e anotações será criado para cada um dos registro selecionado (s). E-mails serão relacionadas com o registro selecionado (s).",
+    //For export labels
+    'LBL_PHONE_HOME' => 'Telefone Residencial',
+    'LBL_PHONE_MOBILE' => 'Mobile',
+    'LBL_PHONE_WORK' => 'Telefone Comercial',
+    'LBL_PHONE_OTHER' => 'Outro Telefone',
+    'LBL_PHONE_FAX' => 'Fax:',
+    'LBL_CAMPAIGN_ID' => 'ID da Campanha',
+    'LBL_EXPORT_ASSIGNED_USER_NAME' => 'nome de usuário atribuído',
+    'LBL_EXPORT_ASSIGNED_USER_ID' => 'ID usuário Atribuído',
+    'LBL_EXPORT_MODIFIED_USER_ID' => 'Modificado Por ID',
+    'LBL_EXPORT_CREATED_BY' => 'Criado pelo ID',
+    'LBL_EXPORT_PHONE_MOBILE' => 'Telefone Móvel',
+    'LBL_EXPORT_EMAIL2' => 'Outro E-mail',
+    'LBL_EDITLAYOUT' => 'Editar Layout' /*for 508 compliance fix*/,
+    'LBL_ENTERDATE' => 'Introduza uma Data' /*for 508 compliance fix*/,
+    'LBL_LOADING' => 'Carregando ...' /*for 508 compliance fix*/,
+    'LBL_EDIT_INLINE' => 'Editar' /*for 508 compliance fix*/,
+    'LBL_FP_EVENTS_LEADS_1_FROM_FP_EVENTS_TITLE' => 'Eventos',
+);
+?>

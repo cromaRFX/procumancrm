@@ -1,0 +1,44 @@
+<?php
+
+$mod_strings['LBL_ASSIGNED_TO_ID'] = 'Assegnato a Utente Id';
+$mod_strings['LBL_ASSIGNED_TO_NAME'] = 'Assegnato a';
+$mod_strings['LBL_ID'] = 'ID';
+$mod_strings['LBL_DATE_ENTERED'] = 'Data Creazione';
+$mod_strings['LBL_DATE_MODIFIED'] = 'Date Modifica';
+$mod_strings['LBL_MODIFIED'] = 'Modificato Da';
+$mod_strings['LBL_MODIFIED_ID'] = 'Modificato Da Id';
+$mod_strings['LBL_MODIFIED_NAME'] = 'Modifica Da Nome';
+$mod_strings['LBL_CREATED'] = 'Creato Da';
+$mod_strings['LBL_CREATED_ID'] = 'Creato Da Id';
+$mod_strings['LBL_DESCRIPTION'] = 'Descrizione';
+$mod_strings['LBL_DELETED'] = 'Cancellato';
+$mod_strings['LBL_NAME'] = 'Nome';
+$mod_strings['LBL_CREATED_USER'] = 'Creato Da Utente';
+$mod_strings['LBL_MODIFIED_USER'] = 'Modificato Da Utente';
+$mod_strings['LBL_LIST_NAME'] = 'Nome';
+$mod_strings['LBL_LIST_FORM_TITLE'] = 'Elenco Aree';
+$mod_strings['LBL_MODULE_NAME'] = 'Aree';
+$mod_strings['LBL_MODULE_TITLE'] = 'Aree';
+$mod_strings['LBL_HOMEPAGE_TITLE'] = 'Le Mie Aree';
+$mod_strings['LNK_NEW_RECORD'] = 'Crea Aree';
+$mod_strings['LNK_LIST'] = 'Aree';
+$mod_strings['LNK_IMPORT_JJWG_AREAS'] = 'Importa Aree';
+$mod_strings['LBL_SEARCH_FORM_TITLE'] = 'Cerca Aree';
+$mod_strings['LBL_HISTORY_SUBPANEL_TITLE'] = 'Vedi log Cambiamenti';
+$mod_strings['LBL_ACTIVITIES_SUBPANEL_TITLE'] = 'Attivit&agrave;';
+$mod_strings['LBL_JJWG_AREAS_SUBPANEL_TITLE'] = 'Aree';
+$mod_strings['LBL_NEW_FORM_TITLE'] = 'Nuova Area';
+$mod_strings['LBL_CITY'] = 'Comune';
+$mod_strings['LBL_STATE'] = 'Provincia';
+$mod_strings['LBL_COUNTRY'] = 'Stato';
+$mod_strings['LBL_COORDINATES'] = 'Coordinate';
+$mod_strings['LBL_LIST_ASSIGNED_USER'] = 'Utente';
+$mod_strings['LBL_AREA_MAP'] = 'Area Map';
+
+$mod_strings['LBL_AREA_EDIT_TITLE'] = 'Area Creation Instructions:';
+$mod_strings['LBL_AREA_EDIT_DESC_1'] = 'Left click on the map, in a clockwise motion, to create marker points for the area.';
+$mod_strings['LBL_AREA_EDIT_DESC_2'] = 'Click on the first marker point to close the polygon area.';
+$mod_strings['LBL_AREA_EDIT_RESET'] = 'Azzera';
+$mod_strings['LBL_AREA_EDIT_USE_AREA_COORDINATES'] = 'Use Area Coordinates';
+$mod_strings['LBL_AREA_EDIT_COORDINATE_RESULTS'] = 'Coordinate Results (lng,lat,elv):';
+$mod_strings['LBL_JJWG_MAPS_JJWG_AREAS_FROM_JJWG_MAPS_TITLE'] = 'Mappe';

@@ -1,0 +1,162 @@
+<?php
+$dashletData['AOS_ProductsDashlet']['searchFields'] = array (
+  'date_entered' => 
+  array (
+    'default' => '',
+  ),
+  'date_modified' => 
+  array (
+    'default' => '',
+  ),
+  'assigned_user_id' => 
+  array (
+    'type' => 'assigned_user_name',
+    'default' => 'Administrator',
+  ),
+);
+$dashletData['AOS_ProductsDashlet']['columns'] = array (
+  'accounts_aos_products_1_name' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_ACCOUNTS_AOS_PRODUCTS_1_FROM_ACCOUNTS_TITLE',
+    'id' => 'ACCOUNTS_AOS_PRODUCTS_1ACCOUNTS_IDA',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'accounts_aos_products_1_name',
+  ),
+  'in_stock_c' => 
+  array (
+    'type' => 'float',
+    'default' => true,
+    'label' => 'LBL_IN_STOCK',
+    'width' => '10%',
+    'name' => 'in_stock_c',
+  ),
+  'name' => 
+  array (
+    'width' => '40%',
+    'label' => 'LBL_LIST_NAME',
+    'link' => true,
+    'default' => true,
+    'name' => 'name',
+  ),
+  'part_number' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_PART_NUMBER',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'part_number',
+  ),
+  'price' => 
+  array (
+    'type' => 'currency',
+    'label' => 'LBL_PRICE',
+    'currency_format' => true,
+    'width' => '10%',
+    'default' => true,
+    'name' => 'price',
+  ),
+  'aos_product_category_name' => 
+  array (
+    'type' => 'relate',
+    'studio' => 'visible',
+    'label' => 'LBL_AOS_PRODUCT_CATEGORYS_NAME',
+    'id' => 'AOS_PRODUCT_CATEGORY_ID',
+    'link' => true,
+    'width' => '10%',
+    'default' => true,
+    'name' => 'aos_product_category_name',
+  ),
+  'maincode' => 
+  array (
+    'type' => 'enum',
+    'default' => false,
+    'studio' => 'visible',
+    'label' => 'LBL_MAINCODE',
+    'width' => '10%',
+    'name' => 'maincode',
+  ),
+  'description' => 
+  array (
+    'type' => 'text',
+    'label' => 'LBL_DESCRIPTION',
+    'sortable' => false,
+    'width' => '10%',
+    'default' => false,
+    'name' => 'description',
+  ),
+  'date_modified' => 
+  array (
+    'width' => '15%',
+    'label' => 'LBL_DATE_MODIFIED',
+    'name' => 'date_modified',
+    'default' => false,
+  ),
+  'moq_c' => 
+  array (
+    'type' => 'float',
+    'default' => false,
+    'label' => 'LBL_MOQ',
+    'width' => '10%',
+    'name' => 'moq_c',
+  ),
+  'price_valid_c' => 
+  array (
+    'type' => 'date',
+    'default' => false,
+    'label' => 'LBL_PRICE_VALID',
+    'width' => '10%',
+    'name' => 'price_valid_c',
+  ),
+  'trade_license_expiry_date_c' => 
+  array (
+    'type' => 'date',
+    'default' => false,
+    'label' => 'LBL_TRADE_LICENSE_EXPIRY_DATE',
+    'width' => '10%',
+    'name' => 'trade_license_expiry_date_c',
+  ),
+  'currency_id' => 
+  array (
+    'type' => 'id',
+    'studio' => 'visible',
+    'label' => 'LBL_CURRENCY',
+    'width' => '10%',
+    'default' => false,
+    'name' => 'currency_id',
+  ),
+  'reorder_c' => 
+  array (
+    'type' => 'float',
+    'default' => false,
+    'label' => 'LBL_REORDER',
+    'width' => '10%',
+    'name' => 'reorder_c',
+  ),
+  'unit_of_measure_c' => 
+  array (
+    'type' => 'enum',
+    'default' => false,
+    'studio' => 'visible',
+    'label' => 'LBL_UNIT_OF_MEASURE',
+    'width' => '10%',
+    'name' => 'unit_of_measure_c',
+  ),
+  'is_preferred_c' => 
+  array (
+    'type' => 'bool',
+    'default' => false,
+    'label' => 'LBL_IS_PREFERRED',
+    'width' => '10%',
+    'name' => 'is_preferred_c',
+  ),
+  'assigned_user_name' => 
+  array (
+    'width' => '8%',
+    'label' => 'LBL_LIST_ASSIGNED_USER',
+    'name' => 'assigned_user_name',
+    'default' => false,
+  ),
+);

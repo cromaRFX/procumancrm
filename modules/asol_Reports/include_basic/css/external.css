@@ -1,0 +1,18 @@
+.alineasol_reports table {
+	width: 100%
+}
+.alineasol_reports h4 {
+    background-color: grey;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+.alineasol_reports table th {
+	background-color: lightgrey;
+	text-align: left;
+}
+.alineasol_reports tr.oddListRowS1 {
+	background-color: white;
+} 
+.alineasol_reports tr.evenListRowS1 {
+	background-color: lightblue;
+}

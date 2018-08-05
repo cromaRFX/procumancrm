@@ -1,0 +1,78 @@
+<?php
+$module_name = 'reinv_Invoices_Received';
+$viewdefs [$module_name] = 
+array (
+  'EditView' => 
+  array (
+    'templateMeta' => 
+    array (
+      'maxColumns' => '2',
+      'widths' => 
+      array (
+        0 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+        1 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+      ),
+      'useTabs' => false,
+      'tabDefs' => 
+      array (
+        'DEFAULT' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+      ),
+      'syncDetailEditViews' => false,
+    ),
+    'panels' => 
+    array (
+      'default' => 
+      array (
+        0 => 
+        array (
+          0 => 'name',
+          1 => 
+          array (
+            'name' => 'invoice_date',
+            'label' => 'LBL_INVOICE_DATE',
+          ),
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            'name' => 'invoice_paid',
+            'label' => 'LBL_INVOICE_PAID',
+          ),
+          1 => 'description',
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'currency_id',
+            'studio' => 'visible',
+            'label' => 'LBL_CURRENCY',
+          ),
+          1 => 
+          array (
+            'name' => 'invoice_value',
+            'label' => 'LBL_INVOICE_VALUE',
+          ),
+        ),
+        3 => 
+        array (
+          0 => 'assigned_user_name',
+        ),
+      ),
+    ),
+  ),
+);
+?>

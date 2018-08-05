@@ -1,0 +1,67 @@
+<?php
+$popupMeta = array (
+    'moduleMain' => 'User',
+    'varName' => 'USER',
+    'orderBy' => 'user_name',
+    'whereClauses' => array (
+  'first_name' => 'users.first_name',
+  'last_name' => 'users.last_name',
+  'user_name' => 'users.user_name',
+  'is_group' => 'users.is_group',
+),
+    'searchInputs' => array (
+  0 => 'first_name',
+  1 => 'last_name',
+  2 => 'user_name',
+  3 => 'is_group',
+),
+    'listviewdefs' => array (
+  'NAME' => 
+  array (
+    'width' => '30%',
+    'label' => 'LBL_LIST_NAME',
+    'link' => true,
+    'related_fields' => 
+    array (
+      0 => 'last_name',
+      1 => 'first_name',
+    ),
+    'orderBy' => 'last_name',
+    'default' => true,
+    'name' => 'name',
+  ),
+  'USER_NAME' => 
+  array (
+    'width' => '5%',
+    'label' => 'LBL_USER_NAME',
+    'link' => true,
+    'default' => true,
+    'name' => 'user_name',
+  ),
+  'TITLE' => 
+  array (
+    'width' => '15%',
+    'label' => 'LBL_TITLE',
+    'link' => true,
+    'default' => true,
+    'name' => 'title',
+  ),
+  'DEPARTMENT' => 
+  array (
+    'width' => '15%',
+    'label' => 'LBL_DEPARTMENT',
+    'link' => true,
+    'default' => true,
+    'name' => 'department',
+  ),
+  'EMAIL1' => 
+  array (
+    'width' => '30%',
+    'sortable' => false,
+    'label' => 'LBL_LIST_EMAIL',
+    'link' => true,
+    'default' => true,
+    'name' => 'email1',
+  ),
+),
+);

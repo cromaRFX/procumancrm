@@ -1,0 +1,130 @@
+/*CRM Instance bugs*/
+
+input[type="file"] {
+    display: inline !important;
+}
+
+#copyright_data div#dialog,
+#copyright_data div#dialog2 {
+	display: none;
+}
+
+/*CRM Instance bugs*/
+
+.alineasol_reports .asol_icon {
+	margin-right: 5px;
+}
+
+.alineasol_reports .clickable {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.alineasol_reports .date {
+	border-bottom: unset;
+	font-weight: unset;
+	padding-right: unset;
+}
+
+.asolReportsExecutionRow .data_value_int, 
+.asolReportsExecutionRow .data_value_tinyint,
+.asolReportsExecutionRow .data_value_smallint,
+.asolReportsExecutionRow .data_value_mediumint,
+.asolReportsExecutionRow .data_value_bigint, 
+.asolReportsExecutionRow .data_value_float, 
+.asolReportsExecutionRow .data_value_decimal, 
+.asolReportsExecutionRow .data_value_double, 
+.asolReportsExecutionRow .data_value_real,
+.asolReportsExecutionRow .data_value_currency,
+
+.asolReportsGroupedTotal .subtotal_value_int,
+.asolReportsGroupedTotal .subtotal_value_tinyint,
+.asolReportsGroupedTotal .subtotal_value_smallint,
+.asolReportsGroupedTotal .subtotal_value_mediumint,
+.asolReportsGroupedTotal .subtotal_value_bigint,
+.asolReportsGroupedTotal .subtotal_value_float,
+.asolReportsGroupedTotal .subtotal_value_decimal,
+.asolReportsGroupedTotal .subtotal_value_double,
+.asolReportsGroupedTotal .subtotal_value_real,
+.asolReportsGroupedTotal .subtotal_value_currency,
+
+.asolReportsGroupedTotal .total_value_int,
+.asolReportsGroupedTotal .total_value_tinyint,
+.asolReportsGroupedTotal .total_value_smallint,
+.asolReportsGroupedTotal .total_value_mediumint,
+.asolReportsGroupedTotal .total_value_bigint,
+.asolReportsGroupedTotal .total_value_float,
+.asolReportsGroupedTotal .total_value_decimal,
+.asolReportsGroupedTotal .total_value_double,
+.asolReportsGroupedTotal .total_value_real,
+.asolReportsGroupedTotal .total_value_currency {
+	text-align: right !important;
+}
+
+.percentCompleteBar {
+	position: relative;
+	max-width: 200px;
+	width: 80%;
+	height: 12px;
+	border: thin solid;
+}
+
+.percentCompleteBar p {
+	padding-left: 2px;
+	margin: 0px;
+	white-space: nowrap;
+}
+
+.percentCompleteBar > div {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+    max-width: 100%;
+	overflow: hidden;
+}
+
+ul.asolReportExportDiv, ul.asolReportFieldRefsDiv {
+	padding-left: 0px !important;
+	list-style: outside none none !important;
+	position: absolute;
+	min-width: 125px;
+	padding: 0px;
+	background-color: #FFF;
+	border: 1px solid #999;
+}
+
+ul.asolReportExportDiv li, ul.asolReportFieldRefsDiv li {
+    list-style-type: none !important;
+}
+
+.asolReportExportDiv li, .asolReportFieldRefsDiv li {
+	padding: 0px;
+	margin: 0px;
+}
+
+.asolReportExportDiv li:hover, .asolReportFieldRefsDiv li:hover {
+	background-color: #EBEBEB;
+}
+
+.asolReportExportDiv li:not(:last-child), .asolReportFieldRefsDiv li:not(:last-child) {
+    border-bottom: 1px solid #C0C0C0;
+}
+
+.asolReportExportDiv a, .asolReportFieldRefsDiv a {
+	color: #000;
+	text-decoration: none;
+	line-height: 15px;
+	padding: 5px;
+	display: block;
+}
+
+/* HTML Visibility Hidden */
+.headerCellHidden, .dataCellHidden, .subHeaderCellHidden, .subtotalCellHidden, .totalHeaderCellHidden, .totalCellHidden {
+	display: none;
+}
+
+.totalCellInvisible {
+	visibility: hidden;
+}
+/* HTML Visibility Hidden */
