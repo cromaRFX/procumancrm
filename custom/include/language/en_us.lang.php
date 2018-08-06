@@ -12,6 +12,9 @@ $app_list_strings['record_type_display_notes']['Prospects']='Target';
 $app_strings['LBL_TABGROUP_SALES'] = 'Suppliers';
 
 $app_strings['LBL_TABGROUP_MARKETING'] = 'Purchasing';
+
+$app_list_strings['moduleList']['AOS_Quotes']='Purchase Orders';
+$app_list_strings['moduleListSingular']['AOS_Quotes']='Purchase Order';
 $GLOBALS['app_list_strings']['template_ddown_c_list']=array (
   '' => '',
 );
@@ -108,6 +111,8 @@ $GLOBALS['app_list_strings']['pdf_template_type_dom']=array (
   'porq_Purchase_Request' => 'Purchase Requisitions',
   'RFX_RFx' => 'RFx Requests',
 );
+$app_list_strings['moduleList']['porq_Purchase_Request_Lines']='PRL Deprecated';
+$app_list_strings['moduleListSingular']['porq_Purchase_Request_Lines']='PRL Deprecated';
 $GLOBALS['app_list_strings']['incoterms_list']=array (
   5 => 'FOB Buyer Location',
   2 => 'FOB Seller Location',
@@ -163,6 +168,17 @@ $app_list_strings['moduleListSingular']['Bugs']='Ticket';
 $app_list_strings['record_type_display']['Bugs']='Ticket';
 $app_list_strings['parent_type_display']['Bugs']='Ticket';
 $app_list_strings['record_type_display_notes']['Bugs']='Ticket';
+
+$GLOBALS['app_list_strings']['asset_type_list']=array (
+  1 => 'Vehicle',
+  2 => 'White Goods',
+  3 => 'Device',
+  4 => 'Machinery',
+  5 => 'Furniture',
+  6 => 'Computer',
+  7 => 'Other',
+);
+
 $GLOBALS['app_list_strings']['invoice_status_list']=array (
   1 => 'Pending Approval',
   2 => 'Approved',
@@ -178,94 +194,10 @@ $GLOBALS['app_list_strings']['payment_terms']=array (
   4 => 'Net 60 Days',
   5 => 'Net 90 Days',
 );
-$GLOBALS['app_list_strings']['payment_status_list']=array (
-  1 => 'Sent to Finance',
-  2 => 'Draft',
-  3 => 'Payment Completed',
-);
-$GLOBALS['app_list_strings']['currency_code_list']=array (
-  1 => 'IDR',
-  2 => 'USD',
-);
-$GLOBALS['app_list_strings']['currency_code']=array (
-  1 => 'IDR',
-  2 => 'USD',
-);
-$GLOBALS['app_list_strings']['status_list']=array (
-  1 => 'Active',
-  2 => 'Inactive',
-);
-$GLOBALS['app_list_strings']['po_type_list']=array (
-  'goods_order' => 'Goods Order',
-  'special_ord' => 'Special Order',
-  'service_ord' => 'Service Order',
-  'act_payment' => 'Actual Payment',
-);
-$GLOBALS['app_list_strings']['asset_type_list']=array (
-  'asset' => 'Asset',
-  'non_asset' => 'Non Asset',
-  'asset_to_maintenance' => 'Asset to Maintenance',
-);
-$GLOBALS['app_list_strings']['rfx_type_0']=array (
-  'e_tender' => 'E-Tender',
-  'manual' => 'Manual',
-);
-$GLOBALS['app_list_strings']['location_0']=array (
-  'head_office' => 'Head Office',
-  'factory' => 'Factory',
-);
-$GLOBALS['app_list_strings']['vat_code_list']=array (
-  'v0' => 'No VAT',
-  'v1' => 'VAT 10%',
-);
-$GLOBALS['app_list_strings']['company_code_list']=array (
-  'pta' => 'PTA(4328)',
-  'nex' => 'NEX (2332)',
-  'asi' => 'ASI(2346)',
-  'abi' => 'ABI(2430)',
-);
-$app_list_strings['moduleListSingular']['eps_asset_location']='Evaluation Group 1';
-$app_list_strings['moduleList']['eps_cost_center']='Cost Center';
-$app_list_strings['moduleList']['eps_year_acquisition']='Year Acquisition';
-$app_list_strings['moduleListSingular']['eps_cost_center']='Cost Center';
-$app_list_strings['moduleListSingular']['eps_year_acquisition']='Year Acquisition';
-$app_list_strings['moduleList']['eps_evaluation_group_2']='Evaluation Group 2';
-$app_list_strings['moduleList']['eps_asset_location']='Evaluation Group 1';
-$app_list_strings['moduleListSingular']['eps_evaluation_group_2']='Evaluation Group 2';
-$GLOBALS['app_list_strings']['location_list']=array (
-  'jho' => 'JHO',
-  'mjk' => 'MJK',
-  'krw' => 'KRW',
-  'abi' => 'ABI',
-);
-$app_list_strings['moduleList']['porq_Purchase_Request_Lines']='PR Line Items';
-$app_list_strings['moduleListSingular']['porq_Purchase_Request_Lines']='PR Line Items';
-$GLOBALS['app_list_strings']['company_code_list']=array (
-  'pta' => 'PTA(4328)',
-  'nex' => 'NEX (2332)',
-  'asi' => 'ASI(2346)',
-  'abi' => 'ABI(2430)',
-);
-$app_list_strings['moduleListSingular']['eps_invoice_receive']='Invoice Receive KREA';
-$app_list_strings['moduleListSingular']['reinv_Invoices_Received']='Invoices Received';
-$app_list_strings['moduleListSingular']['eps_goods_receipt']='Goods Receipt KREA';
-$app_list_strings['moduleListSingular']['eps_purchase_order']='Purchase Order KREA';
-$app_list_strings['moduleList']['reinv_Invoices_Received']='Invoices Received';
-$app_list_strings['moduleList']['eps_invoice_receive']='Invoice Receive KREA';
-$app_list_strings['moduleList']['eps_goods_receipt']='Goods Receipt KREA';
-$app_list_strings['moduleList']['eps_purchase_order']='Purchase Order KREA';
-$app_list_strings['moduleListSingular']['AOS_Quotes']='Purchase Order';
-$app_list_strings['moduleList']['AOS_Quotes']='Purchase Orders';
-$app_list_strings['moduleList']['gdrcp_Goods_Receipt']='Goods Receipt';
-$app_list_strings['moduleListSingular']['gdrcp_Goods_Receipt']='Goods Receipt';
-$app_list_strings['moduleList']['eps_purchase_request']='Purchase Request KREA';
-$app_list_strings['moduleListSingular']['eps_purchase_request']='Purchase Request KREA';
-$GLOBALS['app_list_strings']['request_area_list']=array (
-  1 => 'Head Office',
-  2 => 'Factory',
-);
 $app_list_strings['payment_terms_c']['Cash on Delivery'] = 'Cash on Delivery';
 $app_list_strings['payment_terms_c']['Net 10 Days'] = 'Net 10 Days';
 $app_list_strings['payment_terms_c']['Net 30 Days'] = 'Net 30 Days';
 $app_list_strings['payment_terms_c']['Net 60 Days'] = 'Net 60 Days';
 $app_list_strings['payment_terms_c']['Net 90 Days'] = 'Net 90 Days';
+$app_list_strings['UOM_Options']['UOM'] = 'UOM';
+$app_list_strings['UOM_Options']['LOV'] = 'LOV';

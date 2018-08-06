@@ -13,12 +13,21 @@ $popupMeta = array (
   3 => 'status',
 ),
     'listviewdefs' => array (
+  'NAME' => 
+  array (
+    'width' => '32%',
+    'label' => 'LBL_NAME',
+    'default' => true,
+    'link' => true,
+    'name' => 'name',
+  ),
   'START_DATE' => 
   array (
     'type' => 'date',
     'label' => 'LBL_START_DATE',
     'width' => '10%',
     'default' => true,
+    'name' => 'start_date',
   ),
   'END_DATE' => 
   array (
@@ -26,6 +35,7 @@ $popupMeta = array (
     'label' => 'LBL_END_DATE',
     'width' => '10%',
     'default' => true,
+    'name' => 'end_date',
   ),
   'BUDGET' => 
   array (
@@ -34,6 +44,7 @@ $popupMeta = array (
     'currency_format' => true,
     'width' => '10%',
     'default' => true,
+    'name' => 'budget',
   ),
 ),
 );
