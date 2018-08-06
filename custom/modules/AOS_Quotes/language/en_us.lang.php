@@ -79,6 +79,7 @@ $mod_strings = array (
   'LBL_COST_CENTER_C' => 'Cost Center',
   'LBL_BUDGET_CODE_C' => 'Budget Code',
   'LBL_DELIVERY_CODE_C' => 'Delivery To',
+  'LBL_ITEM_CODE_C' => 'Item Code',
   'LBL_AHI_C' => 'AHI',
   'LBL_SERVICE_NOTE_C' => 'Note',
   'LBL_SAP_PO_NO_C' => 'SAP PO No.',
@@ -86,6 +87,5 @@ $mod_strings = array (
   'LBL_EXCHANGE_RATE_C' => 'Exchange Rate',
   'LBL_UNIT_PRICE_BASE_CURRENCY_C' => 'Unit Price Base Currency',
   'LBL_TOTAL_PRICE_BASE_CURRENCY_C' => 'Total Price Base Currency',
-    'LBL_PAYMENT_TERM_C' => 'Payment Term',
-
+  'LBL_PAYMENT_TERM_C' => 'Payment Term',
 );

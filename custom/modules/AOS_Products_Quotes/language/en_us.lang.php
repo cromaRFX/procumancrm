@@ -1,3 +1,4 @@
+
 <?php
 // created: 2016-12-16 08:58:38
 $mod_strings = array (
@@ -11,6 +12,8 @@ $mod_strings = array (
   'LBL_COLOR_C' => 'Color',
   'LBL_SIZE_C' => 'Size',
   'LBL_SERVICE_QTY_C' => 'Quantity',
+  /*usman*/
+  'LBL_ITEM_CODE_C' => 'Item Code',
   'LBL_ASSET_NO_C' => 'Asset No',
   'LBL_UNIT_OF_MEASURE_C' => 'Unit of Measure',
   'LBL_COST_CENTER_C' => 'Cost Center',
