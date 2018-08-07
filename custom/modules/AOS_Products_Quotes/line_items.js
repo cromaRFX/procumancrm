@@ -97,7 +97,7 @@ function insertProductLine(tableid, groupid) {
 
     var vat_hidden = document.getElementById("vathidden").value;
     var discount_hidden = document.getElementById("discounthidden").value;
-    var payment_terms_c = document.getElementById("payterms").value;
+    var payment_term_c_p = document.getElementById("payterms").value;
 
     sqs_objects["product_name[" + prodln + "]"] = {
         "form": "EditView",
@@ -137,6 +137,84 @@ function insertProductLine(tableid, groupid) {
         "post_onblur_function": "formatListPrice(" + prodln + ");",
         "no_match_text": "No Match"
     };
+    /*usman*/
+    sqs_objects["product_asset_name_c[" + prodln + "]"] = {
+        "form": "EditView",
+        "method": "query",
+        "modules": ["asset_assets"],
+        "group": "or",
+        "field_list": ["name", "id"],
+        "populate_list": ["product_asset_name_c[" + prodln + "]", "product_assets_id_c["+ prodln +"]"],
+        "required_list": ["product_id[" + prodln + "]"],
+        "conditions": [{
+            "name": "name",
+            "op": "like_custom",
+            "end": "%",
+            "value": ""
+        }],
+        "order": "name",
+        "limit": "30",
+        "post_onblur_function": "formatListPrice(" + prodln + ");",
+        "no_match_text": "No Match"
+    };
+    sqs_objects["product_cost_center_name_c[" + prodln + "]"] = {
+        "form": "EditView",
+        "method": "query",
+        "modules": ["costc_cost_center"],
+        "group": "or",
+        "field_list": ["name", "id"],
+        "populate_list": ["product_cost_center_name_c[" + prodln + "]", "product_cost_center_id_c["+ prodln +"]"],        
+        "required_list": ["product_id[" + prodln + "]"],
+        "conditions": [{
+            "name": "name",
+            "op": "like_custom",
+            "end": "%",
+            "value": ""
+        }],
+        "order": "name",
+        "limit": "30",
+        "post_onblur_function": "formatListPrice(" + prodln + ");",
+        "no_match_text": "No Match"
+    };
+    sqs_objects["product_budget_code_name_c[" + prodln + "]"] = {
+        "form": "EditView",
+        "method": "query",
+        "modules": ["budgt_Budget"],
+        "group": "or",
+        "field_list": ["name", "id"],
+        "populate_list": ["product_budget_code_name_c[" + prodln + "]", "product_budget_code_id_c["+ prodln +"]"],        
+        "required_list": ["product_id[" + prodln + "]"],
+        "conditions": [{
+            "name": "name",
+            "op": "like_custom",
+            "end": "%",
+            "value": ""
+        }],
+        "order": "name",
+        "limit": "30",
+        "post_onblur_function": "formatListPrice(" + prodln + ");",
+        "no_match_text": "No Match"
+    };
+    sqs_objects["product_delivery_to_name_c[" + prodln + "]"] = {
+        "form": "EditView",
+        "method": "query",
+        "modules": ["brch_Branch"],
+        "group": "or",
+        "field_list": ["name", "id"],
+        "populate_list": ["product_delivery_to_name_c[" + prodln + "]", "product_delivery_to_id_c["+ prodln +"]"],        
+        "required_list": ["product_id[" + prodln + "]"],
+        "conditions": [{
+            "name": "name",
+            "op": "like_custom",
+            "end": "%",
+            "value": ""
+        }],
+        "order": "name",
+        "limit": "30",
+        "post_onblur_function": "formatListPrice(" + prodln + ");",
+        "no_match_text": "No Match"
+    };
+    /*usman*/
 
     tablebody = document.createElement("tbody");
     tablebody.id = "product_body" + prodln;
@@ -219,25 +297,69 @@ function insertProductLine(tableid, groupid) {
     i.style.color = "rgb(68,68,68)";
     i.innerHTML = "<span style='vertical-align: top;'>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_PAYMENT_TERM_C') + " :&nbsp;</span>";
     // i.innerHTML += "<input size='9' tabindex='116' name='product_payment_term_c[" + prodln + "]' id='product_payment_term_c" + prodln + "' ></input>&nbsp;&nbsp;";
-    i.innerHTML += "<select tabindex='116' name='product_payment_term_c[" + prodln + "]' id='product_payment_term_c" + prodln + "' onchange='calculateLine(" + prodln + ",\"product_\");'>" + payment_terms_c + "</select>";
+    i.innerHTML += "<select tabindex='116' name='product_payment_term_c[" + prodln + "]' id='product_payment_term_c" + prodln + "'>" + payment_term_c_p + "</select>";
+
+    // var i = y.insertCell(3);
+    // i.colSpan = "1";
+    // i.style.color = "rgb(68,68,68)";
+    // i.innerHTML = "<span style='vertical-align: top;'>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_SIZE_C') + " :&nbsp;</span>";
+    // i.innerHTML += "<input size='9' tabindex='116' name='product_size_c[" + prodln + "]' id='product_size_c" + prodln + "' ></input>&nbsp;&nbsp;";
+
+    // var i = y.insertCell(4);
+    // i.colSpan = "1";
+    // i.style.color = "rgb(68,68,68)";
+    // i.innerHTML = "<span style='vertical-align: top;'>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_COLOR_C') + " :&nbsp;</span>";
+    // i.innerHTML += "<input size='12' tabindex='116' name='product_color_c[" + prodln + "]' id='product_color_c" + prodln + "' ></input>&nbsp;&nbsp;";
 
     var i = y.insertCell(3);
-    i.colSpan = "1";
-    i.style.color = "rgb(68,68,68)";
-    i.innerHTML = "<span style='vertical-align: top;'>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_SIZE_C') + " :&nbsp;</span>";
-    i.innerHTML += "<input size='9' tabindex='116' name='product_size_c[" + prodln + "]' id='product_size_c" + prodln + "' ></input>&nbsp;&nbsp;";
-
-    var i = y.insertCell(4);
-    i.colSpan = "1";
-    i.style.color = "rgb(68,68,68)";
-    i.innerHTML = "<span style='vertical-align: top;'>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_COLOR_C') + " :&nbsp;</span>";
-    i.innerHTML += "<input size='12' tabindex='116' name='product_color_c[" + prodln + "]' id='product_color_c" + prodln + "' ></input>&nbsp;&nbsp;";
-
-    var i = y.insertCell(5);
     i.colSpan = "2";
     i.style.color = "rgb(68,68,68)";
     i.innerHTML = "<span style='vertical-align: top;'>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_SUPPLIER_NAME_C') + " :&nbsp;</span>";
     i.innerHTML += "<input size='12' tabindex='116' name='product_supplier_name_c[" + prodln + "]' id='product_supplier_name_c" + prodln + "' readonly='readonly'></input>&nbsp;&nbsp;";
+
+    var ax = tablebody.insertRow(-1);
+    ax.id = 'product_note_line' + prodln;
+
+    var ax1 = ax.insertCell(0)
+    // ax1.colSpan = "1";
+    ax1.innerHTML = "<span>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_ASSET_NO_C') + " :&nbsp;</span>";
+    ax1.innerHTML += "<input style='width: 60px;' type='text' style='text-align: left;' class='sqsEnabled' autocomplete='off' name='product_asset_name_c[" + prodln + "]' id='product_asset_name_c" + prodln + "' size='8' maxlength='20' value='' title='' tabindex='116' ><input type='hidden' name='product_assets_id_c[" + prodln + "]' id='product_assets_id_c" + prodln + "' size='20' maxlength='50' value=''>";
+    ax1.innerHTML += "<button title='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_TITLE') + "' accessKey='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_KEY') + "' type='button' tabindex='116' class='button' value='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_LABEL') + "' name='pbtn1' onclick='openProductPopup_Assets(" + prodln + ");'><img src='themes/default/images/id-ff-select.png' alt='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_LABEL') + "'></button>";
+
+    var ax2 = ax.insertCell(1);
+    ax2.innerHTML = "<span>"  +SUGAR.language.get(module_sugar_grp1, 'LBL_COST_CENTER_C') +": &nbsp; </span>" +"<input style='width: 60px;' type='text' style='text-align: left;' class='sqsEnabled' autocomplete='off' name='product_cost_center_name_c[" + prodln + "]' id='product_cost_center_name_c" + prodln + "' size='8' maxlength='20' value='' title='' tabindex='116' ><input type='hidden' name='product_cost_center_id_c[" + prodln + "]' id='product_cost_center_id_c" + prodln + "' size='20' maxlength='50' value=''>";
+    ax2.innerHTML += "<button title='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_TITLE') + "' accessKey='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_KEY') + "' type='button' tabindex='116' class='button' value='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_LABEL') + "' name='pbtn2' onclick='openProductPopup_CostCenter(" + prodln + ");'><img src='themes/default/images/id-ff-select.png' alt='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_LABEL') + "'></button>";
+
+    var ax3 = ax.insertCell(2);
+    ax3.innerHTML = "<span>"  +SUGAR.language.get(module_sugar_grp1, 'LBL_BUDGET_CODE_C')+": &nbsp; </span>" +"<input style='width: 60px;' type='text' style='text-align: right;'class='sqsEnabled' autocomplete='off' name='product_budget_code_name_c[" + prodln + "]' id='product_budget_code_name_c" + prodln + "' size='8' maxlength='20' value='' title='' tabindex='116' ><input type='hidden' name='product_budget_code_id_c[" + prodln + "]' id='product_budget_code_id_c" + prodln + "' size='20' maxlength='50' value=''>";
+    ax3.innerHTML += "<button title='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_TITLE') + "' accessKey='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_KEY') + "' type='button' tabindex='116' class='button' value='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_LABEL') + "' name='pbtn3' onclick='openProductPopup_BudgetCode(" + prodln + ");'><img src='themes/default/images/id-ff-select.png' alt='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_LABEL') + "'></button>";
+
+    var ax4 = ax.insertCell(3);
+    ax4.innerHTML =  "<span>"  +SUGAR.language.get(module_sugar_grp1, 'LBL_DELIVERY_CODE_C')+": &nbsp; </span>"+"<input style='width: 60px;' type='text' style='text-align: right;' class='sqsEnabled' autocomplete='off' name='product_delivery_to_name_c[" + prodln + "]' id='product_delivery_to_name_c" + prodln + "' size='8' maxlength='20' value='' title='' tabindex='116' ><input type='hidden' name='product_delivery_to_id_c[" + prodln + "]' id='product_delivery_to_id_c" + prodln + "' size='20' maxlength='50' value=''>";
+    ax4.innerHTML += "<button title='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_TITLE') + "' accessKey='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_KEY') + "' type='button' tabindex='116' class='button' value='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_LABEL') + "' name='pbtn4' onclick='openProductPopup_Delivery(" + prodln + ");'><img src='themes/default/images/id-ff-select.png' alt='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_LABEL') + "'></button>";
+
+    var ax5 = ax.insertCell(4);
+    ax5.innerHTML ="<span>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_AHI_C')+": &nbsp; </span>" +"<input type='checkbox' value='1.0' class='checkbox' name='product_ahi_c[" + prodln + "]' id='product_ahi_c" + prodln + "' tabindex='117' onclick='ahi_function(" + prodln + ");'>";
+
+    enableQS(true);
+
+    var ay = tablebody.insertRow(-1);
+    ay.id = 'product_note_line' + prodln;
+
+    var ay1 = ay.insertCell(0);
+    ay1.innerHTML = "<span>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_SAP_PO_NO_C')+": &nbsp; </span>" +"<input type='text' style='text-align: right; width:110px;' name='product_sap_po_no_c[" + prodln + "]' id='product_sap_po_no_c" + prodln + "' value='' title='' tabindex='116'>";
+
+    var ay2 = ay.insertCell(1);
+    ay2.innerHTML ="<span>"  +  SUGAR.language.get(module_sugar_grp1, 'LBL_SAP_LINE_NO_C')+": &nbsp; </span>" +"<input type='text' style='text-align: right; width:110px;' name='product_sap_line_no_c[" + prodln + "]' id='product_sap_line_no_c" + prodln + "' value='' title='' tabindex='116' '>";
+
+    var ay3 = ay.insertCell(2);
+    ay3.innerHTML ="<span>"  +  SUGAR.language.get(module_sugar_grp1, 'LBL_EXCHANGE_RATE_C')+": &nbsp; </span>" +"<input type='text' style='text-align: right; width:110px;' name='product_exchange_rate_c[" + prodln + "]' id='product_exchange_rate_c" + prodln + "' value='' title='' tabindex='116' readonly  >";
+
+    var ay4 = ay.insertCell(3);
+    ay4.innerHTML = "<span>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_UNIT_PRICE_BASE_CURRENCY_C')+": &nbsp; </span>" +"<input type='text' style='text-align: right; width:110px;' name='product_unit_price_bc_c[" + prodln + "]' id='product_unit_price_bc_c" + prodln + "' value='' title='' tabindex='116' readonly >";
+
+    var ay5 = ay.insertCell(4);
+    ay5.innerHTML = "<span>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_TOTAL_PRICE_BASE_CURRENCY_C')+": &nbsp; </span> " +"<input type='text' style='text-align: right; width:110px;' name='product_total_price_bc_c[" + prodln + "]' id='product_total_price_bc_c" + prodln + "' value='' title='' tabindex='116' readonly >";
 
 
     addToValidate('EditView','product_product_id'+prodln,'id',true,"Please choose a product");
@@ -305,7 +427,7 @@ function setProductReturn(popupReplyData){
     set_return(popupReplyData);
     formatListPrice(lineno);
 }
-/*usman*/
+/*usman | PopUps*/
 function openServicePopup_Assets(ln){
 
     lineno=ln;
@@ -320,6 +442,20 @@ function openServicePopup_Assets(ln){
 
     open_popup('asset_assets', 800, 850, '', true, true, popupRequestData);
 }
+function openProductPopup_Assets(ln){
+
+    lineno=ln;
+    var popupRequestData = {
+        "call_back_function" : "setServiceReturn",
+        "form_name" : "EditView",
+        "field_to_name_array" : {
+            "id" : "product_assets_id_c" + ln,
+            "name" : "product_asset_name_c" + ln,
+        }
+    };
+
+    open_popup('asset_assets', 800, 850, '', true, true, popupRequestData);
+}
 function openServicePopup_CostCenter(ln){
 
     lineno=ln;
@@ -329,6 +465,21 @@ function openServicePopup_CostCenter(ln){
         "field_to_name_array" : {
             "id" : "service_cost_center_id_c" + ln,
             "name" : "service_cost_center_name_c" + ln,
+        }
+    };
+
+    open_popup('costc_cost_center', 800, 850, '', true, true, popupRequestData);
+
+}
+function openProductPopup_CostCenter(ln){
+
+    lineno=ln;
+    var popupRequestData = {
+        "call_back_function" : "setServiceReturn",
+        "form_name" : "EditView",
+        "field_to_name_array" : {
+            "id" : "product_cost_center_id_c" + ln,
+            "name" : "product_cost_center_name_c" + ln,
         }
     };
 
@@ -350,6 +501,21 @@ function openServicePopup_BudgetCode(ln){
     open_popup('budgt_Budget', 800, 850, '', true, true, popupRequestData);
 
 }
+function openProductPopup_BudgetCode(ln){
+
+    lineno=ln;
+    var popupRequestData = {
+        "call_back_function" : "setServiceReturn",
+        "form_name" : "EditView",
+        "field_to_name_array" : {
+            "id" : "product_budget_code_id_c" + ln,
+            "name" : "product_budget_code_name_c" + ln,
+        }
+    };
+
+    open_popup('budgt_Budget', 800, 850, '', true, true, popupRequestData);
+
+}
 function openServicePopup_Delivery(ln){
 
     lineno=ln;
@@ -359,6 +525,21 @@ function openServicePopup_Delivery(ln){
         "field_to_name_array" : {
             "id" : "service_delivery_to_id_c" + ln,
             "name" : "service_delivery_to_name_c" + ln,
+        }
+    };
+
+    open_popup('brch_Branch', 800, 850, '', true, true, popupRequestData);
+
+}
+function openProductPopup_Delivery(ln){
+
+    lineno=ln;
+    var popupRequestData = {
+        "call_back_function" : "setServiceReturn",
+        "form_name" : "EditView",
+        "field_to_name_array" : {
+            "id" : "product_delivery_to_id_c" + ln,
+            "name" : "product_delivery_to_name_c" + ln,
         }
     };
 
@@ -423,18 +604,18 @@ function insertServiceLine(tableid, groupid) {
 
     var vat_hidden = document.getElementById("vathidden").value;
     var discount_hidden = document.getElementById("discounthidden").value;
-    var payment_terms_c = document.getElementById("payterms").value;
+    var payment_term_c = document.getElementById("payterms").value;
     var unit_of_measure_c = document.getElementById("uom_c").value;
 
     /*usman*/
-    sqs_objects["service_asset_name_c[" + prodln + "]"] = {
+    sqs_objects["service_asset_name_c[" + servln + "]"] = {
         "form": "EditView",
         "method": "query",
         "modules": ["asset_assets"],
         "group": "or",
         "field_list": ["name"],
-        "populate_list": ["name[" + prodln + "]"],
-        "required_list": ["service_id[" + prodln + "]"],
+        "populate_list": ["name[" + servln + "]"],
+        "required_list": ["service_id[" + servln + "]"],
         "conditions": [{
             "name": "name",
             "op": "like_custom",
@@ -443,17 +624,17 @@ function insertServiceLine(tableid, groupid) {
         }],
         "order": "name",
         "limit": "30",
-        "post_onblur_function": "formatListPrice(" + prodln + ");",
+        "post_onblur_function": "formatListPrice(" + servln + ");",
         "no_match_text": "No Match"
     };
-    sqs_objects["service_cost_center_name_c[" + prodln + "]"] = {
+    sqs_objects["service_cost_center_name_c[" + servln + "]"] = {
         "form": "EditView",
         "method": "query",
         "modules": ["costc_cost_center"],
         "group": "or",
         "field_list": ["name"],
-        "populate_list": ["name[" + prodln + "]"],
-        "required_list": ["service_id[" + prodln + "]"],
+        "populate_list": ["name[" + servln + "]"],
+        "required_list": ["service_id[" + servln + "]"],
         "conditions": [{
             "name": "name",
             "op": "like_custom",
@@ -462,17 +643,17 @@ function insertServiceLine(tableid, groupid) {
         }],
         "order": "name",
         "limit": "30",
-        "post_onblur_function": "formatListPrice(" + prodln + ");",
+        "post_onblur_function": "formatListPrice(" + servln + ");",
         "no_match_text": "No Match"
     };
-    sqs_objects["service_budget_code_name_c[" + prodln + "]"] = {
+    sqs_objects["service_budget_code_name_c[" + servln + "]"] = {
         "form": "EditView",
         "method": "query",
         "modules": ["budgt_Budget"],
         "group": "or",
         "field_list": ["name"],
-        "populate_list": ["name[" + prodln + "]"],
-        "required_list": ["service_id[" + prodln + "]"],
+        "populate_list": ["name[" + servln + "]"],
+        "required_list": ["service_id[" + servln + "]"],
         "conditions": [{
             "name": "name",
             "op": "like_custom",
@@ -481,17 +662,17 @@ function insertServiceLine(tableid, groupid) {
         }],
         "order": "name",
         "limit": "30",
-        "post_onblur_function": "formatListPrice(" + prodln + ");",
+        "post_onblur_function": "formatListPrice(" + servln + ");",
         "no_match_text": "No Match"
     };
-    sqs_objects["service_delivery_to_name_c[" + prodln + "]"] = {
+    sqs_objects["service_delivery_to_name_c[" + servln + "]"] = {
         "form": "EditView",
         "method": "query",
         "modules": ["brch_Branch"],
         "group": "or",
         "field_list": ["name"],
-        "populate_list": ["name[" + prodln + "]"],
-        "required_list": ["service_id[" + prodln + "]"],
+        "populate_list": ["name[" + servln + "]"],
+        "required_list": ["service_id[" + servln + "]"],
         "conditions": [{
             "name": "name",
             "op": "like_custom",
@@ -520,7 +701,7 @@ function insertServiceLine(tableid, groupid) {
     a1.innerHTML = "<input type='text' style='text-align: right;' name='service_product_qty[" + servln + "]' id='service_product_qty" + servln + "' size='8' maxlength='50' value='' title='' tabindex='116' onblur='calculateLine(" + servln + ",\"service_\");'>";
 
     var g = x.insertCell(2);
-    g.innerHTML = "<select tabindex='116' name='service_payment_term_c[" + servln + "]' id='service_payment_term_c" + servln + "' onchange='calculateLine(" + servln + ",\"service_\");'>" + payment_terms_c + "</select>";
+    g.innerHTML = "<select tabindex='116' name='service_payment_term_c[" + servln + "]' id='service_payment_term_c" + servln + "' onchange='calculateLine(" + servln + ",\"service_\");'>" + payment_term_c + "</select>";
 
     var a2 = x.insertCell(3);
     a2.innerHTML = "<input type='text' style='text-align: right;' name='service_product_list_price[" + servln + "]' id='service_product_list_price" + servln + "' size='8' maxlength='50' value='' title='' tabindex='116'   onblur='calculateLine(" + servln + ",\"service_\");'>";
@@ -567,7 +748,7 @@ function insertServiceLine(tableid, groupid) {
     var y2 = y.insertCell(1)
     y2.colSpan = "1";
     y2.innerHTML = "<span>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_ASSET_NO_C') + " :&nbsp;</span>";
-    y2.innerHTML += "<input style='width: 60px;' type='text' style='text-align: left;' class='sqsEnabled' autocomplete='off' name='service_asset_name_c[" + servln + "]' id='service_asset_name_c" + servln + "' size='8' maxlength='20' value='' title='' tabindex='116' ><input type='hidden' name='service_assets_id_c[" + servln + "]' id='service_assets_id_c" + servln + "' size='20' maxlength='50' value=''>";
+    y2.innerHTML += "<input style='width: 70px;' type='text' style='text-align: left;' class='sqsEnabled' autocomplete='off' name='service_asset_name_c[" + servln + "]' id='service_asset_name_c" + servln + "' size='8' maxlength='20' value='' title='' tabindex='116' ><input type='hidden' name='service_assets_id_c[" + servln + "]' id='service_assets_id_c" + servln + "' size='20' maxlength='50' value=''>";
     y2.innerHTML += "<button title='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_TITLE') + "' accessKey='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_KEY') + "' type='button' tabindex='116' class='button' value='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_LABEL') + "' name='btn2' onclick='openServicePopup_Assets(" + servln + ");'><img src='themes/default/images/id-ff-select.png' alt='" + SUGAR.language.get('app_strings', 'LBL_SELECT_BUTTON_LABEL') + "'></button>";
 
     var y3 = y.insertCell(2);
@@ -604,13 +785,13 @@ function insertServiceLine(tableid, groupid) {
     z3.innerHTML ="<span>"  +  SUGAR.language.get(module_sugar_grp1, 'LBL_SAP_LINE_NO_C')+": &nbsp; </span>" +"<input type='text' style='text-align: right; width:110px;' name='service_sap_line_no_c[" + servln + "]' id='service_sap_line_no_c" + servln + "' value='' title='' tabindex='116' '>";
 
     var z4 = z.insertCell(3);
-    z4.innerHTML ="<span>"  +  SUGAR.language.get(module_sugar_grp1, 'LBL_EXCHANGE_RATE_C')+": &nbsp; </span>" +"<input type='text' style='text-align: right; width:110px;' name='service_exchange_rate_c[" + servln + "]' id='service_exchange_rate_c" + servln + "' value='' title='' tabindex='116'  >";
+    z4.innerHTML ="<span>"  +  SUGAR.language.get(module_sugar_grp1, 'LBL_EXCHANGE_RATE_C')+": &nbsp; </span>" +"<input type='text' style='text-align: right; width:110px;' name='service_exchange_rate_c[" + servln + "]' id='service_exchange_rate_c" + servln + "' value='' title='' tabindex='116' readonly  >";
 
     var z5 = z.insertCell(4);
-    z5.innerHTML = "<span>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_UNIT_PRICE_BASE_CURRENCY_C')+": &nbsp; </span>" +"<input type='text' style='text-align: right; width:110px;' name='service_unit_price_bc_c[" + servln + "]' id='service_unit_price_bc_c" + servln + "' value='' title='' tabindex='116'  >";
+    z5.innerHTML = "<span>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_UNIT_PRICE_BASE_CURRENCY_C')+": &nbsp; </span>" +"<input type='text' style='text-align: right; width:110px;' name='service_unit_price_bc_c[" + servln + "]' id='service_unit_price_bc_c" + servln + "' value='' title='' tabindex='116' readonly >";
 
     var z6 = z.insertCell(5);
-    z6.innerHTML = "<span>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_TOTAL_PRICE_BASE_CURRENCY_C')+": &nbsp; </span> " +"<input type='text' style='text-align: right; width:110px;' name='service_total_price_bc_c[" + servln + "]' id='service_total_price_bc_c" + servln + "' value='' title='' tabindex='116' >";
+    z6.innerHTML = "<span>"  + SUGAR.language.get(module_sugar_grp1, 'LBL_TOTAL_PRICE_BASE_CURRENCY_C')+": &nbsp; </span> " +"<input type='text' style='text-align: right; width:110px;' name='service_total_price_bc_c[" + servln + "]' id='service_total_price_bc_c" + servln + "' value='' title='' tabindex='116' readonly >";
 
     addAlignedLabels(servln, 'service');
 
@@ -1252,8 +1433,8 @@ function formatNumber(n, num_grp_sep, dec_sep, round, precision) {
 
 function check_form(formname) {
     calculateAllLines();
-    if(!checkSuppliers())
-        return false;
+    // if(!checkSuppliers())
+    //     return false;
     if (typeof(siw) != 'undefined' && siw && typeof(siw.selectingSomething) != 'undefined' && siw.selectingSomething)
         return false;
     return validate_form(formname, '');
